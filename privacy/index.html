@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — SiteBot</title>
+  <meta name="description" content="SiteBot privacy policy. How we collect, use, and protect your information.">
+  <link rel="canonical" href="https://sitebot.tech/privacy/">
+  <meta name="robots" content="noindex">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 24px; height: 52px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-size: 17px; font-weight: 600; color: var(--white); text-decoration: none; letter-spacing: -0.3px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--white); color: var(--black) !important; padding: 7px 16px; border-radius: 20px; font-weight: 500; font-size: 13px !important; }
+    @media (max-width: 600px) { .nav-links { gap: 16px; } .nav-links li:not(:last-child) { display: none; } }
+
+    /* PAGE */
+    .page-wrap {
+      max-width: 680px; margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .page-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--gray-400); margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.08; margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .page-updated {
+      font-size: 13px; color: var(--gray-400);
+      margin-bottom: 56px;
+    }
+
+    /* TOC */
+    .toc {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+    .toc-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: var(--gray-400); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .toc-list a {
+      font-size: 14px; color: rgba(255,255,255,0.55);
+      text-decoration: none; transition: color .15s;
+    }
+    .toc-list a:hover { color: var(--white); }
+
+    /* SECTIONS */
+    .section { margin-bottom: 52px; }
+
+    h2 {
+      font-size: 20px; font-weight: 700;
+      color: var(--white); margin-bottom: 14px;
+      padding-top: 8px;
+    }
+
+    p {
+      font-size: 15px; color: rgba(255,255,255,0.55);
+      line-height: 1.8; margin-bottom: 14px;
+    }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+    ul {
+      margin: 12px 0 14px 20px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    li {
+      font-size: 15px; color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+    li strong { color: rgba(255,255,255,0.85); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 48px 0;
+    }
+
+    /* HIGHLIGHT */
+    .highlight {
+      background: rgba(37,99,235,0.07);
+      border: 1px solid rgba(37,99,235,0.18);
+      border-radius: 12px; padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .highlight p { margin: 0; font-size: 15px; color: rgba(255,255,255,0.65); }
+    .highlight p strong { color: var(--white); }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 24px 28px;
+      margin-top: 48px;
+    }
+    .contact-box p { margin: 0; }
+    .contact-box a { color: #93c5fd; text-decoration: none; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 24px; text-align: center;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-links a { font-size: 13px; color: var(--gray-400); text-decoration: none; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 13px; color: #444; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="https://sitebot.tech/">SiteBot</a>
+    <ul class="nav-links">
+      <li><a href="/features/">Features</a></li>
+      <li><a href="/demo/">Demo</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/" class="nav-cta">Join the Waitlist</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-label">Legal</div>
+    <h1 class="page-title">Privacy Policy</h1>
+    <p class="page-updated">Last updated: March 2026</p>
+
+    <div class="highlight">
+      <p><strong>The short version:</strong> We collect only what we need to run the waitlist and the platform. We do not sell your data. We do not share it with advertisers. We use it to contact you about SiteBot and to operate the service.</p>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+      <div class="toc-label">On this page</div>
+      <ul class="toc-list">
+        <li><a href="#who">1. Who we are</a></li>
+        <li><a href="#collect">2. What we collect</a></li>
+        <li><a href="#how">3. How we use your information</a></li>
+        <li><a href="#share">4. Who we share it with</a></li>
+        <li><a href="#customers">5. Information about your customers</a></li>
+        <li><a href="#cookies">6. Cookies and analytics</a></li>
+        <li><a href="#retention">7. How long we keep it</a></li>
+        <li><a href="#rights">8. Your rights</a></li>
+        <li><a href="#children">9. Children</a></li>
+        <li><a href="#changes">10. Changes to this policy</a></li>
+        <li><a href="#contact">11. Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- 1 -->
+    <div class="section" id="who">
+      <h2>1. Who we are</h2>
+      <p>SiteBot is a website and lead generation platform for cell phone repair and device buyback shops. It is operated by iMobile Repair Center. When this policy says "SiteBot," "we," "us," or "our," it means SiteBot and its operators.</p>
+      <p>Our contact email is <strong>info@sitebot.tech</strong>. Our website is <strong>sitebot.tech</strong>.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 2 -->
+    <div class="section" id="collect">
+      <h2>2. What we collect</h2>
+
+      <p><strong>Waitlist signups</strong></p>
+      <p>When you join the SiteBot waitlist we collect your name, shop name, and email address. We may also generate a referral code and record the timestamp of your signup. This information is stored in a Google Sheet managed by SiteBot.</p>
+
+      <p><strong>Active customers</strong></p>
+      <p>When you become a SiteBot customer we collect additional information needed to build and operate your shop website, including your shop name, address, phone number, services offered, and pricing data you provide via Google Sheets.</p>
+
+      <p><strong>Information collected automatically</strong></p>
+      <p>When you visit sitebot.tech we may collect standard web analytics data including your IP address, browser type, pages visited, and time spent on pages. This is used to understand how the site is being used and improve it.</p>
+
+      <p><strong>Communications</strong></p>
+      <p>If you email us or contact us directly we retain those communications to follow up and improve our service.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 3 -->
+    <div class="section" id="how">
+      <h2>3. How we use your information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Manage and operate the SiteBot waitlist</li>
+        <li>Contact waitlist members when early access spots open up</li>
+        <li>Build, configure, and maintain your shop website and lead system</li>
+        <li>Send you updates about SiteBot features, pricing, and announcements</li>
+        <li>Respond to your questions and support requests</li>
+        <li>Improve the platform based on how it is being used</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+      <p>We do not use your information for advertising. We do not build profiles for third-party ad targeting. We do not sell your data.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 4 -->
+    <div class="section" id="share">
+      <h2>4. Who we share it with</h2>
+      <p>We do not sell your personal information to anyone. We share information only with the third-party services needed to operate the platform:</p>
+      <ul>
+        <li><strong>Google Sheets and Google Apps Script</strong> — used to store waitlist signups and power the pricing backend for shop calculators</li>
+        <li><strong>EmailJS</strong> — used to send offer code emails and lead notifications on behalf of shop owners</li>
+        <li><strong>Vercel</strong> — used to host sitebot.tech and customer shop websites</li>
+        <li><strong>Twilio</strong> (when SMS features are active) — used to send automated SMS follow-up messages to leads who have opted in</li>
+      </ul>
+      <p>Each of these services has its own privacy policy governing how they handle data. We choose providers carefully and only share what is necessary for the service to function.</p>
+      <p>We may disclose your information if required by law, court order, or to protect the rights and safety of SiteBot, its operators, or others.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 5 -->
+    <div class="section" id="customers">
+      <h2>5. Information about your customers</h2>
+      <p>When someone visits your SiteBot-powered shop website and uses the device quote calculator, they may provide their email address and device details to lock a price. This information belongs to you as the shop owner. SiteBot processes it on your behalf to send offer code emails and lead notifications.</p>
+      <p>As a shop owner using SiteBot you are responsible for:</p>
+      <ul>
+        <li>Having a privacy policy on your own shop website that informs your customers how their data is used</li>
+        <li>Only using customer contact information for the purpose it was collected — following up on device offers and repair leads</li>
+        <li>Complying with applicable privacy laws in your jurisdiction regarding customer data</li>
+        <li>Obtaining proper consent before sending any SMS messages to your customers through SiteBot's SMS features</li>
+      </ul>
+      <p>SiteBot does not use your customers' information for its own marketing purposes.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 6 -->
+    <div class="section" id="cookies">
+      <h2>6. Cookies and analytics</h2>
+      <p>Sitebot.tech may use cookies or similar technologies to remember preferences and understand how visitors use the site. We do not use advertising cookies or share analytics data with ad networks.</p>
+      <p>Most browsers allow you to control cookies through their settings. Disabling cookies may affect how some parts of the site function but will not prevent you from accessing content or joining the waitlist.</p>
+      <p>We do not currently use Google Analytics or any third-party analytics platform that sells or shares your browsing data with advertisers.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 7 -->
+    <div class="section" id="retention">
+      <h2>7. How long we keep it</h2>
+      <p>Waitlist data is retained until you ask to be removed or until SiteBot ceases operations. We keep it because we may reach out about access as new spots become available.</p>
+      <p>Customer data is retained for the duration of your active subscription and for up to 12 months after cancellation for billing records and dispute resolution purposes.</p>
+      <p>You can ask us to delete your information at any time by emailing info@sitebot.tech. We will confirm deletion within 30 days except where we are required by law to retain certain records.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 8 -->
+    <div class="section" id="rights">
+      <h2>8. Your rights</h2>
+      <p>You have the right to:</p>
+      <ul>
+        <li><strong>Access</strong> the information we hold about you</li>
+        <li><strong>Correct</strong> any information that is inaccurate</li>
+        <li><strong>Delete</strong> your information from our systems</li>
+        <li><strong>Opt out</strong> of marketing emails at any time using the unsubscribe link in any email we send</li>
+        <li><strong>Withdraw consent</strong> for SMS communications by replying STOP to any message we send</li>
+      </ul>
+      <p>To exercise any of these rights email us at <strong>info@sitebot.tech</strong>. We will respond within 30 days.</p>
+      <p>If you are located in California you may have additional rights under the California Consumer Privacy Act (CCPA). If you are located in the European Union or United Kingdom you may have additional rights under the GDPR. Contact us if you have questions about your specific rights.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 9 -->
+    <div class="section" id="children">
+      <h2>9. Children</h2>
+      <p>SiteBot is a business platform intended for adults who own or operate cell phone repair and buyback businesses. We do not knowingly collect personal information from anyone under the age of 18. If you believe we have inadvertently collected information from a minor please contact us at info@sitebot.tech and we will delete it promptly.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 10 -->
+    <div class="section" id="changes">
+      <h2>10. Changes to this policy</h2>
+      <p>We may update this privacy policy as the platform evolves. When we do we will update the date at the top of this page. If changes are significant we will notify active customers by email before the changes take effect.</p>
+      <p>Continued use of SiteBot after changes take effect means you accept the updated policy.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 11 -->
+    <div class="section" id="contact">
+      <h2>11. Contact</h2>
+      <p>Questions, requests, or concerns about this privacy policy can be sent to:</p>
+    </div>
+
+    <div class="contact-box">
+      <p><strong style="color:rgba(255,255,255,0.85);">SiteBot</strong><br>
+      Email: <a href="mailto:info@sitebot.tech">info@sitebot.tech</a><br>
+      Website: <a href="https://sitebot.tech">sitebot.tech</a></p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/demo/">Demo</a>
+      <a href="/case-study/imobile/">Case Study</a>
+      <a href="/about/">About</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 SiteBot. Built by a real cell phone shop owner. info@sitebot.tech</p>
+  </footer>
+
+</body>
+</html>
