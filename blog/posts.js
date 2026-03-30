@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "How to Get More Google Reviews for Your Phone Repair Shop",
+    url: "/blog/phone-repair-shop-reviews/",
+    description: "Reviews are the biggest trust signal a repair shop has. Here is the timing, the ask, how to respond, and how iMobile built 400+ reviews at 4.9 stars.",
+    date: "March 2026",
+    category: "Marketing",
+    readTime: "8 min read"
+  },
+  {
     title: "How to Buy Phones for Cash — A Guide for Cell Phone Shop Owners",
     url: "/blog/how-to-buy-phones-for-cash/",
     description: "Device buyback is one of the most profitable parts of running a cell phone shop. Here is how to price phones, protect yourself from bad deals, capture leads online, and buy more devices consistently.",
