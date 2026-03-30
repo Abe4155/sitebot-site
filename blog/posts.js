@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "AI for Phone Repair Shops — What It Can Do for Your Business Right Now",
+    url: "/blog/ai-for-phone-repair-shops/",
+    description: "AI is not just for big companies. Here is exactly how cell phone shops are using AI to quote devices, capture leads, follow up automatically, and get found on Google without hiring anyone.",
+    date: "March 2026",
+    category: "Automation",
+    readTime: "8 min read"
+  },
+  {
     title: "Best Cell Phone Repair Shop Software in 2026 — Honest Comparison",
     url: "/blog/cell-phone-repair-shop-software/",
     description: "RepairDesk, Orderry, RepairShopr, and CellSmart compared honestly. What each does well, what it costs, and the one gap none of them fill that every shop actually needs.",
