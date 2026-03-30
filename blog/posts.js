@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "Phone Repair Shop Marketing — 7 Things That Actually Bring in Customers",
+    url: "/blog/phone-repair-shop-marketing/",
+    description: "Skip the generic advice. These are the marketing tactics that actually work for cell phone repair and buyback shops. What to spend time on, what to ignore, and why repair and buyback customers need different approaches.",
+    date: "March 2026",
+    category: "Marketing",
+    readTime: "9 min read"
+  },
+  {
     title: "Google Business Profile for Phone Repair Shops — The Complete Setup Guide",
     url: "/blog/google-business-profile-phone-repair/",
     description: "Your Google Business Profile is the most powerful free tool your repair shop has. Here is exactly how to set it up, what categories to pick, how to get reviews, and what most shops get wrong.",
