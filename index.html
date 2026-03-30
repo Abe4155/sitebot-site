@@ -278,6 +278,22 @@ footer a:hover{color:rgba(255,255,255,.4)}
   </footer>
 </div>
 <script>
+var API = 'https://script.google.com/macros/s/AKfycbwYxHykU8gEKdM7jF_KBvCBne3XefSMR5wBEwbJphF9qf-CVaKY4k29mu-y2SkhU3BPmQ/exec';
+
+function loadCount() {
+  fetch(API)
+    .then(function(r){ return r.json(); })
+    .then(function(j){
+      if(j.ok && j.count >= 0){
+        var count = j.count;
+        var pct = Math.min(Math.round((count/500)*100), 100);
+        document.getElementById('spot-count').textContent = count + ' of 500 spots claimed';
+        document.getElementById('bar-fill').style.width = pct + '%';
+      }
+    })
+    .catch(function(){});
+}
+
 function go(){
   var fields=[
     {id:'f-name',check:function(v){return v.length>0}},
@@ -292,22 +308,47 @@ function go(){
     else el.classList.remove('err');
   });
   if(!ok)return;
+
+  var name = document.getElementById('f-name').value.trim();
+  var shop = document.getElementById('f-shop').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var ref = 'SB-' + Math.floor(Math.random()*9000+1000);
+
   var btn=document.getElementById('cta-btn');
   btn.textContent='Reserving your spot...';
   btn.disabled=true;
-  setTimeout(function(){
+
+  fetch(API, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({name: name, shop: shop, email: email, ref: ref})
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(j){
     document.getElementById('form-wrap').style.display='none';
     var s=document.getElementById('success');
     s.style.display='block';
-    document.getElementById('ref-code').textContent='SB — '+Math.floor(Math.random()*9000+1000);
-    document.getElementById('bar-fill').style.width='28%';
-    document.getElementById('spot-count').textContent='138 of 500';
-  },1000);
+    document.getElementById('ref-code').textContent= ref;
+    if(j.ok && j.count){
+      var pct = Math.min(Math.round((j.count/500)*100), 100);
+      document.getElementById('bar-fill').style.width = pct + '%';
+      document.getElementById('spot-count').textContent = j.count + ' of 500 spots claimed';
+    }
+  })
+  .catch(function(){
+    document.getElementById('form-wrap').style.display='none';
+    var s=document.getElementById('success');
+    s.style.display='block';
+    document.getElementById('ref-code').textContent= ref;
+  });
 }
+
 document.querySelectorAll('input').forEach(function(el){
   el.addEventListener('input',function(){this.classList.remove('err');});
   el.addEventListener('keydown',function(e){if(e.key==='Enter')go();});
 });
+
+loadCount();
 </script>
 </body>
 </html>
