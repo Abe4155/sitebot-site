@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "Google Business Profile for Phone Repair Shops — The Complete Setup Guide",
+    url: "/blog/google-business-profile-phone-repair/",
+    description: "Your Google Business Profile is the most powerful free tool your repair shop has. Here is exactly how to set it up, what categories to pick, how to get reviews, and what most shops get wrong.",
+    date: "March 2026",
+    category: "SEO",
+    readTime: "10 min read"
+  },
+  {
     title: "How to Rank on Google for Phone Repair in Your City",
     url: "/blog/how-to-rank-on-google-phone-repair/",
     description: "A step-by-step guide to getting your cell phone repair shop to show up on Google Maps and organic search for repair and buyback keywords in your local area.",
