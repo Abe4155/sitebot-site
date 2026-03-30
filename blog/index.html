@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — SiteBot | Guides for Cell Phone Shop Owners</title>
+  <meta name="description" content="Guides, SEO tips, and marketing advice written specifically for cell phone repair and device buyback shop owners. Real advice from a real shop.">
+  <link rel="canonical" href="https://sitebot.tech/blog/">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* PAGE */
+    .page-wrap {
+      max-width: 860px; margin: 0 auto;
+      padding: 72px 24px 40px;
+    }
+
+    .page-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--gray-400); margin-bottom: 14px;
+    }
+
+    .page-title {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.08; margin-bottom: 12px;
+    }
+
+    .page-sub {
+      font-size: 17px; color: rgba(255,255,255,0.5);
+      margin-bottom: 56px; max-width: 520px; line-height: 1.6;
+    }
+
+    /* FILTER TABS */
+    .filter-row {
+      display: flex; gap: 8px; flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .filter-btn {
+      padding: 6px 16px; border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: transparent; color: rgba(255,255,255,0.5);
+      font-size: 13px; cursor: pointer;
+      font-family: var(--font);
+      transition: all .15s;
+    }
+    .filter-btn:hover { border-color: rgba(255,255,255,0.3); color: var(--white); }
+    .filter-btn.active {
+      background: var(--white); color: var(--black);
+      border-color: var(--white); font-weight: 500;
+    }
+
+    /* POSTS GRID */
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+    }
+
+    .post-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px; padding: 24px;
+      text-decoration: none; display: block;
+      transition: border-color .2s, background .15s;
+    }
+    .post-card:hover {
+      border-color: rgba(255,255,255,0.2);
+      background: #111;
+    }
+
+    .post-card-meta {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 12px;
+    }
+    .post-category {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      padding: 3px 9px; border-radius: 20px;
+    }
+    .cat-seo { background: rgba(147,197,253,.1); color: #93c5fd; border: 1px solid rgba(147,197,253,.2); }
+    .cat-website { background: rgba(167,243,208,.08); color: #6ee7b7; border: 1px solid rgba(167,243,208,.18); }
+    .cat-marketing { background: rgba(253,230,138,.08); color: #fcd34d; border: 1px solid rgba(253,230,138,.18); }
+    .cat-buyback { background: rgba(196,181,253,.08); color: #c4b5fd; border: 1px solid rgba(196,181,253,.18); }
+    .cat-automation { background: rgba(251,146,60,.08); color: #fb923c; border: 1px solid rgba(251,146,60,.18); }
+    .cat-default { background: rgba(255,255,255,.05); color: rgba(255,255,255,.5); border: 1px solid rgba(255,255,255,.1); }
+
+    .post-read-time {
+      font-size: 12px; color: rgba(255,255,255,0.3);
+    }
+
+    .post-card-title {
+      font-size: 17px; font-weight: 700;
+      color: var(--white); line-height: 1.3;
+      margin-bottom: 10px; letter-spacing: -0.01em;
+    }
+
+    .post-card-desc {
+      font-size: 14px; color: rgba(255,255,255,0.45);
+      line-height: 1.65; margin-bottom: 16px;
+    }
+
+    .post-card-footer {
+      display: flex; align-items: center;
+      justify-content: space-between;
+    }
+    .post-date { font-size: 12px; color: rgba(255,255,255,0.25); }
+    .post-arrow { font-size: 16px; color: rgba(255,255,255,0.3); transition: transform .2s, color .2s; }
+    .post-card:hover .post-arrow { transform: translateX(4px); color: var(--white); }
+
+    /* EMPTY STATE */
+    .empty-state {
+      grid-column: 1 / -1;
+      padding: 48px 24px; text-align: center;
+      color: rgba(255,255,255,0.3); font-size: 15px;
+    }
+
+    /* CTA */
+    .blog-cta {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 36px 32px;
+      margin-top: 56px; text-align: center;
+    }
+    .blog-cta h3 {
+      font-size: 22px; font-weight: 700;
+      color: var(--white); margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+    .blog-cta p {
+      font-size: 15px; color: rgba(255,255,255,0.45);
+      margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;
+    }
+    .btn-white {
+      display: inline-block;
+      background: var(--white); color: var(--black);
+      font-size: 15px; font-weight: 600;
+      padding: 12px 28px; border-radius: 30px;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn-white:hover { opacity: 0.88; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <div class="page-wrap">
+    <div class="page-label">Blog</div>
+    <h1 class="page-title">Guides for shop owners</h1>
+    <p class="page-sub">Real advice on getting more customers, ranking on Google, and building the online side of your cell phone repair or buyback business.</p>
+
+    <!-- FILTER TABS -->
+    <div class="filter-row" id="filter-row">
+      <button class="filter-btn active" onclick="filterPosts('all', this)">All</button>
+    </div>
+
+    <!-- POSTS GRID -->
+    <div class="posts-grid" id="posts-grid">
+      <div class="empty-state">Loading posts...</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="blog-cta">
+      <h3>Ready to get your shop found online?</h3>
+      <p>SiteBot builds the website, the SEO pages, and the lead capture system for cell phone shops. No setup fee for early access shops.</p>
+      <a href="/" class="btn-white">Join the Waitlist</a>
+    </div>
+  </div>
+
+  <div id="site-footer"></div>
+
+  <script src="/blog/posts.js"></script>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+  <script>
+    var activeFilter = 'all';
+
+    function getCategoryClass(cat) {
+      var map = {
+        'SEO': 'cat-seo',
+        'Website': 'cat-website',
+        'Marketing': 'cat-marketing',
+        'Buyback': 'cat-buyback',
+        'Automation': 'cat-automation'
+      };
+      return map[cat] || 'cat-default';
+    }
+
+    function buildFilterTabs() {
+      var categories = [];
+      SITEBOT_POSTS.forEach(function(p) {
+        if (p.category && categories.indexOf(p.category) === -1) {
+          categories.push(p.category);
+        }
+      });
+      var row = document.getElementById('filter-row');
+      categories.forEach(function(cat) {
+        var btn = document.createElement('button');
+        btn.className = 'filter-btn';
+        btn.textContent = cat;
+        btn.onclick = function() { filterPosts(cat, this); };
+        row.appendChild(btn);
+      });
+    }
+
+    function renderPosts(posts) {
+      var grid = document.getElementById('posts-grid');
+      if (!posts.length) {
+        grid.innerHTML = '<div class="empty-state">No posts in this category yet.</div>';
+        return;
+      }
+      grid.innerHTML = posts.map(function(post) {
+        return '<a href="' + post.url + '" class="post-card">' +
+          '<div class="post-card-meta">' +
+            '<span class="post-category ' + getCategoryClass(post.category) + '">' + (post.category || 'Article') + '</span>' +
+            '<span class="post-read-time">' + (post.readTime || '') + '</span>' +
+          '</div>' +
+          '<div class="post-card-title">' + post.title + '</div>' +
+          '<div class="post-card-desc">' + post.description + '</div>' +
+          '<div class="post-card-footer">' +
+            '<span class="post-date">' + (post.date || '') + '</span>' +
+            '<span class="post-arrow">&#8594;</span>' +
+          '</div>' +
+        '</a>';
+      }).join('');
+    }
+
+    function filterPosts(category, btn) {
+      activeFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(function(b) {
+        b.classList.remove('active');
+      });
+      if (btn) btn.classList.add('active');
+      var filtered = category === 'all'
+        ? SITEBOT_POSTS
+        : SITEBOT_POSTS.filter(function(p) { return p.category === category; });
+      renderPosts(filtered);
+    }
+
+    // Init
+    buildFilterTabs();
+    renderPosts(SITEBOT_POSTS);
+  </script>
+
+</body>
+</html>
