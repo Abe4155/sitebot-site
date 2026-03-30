@@ -9,7 +9,7 @@
       <li><a href="/features/">Features</a></li>
       <li><a href="/demo/">Demo</a></li>
       <li><a href="/case-study/imobile/">Case Study</a></li>
-      <li><a href="/blog/how-to-get-more-customers-phone-repair/">Blog</a></li>
+      <li><a href="/blog/">Blog</a></li>
       <li><a href="/about/">About</a></li>
       <li><a href="/" class="nav-cta">Join the Waitlist</a></li>
     </ul>
@@ -19,7 +19,7 @@
     <a href="/features/">Features</a>
     <a href="/demo/">Demo</a>
     <a href="/case-study/imobile/">Case Study</a>
-    <a href="/blog/how-to-get-more-customers-phone-repair/">Blog</a>
+    <a href="/blog/">Blog</a>
     <a href="/about/">About</a>
     <a href="/">Join the Waitlist</a>
   </div>`;
