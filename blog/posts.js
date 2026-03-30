@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "Best Cell Phone Repair Shop Software in 2026 — Honest Comparison",
+    url: "/blog/cell-phone-repair-shop-software/",
+    description: "RepairDesk, Orderry, RepairShopr, and CellSmart compared honestly. What each does well, what it costs, and the one gap none of them fill that every shop actually needs.",
+    date: "March 2026",
+    category: "Software",
+    readTime: "10 min read"
+  },
+  {
     title: "Phone Repair Shop Marketing — 7 Things That Actually Bring in Customers",
     url: "/blog/phone-repair-shop-marketing/",
     description: "Skip the generic advice. These are the marketing tactics that actually work for cell phone repair and buyback shops. What to spend time on, what to ignore, and why repair and buyback customers need different approaches.",
