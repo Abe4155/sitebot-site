@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study: How iMobile Repair Center Detroit Ranks on Google and Buys More Phones</title>
+  <meta name="description" content="iMobile Repair Center in Detroit is the real shop SiteBot was built on. See the live rankings, the device quote calculator, the lead system, and every page that is working right now.">
+  <link rel="canonical" href="https://sitebot.tech/case-study/imobile/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How iMobile Repair Center Detroit Ranks on Google and Buys More Phones with SiteBot",
+    "description": "iMobile Repair Center in Detroit is the real shop SiteBot was built on first. This case study shows the rankings, the device quote calculator, the lead capture system, and every page live today.",
+    "author": { "@type": "Organization", "name": "SiteBot" },
+    "publisher": { "@type": "Organization", "name": "SiteBot", "url": "https://sitebot.tech" },
+    "mainEntityOfPage": "https://sitebot.tech/case-study/imobile/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray-400: #86868b;
+      --gray-600: #424245;
+      --gray-800: #1d1d1f;
+      --accent: #2563eb;
+      --green: #16a34a;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 24px; height: 52px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-size: 17px; font-weight: 600; color: var(--white); text-decoration: none; letter-spacing: -0.3px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--white); color: var(--black) !important; padding: 7px 16px; border-radius: 20px; font-weight: 500; font-size: 13px !important; }
+    @media (max-width: 600px) { .nav-links { gap: 16px; } .nav-links li:not(:last-child) { display: none; } }
+
+    /* HERO */
+    .hero {
+      max-width: 820px; margin: 0 auto;
+      padding: 80px 24px 60px;
+    }
+    .breadcrumb {
+      font-size: 13px; color: var(--gray-400); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .breadcrumb a { color: var(--gray-400); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--white); }
+    .breadcrumb-sep { opacity: 0.4; }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #86efac;
+      background: rgba(22,163,74,0.1);
+      border: 1px solid rgba(22,163,74,0.2);
+      padding: 4px 12px; border-radius: 20px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5.5vw, 56px);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.08; margin-bottom: 20px;
+    }
+    .hero-sub {
+      font-size: 18px; color: rgba(255,255,255,0.55);
+      line-height: 1.7; margin-bottom: 36px;
+      max-width: 640px;
+    }
+
+    /* RESULT NUMBERS BAR */
+    .results-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px; overflow: hidden;
+      margin-bottom: 60px;
+    }
+    .result-block { background: #000; padding: 24px 20px; text-align: center; }
+    .result-val { font-size: 32px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 5px; }
+    .result-label { font-size: 12px; color: rgba(255,255,255,0.4); line-height: 1.4; }
+
+    /* BODY CONTENT */
+    .body-wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+    .section-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin: 56px 0;
+    }
+
+    h2 {
+      font-size: clamp(24px, 3.5vw, 34px);
+      font-weight: 700; letter-spacing: -0.02em;
+      line-height: 1.15; margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    h3 {
+      font-size: 18px; font-weight: 600;
+      color: var(--white); margin-bottom: 10px;
+      margin-top: 32px;
+    }
+
+    p {
+      font-size: 17px; color: rgba(255,255,255,0.6);
+      line-height: 1.75; margin-bottom: 18px;
+    }
+
+    p strong { color: var(--white); font-weight: 600; }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      border-left: 3px solid rgba(255,255,255,0.15);
+      padding: 4px 0 4px 24px;
+      margin: 32px 0;
+    }
+    .pull-quote p {
+      font-size: 20px; font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5; font-style: italic;
+      margin: 0;
+    }
+
+    /* SYSTEM CARD */
+    .system-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin: 24px 0;
+    }
+    .system-card-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: var(--gray-400); margin-bottom: 6px;
+    }
+    .system-card h3 { font-size: 20px; margin-top: 0; margin-bottom: 10px; }
+    .system-card p { font-size: 15px; margin-bottom: 12px; }
+    .system-card p:last-child { margin-bottom: 0; }
+
+    /* PROOF LINK */
+    .proof-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px; padding: 10px 16px;
+      font-size: 13px; color: #93c5fd;
+      text-decoration: none; margin-top: 8px;
+      transition: border-color .2s;
+    }
+    .proof-link:hover { border-color: rgba(147,197,253,0.35); }
+    .proof-link-arrow { transition: transform .2s; }
+    .proof-link:hover .proof-link-arrow { transform: translateX(3px); }
+
+    /* LIVE DOT */
+    .live-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      border-radius: 50%; background: #4ade80;
+      animation: blink 1.5s infinite;
+      margin-right: 4px;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    /* PAGE LIST */
+    .page-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px; margin: 20px 0;
+    }
+    @media (max-width: 560px) { .page-list { grid-template-columns: 1fr; } }
+    .page-item {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px; padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+      transition: border-color .2s;
+    }
+    .page-item:hover { border-color: rgba(255,255,255,0.2); }
+    .page-item-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .page-item-title { font-size: 13px; font-weight: 600; color: #93c5fd; margin-bottom: 3px; }
+    .page-item-url { font-size: 11px; color: rgba(255,255,255,0.3); font-family: monospace; }
+    .rank-badge {
+      float: right;
+      font-size: 10px; font-weight: 700;
+      padding: 2px 8px; border-radius: 20px;
+      margin-left: 6px;
+    }
+    .rank-badge.g { background: rgba(74,222,128,.1); color: #4ade80; border: 1px solid rgba(74,222,128,.2); }
+    .rank-badge.y { background: rgba(251,191,36,.08); color: #fbbf24; border: 1px solid rgba(251,191,36,.15); }
+
+    /* BEFORE/AFTER */
+    .before-after {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin: 24px 0;
+    }
+    @media (max-width: 560px) { .before-after { grid-template-columns: 1fr; } }
+    .ba-card {
+      border-radius: 12px; padding: 20px;
+    }
+    .ba-before { background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.15); }
+    .ba-after { background: rgba(74,222,128,0.07); border: 1px solid rgba(74,222,128,0.15); }
+    .ba-label {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .08em;
+      margin-bottom: 12px;
+    }
+    .ba-before .ba-label { color: #f87171; }
+    .ba-after .ba-label { color: #4ade80; }
+    .ba-item {
+      font-size: 14px; color: rgba(255,255,255,0.6);
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.5;
+    }
+    .ba-item:last-child { border-bottom: none; }
+
+    /* HIGHLIGHT BOX */
+    .highlight {
+      background: rgba(37,99,235,0.08);
+      border: 1px solid rgba(37,99,235,0.2);
+      border-radius: 14px; padding: 24px 28px;
+      margin: 28px 0;
+    }
+    .highlight p { font-size: 15px; margin-bottom: 0; color: rgba(255,255,255,0.7); }
+    .highlight p strong { color: var(--white); }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: clamp(26px, 4.5vw, 44px);
+      font-weight: 700; letter-spacing: -0.02em;
+      color: var(--black); margin-bottom: 14px;
+    }
+    .cta-section p {
+      font-size: 17px; color: #424245;
+      max-width: 480px; margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .btn-dark {
+      display: inline-block;
+      background: var(--black); color: var(--white);
+      font-size: 16px; font-weight: 600;
+      padding: 15px 34px; border-radius: 30px;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn-dark:hover { opacity: 0.85; }
+    .cta-note { margin-top: 14px; font-size: 13px; color: #86868b; }
+
+    /* RELATED */
+    .related {
+      max-width: 820px; margin: 0 auto;
+      padding: 60px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .related-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: var(--gray-400); margin-bottom: 16px;
+    }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 560px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 12px; padding: 18px 20px;
+      text-decoration: none;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      transition: border-color .2s;
+    }
+    .rel-card:hover { border-color: rgba(255,255,255,0.2); }
+    .rel-card-label { font-size: 11px; color: var(--gray-400); margin-bottom: 4px; }
+    .rel-card-title { font-size: 14px; font-weight: 600; color: var(--white); }
+    .rel-arrow { color: var(--gray-400); font-size: 18px; flex-shrink: 0; margin-left: 12px; }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 24px; text-align: center;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-links a { font-size: 13px; color: var(--gray-400); text-decoration: none; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 13px; color: #444; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="https://sitebot.tech/">SiteBot</a>
+    <ul class="nav-links">
+      <li><a href="/features/">Features</a></li>
+      <li><a href="/demo/">Demo</a></li>
+      <li><a href="/blog/how-to-get-more-customers-phone-repair/">Blog</a></li>
+      <li><a href="/" class="nav-cta">Join the Waitlist</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="breadcrumb">
+      <a href="/">SiteBot</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Case Study</span>
+      <span class="breadcrumb-sep">/</span>
+      <span>iMobile Repair Center</span>
+    </div>
+    <span class="hero-tag">Case Study</span>
+    <h1>How iMobile Repair Center went from invisible to ranking on Google across Detroit</h1>
+    <p class="hero-sub">iMobile Repair Center on 8 Mile in Detroit is the real shop SiteBot was built on first. Every feature was tested here before it became a product. This is what was built, how it works, and what is live today.</p>
+
+    <div class="results-bar">
+      <div class="result-block">
+        <div class="result-val">4.9★</div>
+        <div class="result-label">Google rating</div>
+      </div>
+      <div class="result-block">
+        <div class="result-val">400+</div>
+        <div class="result-label">Google reviews</div>
+      </div>
+      <div class="result-block">
+        <div class="result-val">30+</div>
+        <div class="result-label">SEO pages ranking</div>
+      </div>
+      <div class="result-block">
+        <div class="result-val">2</div>
+        <div class="result-label">Calculators live</div>
+      </div>
+      <div class="result-block">
+        <div class="result-val">72hr</div>
+        <div class="result-label">Offer lock period</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="body-wrap">
+
+    <h2>The shop</h2>
+    <p>iMobile Repair Center has been serving Detroit since before most people knew what a buyback shop was. The store sits on Dequindre Street near 8 Mile, one of the most trafficked corridors in the city. The shop does iPhone repair, iPad repair, computer repair, and buys devices for cash. Cash, CashApp, and Zelle. Most repairs done the same day.</p>
+    <p>The store had the reviews. It had the reputation. It had customers who drove across town to sell their phones and get their screens fixed. What it did not have was a website that showed any of that to someone sitting at home searching Google at 10pm wondering where to sell their old iPhone.</p>
+
+    <hr class="section-divider">
+
+    <h2>The problem every shop has</h2>
+
+    <div class="pull-quote">
+      <p>A customer cracks their screen, searches "iPhone repair near me," and clicks the first result they see. If that is not your shop, it does not matter how good you are. They are already gone.</p>
+    </div>
+
+    <p>The same thing happens on the buyback side. Someone wants to sell their iPhone 14. They search "sell iPhone Detroit" or "how much is my iPhone worth." If your shop does not show up with a page that answers that question and gives them an instant number, they go to a kiosk or an online buyer and you never see that phone.</p>
+
+    <p>Most shops do not have the time to build a website, write SEO content, wire up a pricing calculator, and set up lead capture. They are too busy fixing screens and buying phones. That is exactly the problem SiteBot was built to solve.</p>
+
+    <div class="before-after">
+      <div class="ba-card ba-before">
+        <div class="ba-label">Before</div>
+        <div class="ba-item">No pages ranking on Google for repair keywords</div>
+        <div class="ba-item">No pages ranking for sell iPhone keywords</div>
+        <div class="ba-item">No device quote calculator</div>
+        <div class="ba-item">No lead capture system</div>
+        <div class="ba-item">Customers went to competitors after searching Google</div>
+      </div>
+      <div class="ba-card ba-after">
+        <div class="ba-label">After</div>
+        <div class="ba-item">30+ pages ranking for repair and buyback searches</div>
+        <div class="ba-item">Live calculator for iPhones and iPads</div>
+        <div class="ba-item">Offer code system capturing leads automatically</div>
+        <div class="ba-item">Every lead emailed to the shop in real time</div>
+        <div class="ba-item">Google presence locked in with 400+ reviews</div>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>What was built</h2>
+    <p>The build started with the core pages every shop needs and grew from there. Here is each system that is live today.</p>
+
+    <div class="system-card">
+      <div class="system-card-label">System 1</div>
+      <h3>The website</h3>
+      <p>A fast, clean static site built specifically for a phone repair and buyback shop. Shared header and footer across every page. Shared CSS so every new page inherits the same look. No WordPress, no page builder, no monthly plugin fees. The site loads fast and stays fast.</p>
+      <p>Every page is structured around what customers actually search. Repair pages for every service. Sell pages for every device. Article pages for every question a customer asks before deciding which shop to trust.</p>
+      <a href="https://imobilerbb.com" target="_blank" rel="noopener" class="proof-link">
+        <span class="live-dot"></span> Visit imobilerbb.com <span class="proof-link-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="system-card">
+      <div class="system-card-label">System 2</div>
+      <h3>The iPhone and iPad quote calculators</h3>
+      <p>A customer visits the sell page, picks their model and condition, and gets an instant cash offer. No phone call. No form to submit. Just a number, right there on the screen. The offer comes from a private Google Sheet the shop owner controls. Change the prices any time without touching the website.</p>
+      <p>After seeing their offer, the customer can lock the price for 72 hours by entering their email. They get an offer code sent instantly. The shop owner gets the lead automatically. The code is what brings the customer in the door instead of going elsewhere.</p>
+      <a href="https://imobilerbb.com/sell/iphone/calculator.html" target="_blank" rel="noopener" class="proof-link">
+        <span class="live-dot"></span> Try the live iPhone calculator <span class="proof-link-arrow">→</span>
+      </a>
+      <a href="https://imobilerbb.com/sell/ipad/" target="_blank" rel="noopener" class="proof-link" style="margin-left:10px;">
+        <span class="live-dot"></span> Try the live iPad calculator <span class="proof-link-arrow">→</span>
+      </a>
+    </div>
+
+    <div class="system-card">
+      <div class="system-card-label">System 3</div>
+      <h3>The SEO page library</h3>
+      <p>Over 30 pages built to rank for searches real customers make every day. Repair pages, buyback pages, article pages covering every device issue, cost question, and comparison a customer searches before choosing a shop. Each one written with FAQ schema and structured data so Google can pull answers directly from the page.</p>
+      <p>This is the part most shops never build. It takes time and expertise. SiteBot builds the whole library as part of setup so the shop starts ranking from day one.</p>
+    </div>
+
+    <div class="system-card">
+      <div class="system-card-label">System 4</div>
+      <h3>Google Business Profile optimization</h3>
+      <p>4.9 stars and over 400 reviews. The profile is the anchor that makes every other page pull more weight. When someone searches "iPhone repair Detroit" and sees a map result with a 4.9-star shop a few miles away, that review count is the thing that makes them click.</p>
+      <a href="https://maps.app.goo.gl/7yRVZSxU3cuhnYR3A" target="_blank" rel="noopener" class="proof-link">
+        <span class="live-dot"></span> View iMobile on Google Maps <span class="proof-link-arrow">→</span>
+      </a>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>The pages that are live and ranking now</h2>
+    <p>These are real pages on imobilerbb.com. You can visit every one of them today.</p>
+
+    <div class="page-list">
+      <a href="https://imobilerbb.com/sell/iphone/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge g">Ranking</span>
+        <div class="page-item-label">Sell page</div>
+        <div class="page-item-title">Sell Your iPhone for Cash</div>
+        <div class="page-item-url">imobilerbb.com/sell/iphone/</div>
+      </a>
+      <a href="https://imobilerbb.com/repair/iphone/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge g">Ranking</span>
+        <div class="page-item-label">Repair page</div>
+        <div class="page-item-title">iPhone Repair Detroit</div>
+        <div class="page-item-url">imobilerbb.com/repair/iphone/</div>
+      </a>
+      <a href="https://imobilerbb.com/sell/ipad/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge g">Ranking</span>
+        <div class="page-item-label">Sell page</div>
+        <div class="page-item-title">Sell Your iPad for Cash</div>
+        <div class="page-item-url">imobilerbb.com/sell/ipad/</div>
+      </a>
+      <a href="https://imobilerbb.com/repair/iphone/battery/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge y">Ranking</span>
+        <div class="page-item-label">Article</div>
+        <div class="page-item-title">iPhone Battery Replacement</div>
+        <div class="page-item-url">imobilerbb.com/repair/iphone/battery/</div>
+      </a>
+      <a href="https://imobilerbb.com/repair/iphone/screens/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge y">Ranking</span>
+        <div class="page-item-label">Article</div>
+        <div class="page-item-title">iPhone Screen Repair Guide</div>
+        <div class="page-item-url">imobilerbb.com/repair/iphone/screens/</div>
+      </a>
+      <a href="https://imobilerbb.com/sell/macbook/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge y">Ranking</span>
+        <div class="page-item-label">Sell page</div>
+        <div class="page-item-title">Sell Your MacBook for Cash</div>
+        <div class="page-item-url">imobilerbb.com/sell/macbook/</div>
+      </a>
+      <a href="https://imobilerbb.com/repair/iphone/charging-port/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge y">Ranking</span>
+        <div class="page-item-label">Article</div>
+        <div class="page-item-title">iPhone Charging Port Repair</div>
+        <div class="page-item-url">imobilerbb.com/repair/iphone/charging-port/</div>
+      </a>
+      <a href="https://imobilerbb.com/repair/ipad/" target="_blank" rel="noopener" class="page-item">
+        <span class="rank-badge y">Ranking</span>
+        <div class="page-item-label">Repair page</div>
+        <div class="page-item-title">iPad Repair Detroit</div>
+        <div class="page-item-url">imobilerbb.com/repair/ipad/</div>
+      </a>
+    </div>
+
+    <hr class="section-divider">
+
+    <h2>Why this is the proof that matters</h2>
+
+    <p>A lot of software companies build a demo that shows you what things could look like. SiteBot built a real shop first. iMobile is not a mock-up. It is not a sandbox. It is a live business in Detroit with real customers, real reviews, and real pages pulling in traffic every day.</p>
+
+    <p>When a shop owner joins SiteBot, <strong>this is what they get</strong>. The same system. Configured for their location, their devices, their prices. The calculator connected to their own Google Sheet. The leads going to their own inbox. The pages targeting their own city.</p>
+
+    <div class="highlight">
+      <p>iMobile is at 20503 Dequindre St, Detroit MI 48234. The phone number is (313) 900-1032. You can call the shop, visit the site, use the calculator, and see 400+ real Google reviews. <strong>This is not a case study about what is possible. It is a case study about what is already working.</strong></p>
+    </div>
+
+    <p>The goal of SiteBot has always been to take what works at iMobile and make it available to every phone shop that needs it. Most shops are just as good as iMobile. They just do not have the system behind them yet.</p>
+
+    <hr class="section-divider">
+
+    <h2>What a shop owner gets when they join SiteBot</h2>
+    <p>Everything you saw in this case study gets built for your shop. Your location, your devices, your prices. Here is what is included from day one.</p>
+
+    <div class="system-card">
+      <p><strong>A full website</strong> with repair pages, sell pages, and an article library targeting the searches your customers make. Fast, clean, and built to rank from the start.</p>
+      <p><strong>A device quote calculator</strong> for iPhones and iPads connected to your own Google Sheet. Update prices any time without touching the website.</p>
+      <p><strong>An offer code system</strong> that captures the lead the moment a customer locks a price. Their contact info goes straight to your inbox.</p>
+      <p><strong>SEO structure</strong> on every page with FAQ schema and LocalBusiness markup so Google understands your shop and surfaces your pages in local searches.</p>
+      <p><strong>Google Business Profile guidance</strong> so your map listing works as hard as your website.</p>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>Ready to get this for your shop?</h2>
+    <p>Join the waitlist and be one of the first shops to launch with SiteBot. No setup fee for early access shops.</p>
+    <a href="/" class="btn-dark">Join the Waitlist</a>
+    <p class="cta-note">No credit card required. Early access shops get priority onboarding and direct support.</p>
+  </section>
+
+  <!-- RELATED -->
+  <div class="related">
+    <div class="related-label">Keep reading</div>
+    <div class="related-grid">
+      <a href="/features/" class="rel-card">
+        <div>
+          <div class="rel-card-label">See the full system</div>
+          <div class="rel-card-title">SiteBot Features</div>
+        </div>
+        <span class="rel-arrow">→</span>
+      </a>
+      <a href="/demo/" class="rel-card">
+        <div>
+          <div class="rel-card-label">Try it yourself</div>
+          <div class="rel-card-title">Live Demo</div>
+        </div>
+        <span class="rel-arrow">→</span>
+      </a>
+      <a href="/blog/how-to-get-more-customers-phone-repair/" class="rel-card">
+        <div>
+          <div class="rel-card-label">From the blog</div>
+          <div class="rel-card-title">How to get more customers for your repair shop</div>
+        </div>
+        <span class="rel-arrow">→</span>
+      </a>
+      <a href="/blog/phone-repair-lead-capture/" class="rel-card">
+        <div>
+          <div class="rel-card-label">From the blog</div>
+          <div class="rel-card-title">How to capture leads online for your repair shop</div>
+        </div>
+        <span class="rel-arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/demo/">Demo</a>
+      <a href="/blog/how-to-get-more-customers-phone-repair/">Blog</a>
+      <a href="/case-study/imobile/">Case Study</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 SiteBot. Built by a real cell phone shop owner. info@sitebot.tech</p>
+  </footer>
+
+</body>
+</html>
