@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>See SiteBot Live — Watch the System Work on a Real Detroit Shop</title>
+  <meta name="description" content="Don't book a demo call. See SiteBot working right now on iMobile Repair Center in Detroit. Live device quote calculator, offer code system, and SEO pages you can visit today.">
+  <link rel="canonical" href="https://sitebot.tech/demo/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I see SiteBot working before I sign up?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. iMobile Repair Center in Detroit runs the full SiteBot system right now. You can visit imobilerbb.com, use the device quote calculator, and see the live SEO pages today without signing up for anything."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the device quote calculator work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A customer selects their device model and condition. The calculator shows an instant cash offer pulled from a private Google Sheet the shop owner controls. The customer can lock the price for 72 hours by entering their email. The shop owner receives the lead automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after a customer locks their offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The customer receives a unique offer code by email, valid for 72 hours. The code gives them a reason to come into the store. The shop owner gets the customer's contact information and device details before the customer even walks in."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray-100: #f5f5f7;
+      --gray-400: #86868b;
+      --gray-600: #424245;
+      --gray-800: #1d1d1f;
+      --accent: #2563eb;
+      --green: #16a34a;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 24px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo { font-size: 17px; font-weight: 600; color: var(--white); text-decoration: none; letter-spacing: -0.3px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--white); color: var(--black) !important; padding: 7px 16px; border-radius: 20px; font-weight: 500; font-size: 13px !important; }
+    @media (max-width: 600px) { .nav-links { gap: 16px; } .nav-links li:not(:last-child) { display: none; } }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 90px 24px 60px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      color: #86efac;
+      background: rgba(22,163,74,0.12);
+      border: 1px solid rgba(22,163,74,0.25);
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 60px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+    .hero h1 em { font-style: normal; color: rgba(255,255,255,0.4); }
+    .hero-sub {
+      font-size: clamp(16px, 2.2vw, 19px);
+      color: rgba(255,255,255,0.55);
+      max-width: 520px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .live-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: #93c5fd;
+      text-decoration: none;
+      border: 1px solid rgba(147,197,253,0.2);
+      padding: 8px 18px;
+      border-radius: 20px;
+      transition: border-color .2s;
+    }
+    .live-link:hover { border-color: rgba(147,197,253,0.4); }
+    .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; animation: blink 1.5s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+    /* SECTION LABEL */
+    .section-wrap { max-width: 1060px; margin: 0 auto; padding: 80px 24px; }
+    .section-wrap + .section-wrap { border-top: 1px solid rgba(255,255,255,0.06); }
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--gray-400);
+      margin-bottom: 8px;
+    }
+    .section-title {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+    .section-sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.5);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    /* TWO COL */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .two-col.flip { direction: rtl; }
+    .two-col.flip > * { direction: ltr; }
+    @media (max-width: 720px) { .two-col, .two-col.flip { grid-template-columns: 1fr; gap: 32px; direction: ltr; } }
+
+    /* STEP FLOW */
+    .steps { display: flex; flex-direction: column; gap: 0; }
+    .step {
+      display: flex;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      cursor: pointer;
+      transition: opacity .2s;
+    }
+    .step:last-child { border-bottom: none; }
+    .step:hover { opacity: 0.8; }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      flex-shrink: 0;
+      margin-top: 2px;
+      transition: background .2s, border-color .2s, color .2s;
+    }
+    .step.active .step-num { background: var(--white); border-color: var(--white); color: var(--black); }
+    .step-text h4 { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .step-text p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+    /* CALCULATOR DEMO */
+    .demo-screen {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      overflow: hidden;
+      min-height: 380px;
+    }
+    .demo-topbar {
+      background: #151515;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .d { width: 9px; height: 9px; border-radius: 50%; }
+    .demo-inner { padding: 28px; }
+
+    /* Screen A: model select */
+    .model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .model-btn {
+      background: #1a1a1a;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 14px 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color .2s, background .2s;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+    }
+    .model-btn:hover, .model-btn.sel { border-color: var(--white); background: rgba(255,255,255,0.05); color: var(--white); }
+
+    /* Screen B: offer */
+    .offer-price-block {
+      background: #111;
+      border-radius: 14px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255,255,255,0.07);
+    }
+    .offer-eyebrow { font-size: 12px; color: var(--gray-400); margin-bottom: 6px; }
+    .offer-amount { font-size: 56px; font-weight: 700; line-height: 1; color: var(--white); }
+    .offer-sup { font-size: 28px; vertical-align: super; }
+    .offer-sub { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 6px; }
+    .lock-btn {
+      width: 100%;
+      background: var(--white);
+      color: var(--black);
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: opacity .15s;
+    }
+    .lock-btn:hover { opacity: 0.88; }
+
+    /* Screen C: code */
+    .code-wrap { text-align: center; padding: 8px 0; }
+    .code-icon { font-size: 40px; margin-bottom: 12px; }
+    .code-label { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 10px; }
+    .code-box {
+      background: #1a1a1a;
+      border: 1px dashed rgba(255,255,255,0.18);
+      border-radius: 12px;
+      padding: 18px;
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      color: var(--white);
+      margin: 0 auto 12px;
+    }
+    .code-expiry { font-size: 12px; color: var(--gray-400); margin-bottom: 20px; }
+    .code-row {
+      background: #111;
+      border-radius: 8px;
+      padding: 11px 14px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 13px;
+    }
+    .code-row-k { color: rgba(255,255,255,0.45); }
+    .code-row-v { font-weight: 600; color: var(--white); }
+    .code-row-v.green { color: #4ade80; }
+
+    /* SCREEN TOGGLE */
+    .screen { display: none; }
+    .screen.active { display: block; }
+
+    /* SEO DEMO */
+    .seo-cards { display: flex; flex-direction: column; gap: 12px; }
+    .seo-c {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 16px 18px;
+      text-decoration: none;
+      display: block;
+      transition: border-color .2s;
+    }
+    .seo-c:hover { border-color: rgba(255,255,255,0.2); }
+    .seo-source { font-size: 12px; color: #4ade80; margin-bottom: 3px; }
+    .seo-title { font-size: 15px; font-weight: 600; color: #93c5fd; margin-bottom: 3px; }
+    .seo-url { font-size: 12px; color: var(--gray-400); margin-bottom: 6px; font-family: monospace; }
+    .seo-desc { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.5; }
+    .rank-tag {
+      float: right;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 20px;
+      margin-left: 8px;
+    }
+    .rank-tag.top { background: rgba(74,222,128,.12); color: #4ade80; border: 1px solid rgba(74,222,128,.2); }
+    .rank-tag.mid { background: rgba(251,191,36,.1); color: #fbbf24; border: 1px solid rgba(251,191,36,.2); }
+
+    /* VISIT LINK */
+    .visit-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 14px 20px;
+      text-decoration: none;
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 500;
+      transition: border-color .2s;
+      margin-top: 8px;
+    }
+    .visit-cta:hover { border-color: rgba(255,255,255,0.3); }
+    .visit-arrow { font-size: 16px; transition: transform .2s; }
+    .visit-cta:hover .visit-arrow { transform: translateX(3px); }
+
+    /* PROOF NUMBERS */
+    .numbers-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 60px 0;
+    }
+    .num-block {
+      background: #000;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .num-val { font-size: 36px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 6px; }
+    .num-label { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.4; }
+
+    /* CTA BANNER */
+    .cta-section {
+      background: var(--white);
+      padding: 80px 24px;
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-size: clamp(26px, 5vw, 44px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      margin-bottom: 14px;
+    }
+    .cta-section p {
+      font-size: 17px;
+      color: #424245;
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .btn-dark {
+      display: inline-block;
+      background: var(--black);
+      color: var(--white);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 15px 34px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: opacity .2s;
+    }
+    .btn-dark:hover { opacity: 0.85; }
+    .cta-note { margin-top: 14px; font-size: 13px; color: #86868b; }
+
+    /* INTERNAL LINKS */
+    .internal-links {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 60px 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 560px) { .internal-links { grid-template-columns: 1fr; } }
+    .int-link {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 18px 20px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: border-color .2s;
+    }
+    .int-link:hover { border-color: rgba(255,255,255,0.2); }
+    .int-link-label { font-size: 11px; color: var(--gray-400); margin-bottom: 4px; }
+    .int-link-title { font-size: 14px; font-weight: 600; color: var(--white); }
+    .int-link-arrow { color: var(--gray-400); font-size: 18px; }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-links a { font-size: 13px; color: var(--gray-400); text-decoration: none; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 13px; color: #444; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="https://sitebot.tech/">SiteBot</a>
+    <ul class="nav-links">
+      <li><a href="/features/">Features</a></li>
+      <li><a href="/blog/how-to-get-more-customers-phone-repair/">Blog</a></li>
+      <li><a href="/case-study/imobile/">Case Study</a></li>
+      <li><a href="/" class="nav-cta">Join the Waitlist</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-eyebrow">No booking. No sales call. No waiting.</span>
+    <h1>See SiteBot working.<br><em>Right now.</em></h1>
+    <p class="hero-sub">iMobile Repair Center in Detroit runs the full SiteBot system today. The calculator is live. The SEO pages are ranking. You can visit the site right now and see exactly what your shop gets.</p>
+    <a href="https://imobilerbb.com" target="_blank" rel="noopener" class="live-link">
+      <span class="live-dot"></span>
+      imobilerbb.com — live site
+    </a>
+  </section>
+
+  <!-- NUMBERS -->
+  <div style="max-width:900px; margin: 0 auto; padding: 0 24px;">
+    <div class="numbers-row">
+      <div class="num-block">
+        <div class="num-val">4.9★</div>
+        <div class="num-label">Google rating on iMobile</div>
+      </div>
+      <div class="num-block">
+        <div class="num-val">400+</div>
+        <div class="num-label">Reviews on Google</div>
+      </div>
+      <div class="num-block">
+        <div class="num-val">30+</div>
+        <div class="num-label">SEO pages live and ranking</div>
+      </div>
+      <div class="num-block">
+        <div class="num-val">72hr</div>
+        <div class="num-label">Offer code lock period</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMO 1: Calculator -->
+  <div class="section-wrap">
+    <div class="two-col">
+      <div>
+        <div class="section-label">System 1 of 3</div>
+        <h2 class="section-title">The device quote calculator</h2>
+        <p class="section-sub">A customer lands on your site at any hour and wants to know what their iPhone is worth. They pick their model and condition and get an instant cash offer. No phone call. No waiting. Just a number and a reason to come in.</p>
+
+        <div class="steps" id="calcSteps">
+          <div class="step active" onclick="showScreen('A', this)">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <h4>Customer selects their device</h4>
+              <p>Model, condition, and storage. Three steps, under a minute.</p>
+            </div>
+          </div>
+          <div class="step" onclick="showScreen('B', this)">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <h4>Instant offer appears</h4>
+              <p>The price comes from your Google Sheet. You control it. Update it any time without touching the site.</p>
+            </div>
+          </div>
+          <div class="step" onclick="showScreen('C', this)">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <h4>Customer locks the price and you get the lead</h4>
+              <p>They enter their email. You get their contact info. They get an offer code valid for 72 hours.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px;">
+          <a href="https://imobilerbb.com/sell/iphone/calculator.html" target="_blank" rel="noopener" class="visit-cta">
+            Try the live calculator on iMobile <span class="visit-arrow">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- INTERACTIVE DEMO -->
+      <div class="demo-screen">
+        <div class="demo-topbar">
+          <div class="d" style="background:#ff5f57"></div>
+          <div class="d" style="background:#febc2e"></div>
+          <div class="d" style="background:#28c840"></div>
+        </div>
+        <div class="demo-inner">
+
+          <!-- Screen A: model select -->
+          <div id="screenA" class="screen active">
+            <div style="font-size:12px; color:var(--gray-400); margin-bottom:6px;">Step 1 of 3</div>
+            <div style="font-size:18px; font-weight:700; margin-bottom:18px;">Select your iPhone model</div>
+            <div class="model-grid">
+              <div class="model-btn" onclick="pickModel(this)">iPhone 16 Pro</div>
+              <div class="model-btn" onclick="pickModel(this)">iPhone 15 Pro</div>
+              <div class="model-btn sel" onclick="pickModel(this)">iPhone 14 Pro</div>
+              <div class="model-btn" onclick="pickModel(this)">iPhone 13 Pro</div>
+              <div class="model-btn" onclick="pickModel(this)">iPhone 12</div>
+              <div class="model-btn" onclick="pickModel(this)">iPhone 11</div>
+            </div>
+            <div style="margin-top:16px;">
+              <div style="font-size:12px; color:var(--gray-400); margin-bottom:8px;">Condition</div>
+              <div style="display:flex; gap:8px;">
+                <div class="model-btn sel" style="flex:1; font-size:12px;" onclick="nextStep(this)">Good</div>
+                <div class="model-btn" style="flex:1; font-size:12px;" onclick="nextStep(this)">Fair</div>
+                <div class="model-btn" style="flex:1; font-size:12px;" onclick="nextStep(this)">Poor</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Screen B: offer -->
+          <div id="screenB" class="screen">
+            <div style="font-size:12px; color:var(--gray-400); margin-bottom:14px;">iPhone 14 Pro · Good condition · 128GB</div>
+            <div class="offer-price-block">
+              <div class="offer-eyebrow">Your instant cash offer</div>
+              <div class="offer-amount"><span class="offer-sup">$</span>320</div>
+              <div class="offer-sub">Cash · CashApp · Zelle · Same day</div>
+            </div>
+            <button class="lock-btn" onclick="showScreen('C', null)">🔒 Lock My Price for 72 Hours</button>
+            <div style="font-size:11px; color:rgba(255,255,255,0.3); text-align:center; margin-top:10px;">By locking you agree to our terms. Email required.</div>
+          </div>
+
+          <!-- Screen C: code -->
+          <div id="screenC" class="screen">
+            <div class="code-wrap">
+              <div class="code-icon">✉️</div>
+              <div class="code-label">Your offer code has been sent to your email</div>
+              <div class="code-box">IMB-4892</div>
+              <div class="code-expiry">Valid for 72 hours · Show in store at pickup</div>
+              <div class="code-row">
+                <span class="code-row-k">Device</span>
+                <span class="code-row-v">iPhone 14 Pro 128GB</span>
+              </div>
+              <div class="code-row">
+                <span class="code-row-k">Condition</span>
+                <span class="code-row-v">Good</span>
+              </div>
+              <div class="code-row">
+                <span class="code-row-k">Your offer</span>
+                <span class="code-row-v green">$320 cash</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMO 2: SEO pages -->
+  <div class="section-wrap">
+    <div class="two-col flip">
+      <div>
+        <div class="section-label">System 2 of 3</div>
+        <h2 class="section-title">The SEO pages that pull in customers</h2>
+        <p class="section-sub">Every search your customer makes — "sell iPhone Detroit," "iPhone screen repair near me," "how much is my iPhone worth" — SiteBot has a page built to rank for it. These are real pages on imobilerbb.com, live and indexed today.</p>
+
+        <div class="seo-cards">
+          <a href="https://imobilerbb.com/sell/iphone/" target="_blank" rel="noopener" class="seo-c">
+            <span class="rank-tag top">Ranking</span>
+            <div class="seo-source">imobilerbb.com</div>
+            <div class="seo-title">Sell Your iPhone for Cash in Detroit</div>
+            <div class="seo-url">imobilerbb.com/sell/iphone/</div>
+            <div class="seo-desc">Instant cash offer for your iPhone. Walk in, get paid same day on 8 Mile in Detroit.</div>
+          </a>
+          <a href="https://imobilerbb.com/repair/iphone/" target="_blank" rel="noopener" class="seo-c">
+            <span class="rank-tag top">Ranking</span>
+            <div class="seo-source">imobilerbb.com</div>
+            <div class="seo-title">iPhone Repair Detroit — iMobile Repair Center</div>
+            <div class="seo-url">imobilerbb.com/repair/iphone/</div>
+            <div class="seo-desc">Same day iPhone screen, battery, and charging port repair. 4.9 stars, 400+ reviews.</div>
+          </a>
+          <a href="https://imobilerbb.com/sell/ipad/" target="_blank" rel="noopener" class="seo-c">
+            <span class="rank-tag mid">Ranking</span>
+            <div class="seo-source">imobilerbb.com</div>
+            <div class="seo-title">Sell Your iPad for Cash — Detroit Buyback</div>
+            <div class="seo-url">imobilerbb.com/sell/ipad/</div>
+            <div class="seo-desc">Instant iPad offers. Cash, CashApp, or Zelle. Under 10 minutes.</div>
+          </a>
+          <a href="https://imobilerbb.com/repair/iphone/battery/" target="_blank" rel="noopener" class="seo-c">
+            <span class="rank-tag mid">Ranking</span>
+            <div class="seo-source">imobilerbb.com</div>
+            <div class="seo-title">iPhone Battery Replacement Detroit</div>
+            <div class="seo-url">imobilerbb.com/repair/iphone/battery/</div>
+            <div class="seo-desc">Same day battery replacement. Genuine and OEM options available.</div>
+          </a>
+        </div>
+
+        <a href="https://imobilerbb.com" target="_blank" rel="noopener" class="visit-cta" style="margin-top:16px;">
+          Browse the live site <span class="visit-arrow">→</span>
+        </a>
+      </div>
+
+      <div>
+        <div class="section-label">Why this works</div>
+        <h2 class="section-title" style="font-size:clamp(22px,3vw,30px);">Your competitors do not have this</h2>
+        <p class="section-sub" style="font-size:15px;">Most phone repair shops have one page on their website. Maybe two. Every search a customer makes that they are not ranking for is a customer who goes to someone else. SiteBot builds the full library from day one.</p>
+
+        <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px;">
+          <div style="background:#0d0d0d; border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+            <div style="font-size:13px; font-weight:600; color:var(--white); margin-bottom:5px;">Repair pages</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.45);">iPhone, iPad, MacBook, computer, HDMI port, screen, battery, charging port — a page for every service.</div>
+          </div>
+          <div style="background:#0d0d0d; border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+            <div style="font-size:13px; font-weight:600; color:var(--white); margin-bottom:5px;">Buyback pages</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.45);">Sell iPhone, sell iPad, sell MacBook, sell Android — pages built to rank for "sell phone near me" searches.</div>
+          </div>
+          <div style="background:#0d0d0d; border:1px solid rgba(255,255,255,0.07); border-radius:12px; padding:18px 20px;">
+            <div style="font-size:13px; font-weight:600; color:var(--white); margin-bottom:5px;">Article library</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.45);">30+ articles covering every question a customer searches before choosing a shop. Each one built with FAQ schema for Google AI Overviews.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEMO 3: Lead capture -->
+  <div class="section-wrap">
+    <div style="max-width:640px; margin:0 auto; text-align:center;">
+      <div class="section-label" style="text-align:center;">System 3 of 3</div>
+      <h2 class="section-title">Every lead goes straight to your inbox</h2>
+      <p class="section-sub" style="margin:0 auto 32px;">When a customer locks a price, their name, email, device, and offer amount are sent to you automatically. You know who is coming in before they walk through the door. Nothing falls through the cracks.</p>
+
+      <div style="background:#0d0d0d; border:1px solid rgba(255,255,255,0.09); border-radius:20px; padding:32px; text-align:left;">
+        <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:.1em; color:var(--gray-400); margin-bottom:16px;">Email you receive when a lead locks a price</div>
+
+        <div style="background:#111; border-radius:12px; padding:20px; margin-bottom:16px;">
+          <div style="font-size:12px; color:var(--gray-400); margin-bottom:4px;">From: noreply@sitebot.tech</div>
+          <div style="font-size:12px; color:var(--gray-400); margin-bottom:12px;">Subject: New lead — iPhone 14 Pro locked at $320</div>
+          <div style="font-size:14px; color:rgba(255,255,255,0.7); line-height:1.7;">
+            A customer just locked a price on your website.<br><br>
+            <strong style="color:var(--white);">Device:</strong> iPhone 14 Pro 128GB<br>
+            <strong style="color:var(--white);">Condition:</strong> Good<br>
+            <strong style="color:var(--white);">Offer:</strong> $320<br>
+            <strong style="color:var(--white);">Offer code:</strong> IMB-4892<br>
+            <strong style="color:var(--white);">Code expires:</strong> 72 hours from now<br><br>
+            <span style="color:rgba(255,255,255,0.4); font-size:13px;">Customer email sent to: info@yourshop.com (BCC)</span>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px; font-size:13px; color:rgba(255,255,255,0.4);">
+          <span style="width:8px; height:8px; border-radius:50%; background:#4ade80; flex-shrink:0;"></span>
+          iMobile gets this email every time a customer locks a price. Automated. No manual work.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <h2>You just saw the whole system.</h2>
+    <p>Join the waitlist and we build it for your shop. No setup fee for early access shops.</p>
+    <a href="/" class="btn-dark">Join the Waitlist</a>
+    <p class="cta-note">No credit card required. Early access shops get priority onboarding.</p>
+  </section>
+
+  <!-- INTERNAL LINKS -->
+  <div class="internal-links">
+    <a href="/features/" class="int-link">
+      <div>
+        <div class="int-link-label">See every feature</div>
+        <div class="int-link-title">SiteBot Features</div>
+      </div>
+      <span class="int-link-arrow">→</span>
+    </a>
+    <a href="/case-study/imobile/" class="int-link">
+      <div>
+        <div class="int-link-label">Real results</div>
+        <div class="int-link-title">iMobile Case Study</div>
+      </div>
+      <span class="int-link-arrow">→</span>
+    </a>
+    <a href="/blog/how-to-get-more-customers-phone-repair/" class="int-link">
+      <div>
+        <div class="int-link-label">From the blog</div>
+        <div class="int-link-title">How to get more customers</div>
+      </div>
+      <span class="int-link-arrow">→</span>
+    </a>
+    <a href="/blog/phone-repair-lead-capture/" class="int-link">
+      <div>
+        <div class="int-link-label">From the blog</div>
+        <div class="int-link-title">How to capture leads online</div>
+      </div>
+      <span class="int-link-arrow">→</span>
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/demo/">Demo</a>
+      <a href="/blog/how-to-get-more-customers-phone-repair/">Blog</a>
+      <a href="/case-study/imobile/">Case Study</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 SiteBot. Built by a real cell phone shop owner. info@sitebot.tech</p>
+  </footer>
+
+  <script>
+    function showScreen(id, clickedStep) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('screen' + id).classList.add('active');
+      if (clickedStep) {
+        document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+        clickedStep.classList.add('active');
+      }
+    }
+
+    function pickModel(el) {
+      el.closest('.model-grid').querySelectorAll('.model-btn').forEach(b => b.classList.remove('sel'));
+      el.classList.add('sel');
+      setTimeout(() => showScreen('B', document.querySelectorAll('.step')[1]), 400);
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.step')[1].classList.add('active');
+    }
+
+    function nextStep(el) {
+      el.closest('.demo-inner').querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById('screenB').classList.add('active');
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.step')[1].classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
