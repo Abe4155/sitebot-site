@@ -1,351 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SiteBot — The AI Operating System for Cell Phone Shops</title>
-<meta name="description" content="SiteBot automates your cell phone shop. AI website, device pricing, lead capture, SMS follow-up. Join the waitlist.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --white:#ffffff;
-  --mid:#86868b;
-  --black:#000000;
-  --blue:#0071e3;
-  --blue2:#0077ed;
-  --font:-apple-system,'Inter','Helvetica Neue',Helvetica,Arial,sans-serif;
-}
-html{height:100%}
-body{
-  background:var(--black);
-  color:var(--white);
-  font-family:var(--font);
-  min-height:100vh;
-  -webkit-font-smoothing:antialiased;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  overflow-x:hidden;
-}
-nav{
-  position:fixed;top:0;left:0;right:0;
-  height:52px;
-  background:rgba(0,0,0,.8);
-  backdrop-filter:saturate(180%) blur(20px);
-  -webkit-backdrop-filter:saturate(180%) blur(20px);
-  border-bottom:1px solid rgba(255,255,255,.08);
-  display:flex;align-items:center;justify-content:center;
-  z-index:100;
-}
-.nav-logo{font-size:17px;font-weight:600;color:var(--white);letter-spacing:-.02em}
-.nav-logo span{color:var(--mid);font-weight:300}
-.page{
-  position:relative;z-index:1;
-  width:100%;max-width:640px;
-  padding:140px 32px 60px;
-  display:flex;flex-direction:column;
-  align-items:center;
-  text-align:center;
-}
-.eyebrow{
-  font-size:12px;font-weight:400;
-  color:var(--blue2);
-  letter-spacing:.01em;
-  margin-bottom:18px;
-  opacity:0;animation:rise .8s .2s ease forwards;
-}
-h1{
-  font-size:clamp(44px,9vw,76px);
-  font-weight:700;
-  line-height:1.03;
-  letter-spacing:-.05em;
-  color:var(--white);
-  margin-bottom:20px;
-  opacity:0;animation:rise .8s .35s ease forwards;
-}
-h1 .dim{color:var(--mid);font-weight:200;font-style:italic}
-.sub{
-  font-size:clamp(17px,2.5vw,21px);
-  font-weight:300;
-  color:var(--mid);
-  line-height:1.6;
-  letter-spacing:-.01em;
-  max-width:480px;
-  margin-bottom:44px;
-  opacity:0;animation:rise .8s .5s ease forwards;
-}
-.scarcity{
-  display:flex;align-items:center;gap:10px;
-  margin-bottom:32px;
-  opacity:0;animation:rise .8s .6s ease forwards;
-}
-.bar{width:88px;height:2px;background:rgba(255,255,255,.1);border-radius:1px;overflow:hidden}
-.bar-fill{height:100%;width:27%;background:rgba(255,255,255,.45);border-radius:1px;transition:width .6s ease}
-.scar-txt{font-size:12px;font-weight:400;color:var(--mid)}
-.scar-txt b{color:rgba(255,255,255,.6);font-weight:500}
-.form-wrap{
-  width:100%;max-width:460px;
-  opacity:0;animation:rise .8s .7s ease forwards;
-}
-.fields{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
-.field-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-input{
-  width:100%;
-  background:rgba(255,255,255,.06);
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:14px;
-  padding:15px 18px;
-  font-size:15px;
-  font-weight:400;
-  color:var(--white);
-  font-family:var(--font);
-  outline:none;
-  transition:border-color .2s,background .2s;
-  -webkit-appearance:none;
-}
-input::placeholder{color:rgba(255,255,255,.2);font-weight:300}
-input:focus{border-color:rgba(255,255,255,.3);background:rgba(255,255,255,.08)}
-input.err{border-color:rgba(255,59,48,.5)}
-.cta{
-  width:100%;
-  padding:16px;
-  background:var(--blue);
-  color:#fff;
-  border:none;
-  border-radius:14px;
-  font-size:16px;
-  font-weight:500;
-  font-family:var(--font);
-  letter-spacing:-.01em;
-  cursor:pointer;
-  transition:background .15s,transform .1s,opacity .2s;
-  -webkit-appearance:none;
-  margin-top:2px;
-}
-.cta:hover{background:var(--blue2)}
-.cta:active{transform:scale(.98)}
-.cta:disabled{opacity:.5;cursor:default}
-.fine{
-  font-size:12px;font-weight:300;
-  color:rgba(255,255,255,.2);
-  margin-top:14px;
-  letter-spacing:.01em;
-  line-height:1.5;
-}
-.success{
-  display:none;
-  width:100%;max-width:460px;
-  padding:52px 32px;
-  text-align:center;
-  opacity:0;
-  animation:rise .6s ease forwards;
-}
-.check{
-  width:52px;height:52px;
-  border-radius:50%;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 22px;
-}
-.success-title{
-  font-size:32px;font-weight:700;
-  letter-spacing:-.04em;
-  color:var(--white);margin-bottom:12px;
-}
-.success-body{
-  font-size:15px;font-weight:300;
-  color:var(--mid);line-height:1.65;
-  max-width:280px;margin:0 auto 22px;
-}
-.ref{
-  display:inline-block;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:8px;
-  padding:7px 18px;
-  font-size:12px;
-  font-weight:500;
-  color:rgba(255,255,255,.35);
-  letter-spacing:.14em;
-  font-family:ui-monospace,'SF Mono',monospace;
-}
-.pillars{
-  display:flex;
-  width:100%;
-  border-top:1px solid rgba(255,255,255,.07);
-  margin-top:64px;
-  opacity:0;animation:rise .8s .9s ease forwards;
-}
-.pillar{
-  flex:1;
-  padding:24px 16px;
-  border-right:1px solid rgba(255,255,255,.07);
-  text-align:center;
-}
-.pillar:last-child{border-right:none}
-.pillar-num{
-  font-size:26px;font-weight:600;
-  letter-spacing:-.04em;
-  color:var(--white);
-  margin-bottom:5px;
-}
-.pillar-lbl{
-  font-size:11px;font-weight:300;
-  color:var(--mid);
-  letter-spacing:.01em;
-  line-height:1.5;
-}
-footer{
-  margin-top:40px;
-  font-size:11px;font-weight:300;
-  color:rgba(255,255,255,.18);
-  letter-spacing:.01em;
-  opacity:0;animation:rise .8s 1.1s ease forwards;
-}
-footer a{color:rgba(255,255,255,.25);text-decoration:none}
-footer a:hover{color:rgba(255,255,255,.4)}
-@keyframes rise{
-  from{opacity:0;transform:translateY(18px)}
-  to{opacity:1;transform:translateY(0)}
-}
-@media(max-width:500px){
-  .field-row{grid-template-columns:1fr}
-  .pillars{flex-wrap:wrap}
-  .pillar{flex:1 1 50%;border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
-  .pillar:nth-child(odd){border-right:1px solid rgba(255,255,255,.07)}
-  .pillar:nth-last-child(-n+2){border-bottom:none}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteBot — The AI Website and Lead System for Cell Phone Shops</title>
+  <meta name="description" content="SiteBot gives your cell phone repair or buyback shop a website that ranks on Google, a device quote calculator that captures leads, and automated follow-up. All done for you.">
+  <link rel="canonical" href="https://sitebot.tech/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "SiteBot",
+    "url": "https://sitebot.tech",
+    "description": "AI-powered website and lead capture system built specifically for cell phone repair and device buyback shops.",
+    "email": "info@sitebot.tech"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray-400: #86868b;
+      --gray-600: #424245;
+      --accent: #2563eb;
+      --green: #16a34a;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      text-align: center;
+      padding: 96px 24px 80px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 12px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: #86efac;
+      background: rgba(22,163,74,0.1);
+      border: 1px solid rgba(22,163,74,0.22);
+      padding: 5px 14px; border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      font-weight: 700; letter-spacing: -0.035em;
+      line-height: 1.06; margin-bottom: 22px;
+      color: var(--white);
+    }
+
+    .hero h1 span { color: rgba(255,255,255,0.38); }
+
+    .hero-sub {
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: rgba(255,255,255,0.52);
+      max-width: 540px; margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    /* ── COUNTER ── */
+    .counter-wrap {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 30px; padding: 8px 18px;
+      margin-bottom: 28px;
+    }
+    .counter-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #4ade80;
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .counter-text { font-size: 13px; color: rgba(255,255,255,0.6); }
+    .counter-text strong { color: var(--white); font-weight: 600; }
+
+    /* ── FORM ── */
+    .waitlist-form {
+      display: flex; flex-direction: column;
+      gap: 12px; max-width: 420px; margin: 0 auto;
+    }
+
+    .waitlist-form input {
+      width: 100%;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 15px; color: var(--white);
+      font-family: var(--font);
+      outline: none;
+      transition: border-color .2s;
+    }
+    .waitlist-form input::placeholder { color: rgba(255,255,255,0.3); }
+    .waitlist-form input:focus { border-color: rgba(255,255,255,0.35); }
+
+    .btn-waitlist {
+      width: 100%;
+      background: var(--white); color: var(--black);
+      border: none; border-radius: 10px;
+      padding: 15px; font-size: 16px; font-weight: 700;
+      cursor: pointer; font-family: var(--font);
+      transition: opacity .2s, transform .15s;
+    }
+    .btn-waitlist:hover { opacity: 0.9; transform: scale(1.01); }
+    .btn-waitlist:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .form-note {
+      font-size: 12px; color: rgba(255,255,255,0.28);
+      text-align: center; margin-top: 4px;
+    }
+
+    /* ── SUCCESS STATE ── */
+    .success-box {
+      display: none;
+      background: rgba(22,163,74,0.08);
+      border: 1px solid rgba(22,163,74,0.22);
+      border-radius: 14px; padding: 28px 24px;
+      text-align: center; max-width: 420px; margin: 0 auto;
+    }
+    .success-box.show { display: block; }
+    .success-icon { font-size: 32px; margin-bottom: 12px; }
+    .success-title { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .success-sub { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.6; margin-bottom: 14px; }
+    .success-code {
+      display: inline-block;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px; padding: 8px 20px;
+      font-size: 20px; font-weight: 700; letter-spacing: .1em;
+      color: var(--white);
+    }
+
+    /* ── STATS ROW ── */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px; overflow: hidden;
+      max-width: 680px; margin: 60px auto 0;
+    }
+    .stat-block { background: #000; padding: 24px 16px; text-align: center; }
+    .stat-val { font-size: 28px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 5px; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.38); line-height: 1.4; }
+
+    /* ── DIVIDER ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      max-width: 1060px; margin: 0 auto;
+    }
+
+    /* ── PROOF STRIP ── */
+    .proof-strip {
+      max-width: 900px; margin: 0 auto;
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .proof-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: rgba(255,255,255,0.25); margin-bottom: 20px;
+    }
+    .proof-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+    .proof-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 22px 20px;
+      text-align: left;
+    }
+    .proof-card-live {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 10px;
+    }
+    .proof-card-live-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #4ade80; animation: pulse 1.8s infinite;
+    }
+    .proof-card-stat { font-size: 30px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 4px; }
+    .proof-card-desc { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.5; }
+
+    /* ── FEATURES ── */
+    .features-section {
+      max-width: 1060px; margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .features-header { text-align: center; margin-bottom: 48px; }
+    .features-eyebrow {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--gray-400); margin-bottom: 12px;
+    }
+    .features-header h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700; letter-spacing: -0.02em;
+      color: var(--white); margin-bottom: 14px;
+    }
+    .features-header p {
+      font-size: 17px; color: rgba(255,255,255,0.45);
+      max-width: 480px; margin: 0 auto; line-height: 1.65;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 28px;
+      text-decoration: none; display: block;
+      transition: border-color .2s;
+    }
+    .feature-card:hover { border-color: rgba(255,255,255,0.18); }
+    .feature-icon { font-size: 28px; margin-bottom: 14px; }
+    .feature-title { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .feature-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.65; margin-bottom: 14px; }
+    .feature-link-text { font-size: 13px; color: #93c5fd; display: flex; align-items: center; gap: 5px; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section {
+      background: #060606;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 80px 24px;
+    }
+    .how-inner { max-width: 860px; margin: 0 auto; }
+    .how-header { text-align: center; margin-bottom: 52px; }
+    .how-header h2 {
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700; letter-spacing: -0.02em;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .how-header p { font-size: 16px; color: rgba(255,255,255,0.42); max-width: 440px; margin: 0 auto; }
+    .how-steps { display: flex; flex-direction: column; gap: 0; }
+    .how-step {
+      display: flex; gap: 24px; align-items: flex-start;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .how-step:last-child { border-bottom: none; }
+    .how-step-num {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; color: rgba(255,255,255,0.4);
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .how-step-title { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .how-step-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.65; }
+
+    /* ── BLOG TEASER ── */
+    .blog-section {
+      max-width: 1060px; margin: 0 auto;
+      padding: 80px 24px;
+    }
+    .blog-header {
+      display: flex; align-items: center;
+      justify-content: space-between; margin-bottom: 28px;
+      flex-wrap: wrap; gap: 12px;
+    }
+    .blog-header h2 { font-size: 22px; font-weight: 700; color: var(--white); }
+    .blog-see-all {
+      font-size: 13px; color: rgba(255,255,255,0.45);
+      text-decoration: none; transition: color .2s;
+    }
+    .blog-see-all:hover { color: var(--white); }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .blog-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 22px;
+      text-decoration: none; display: block;
+      transition: border-color .15s;
+    }
+    .blog-card:hover { border-color: rgba(255,255,255,0.2); }
+    .blog-cat {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #93c5fd; margin-bottom: 8px;
+    }
+    .blog-title { font-size: 15px; font-weight: 600; color: var(--white); line-height: 1.4; margin-bottom: 8px; }
+    .blog-desc { font-size: 13px; color: rgba(255,255,255,0.38); line-height: 1.6; }
+    .blog-arrow { font-size: 16px; color: rgba(255,255,255,0.25); float: right; margin-top: -18px; transition: color .15s; }
+    .blog-card:hover .blog-arrow { color: var(--white); }
+
+    /* ── IMOBILE CALLOUT ── */
+    .imobile-callout {
+      max-width: 820px; margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .imobile-inner {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px; padding: 40px 48px;
+      display: flex; align-items: center;
+      justify-content: space-between;
+      gap: 32px; flex-wrap: wrap;
+    }
+    @media (max-width: 600px) { .imobile-inner { padding: 28px 24px; } }
+    .imobile-text h3 {
+      font-size: 20px; font-weight: 700;
+      color: var(--white); margin-bottom: 6px;
+    }
+    .imobile-text p { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.6; max-width: 380px; }
+    .btn-secondary {
+      display: inline-block;
+      background: transparent; color: var(--white);
+      border: 1px solid rgba(255,255,255,0.22);
+      font-size: 14px; font-weight: 500;
+      padding: 11px 24px; border-radius: 30px;
+      text-decoration: none; white-space: nowrap;
+      transition: border-color .2s, background .2s;
+    }
+    .btn-secondary:hover { border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.05); }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--white);
+      padding: 80px 24px; text-align: center;
+    }
+    .final-cta h2 {
+      font-size: clamp(28px, 5vw, 48px);
+      font-weight: 700; letter-spacing: -0.025em;
+      color: var(--black); margin-bottom: 14px;
+    }
+    .final-cta p {
+      font-size: 17px; color: #424245;
+      max-width: 480px; margin: 0 auto 32px; line-height: 1.6;
+    }
+    .btn-dark {
+      display: inline-block;
+      background: var(--black); color: var(--white);
+      font-size: 16px; font-weight: 600;
+      padding: 15px 36px; border-radius: 30px;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 14px; font-size: 12px; color: #86868b; }
+  </style>
 </head>
 <body>
-<nav>
-  <div class="nav-logo">SiteBot<span>.tech</span></div>
-</nav>
-<div class="page">
-  <p class="eyebrow">Early access — cell phone shops only</p>
-  <h1>The OS for<br><span class="dim">your shop.</span></h1>
-  <p class="sub">SiteBot automates your entire online presence. AI device quotes, lead capture, SMS follow-up, and a site that ranks on Google. All running while you run your shop.</p>
-  <div class="scarcity">
-    <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
-    <span class="scar-txt"><b id="spot-count">137 of 500</b> spots claimed</span>
-  </div>
-  <div class="form-wrap" id="form-wrap">
-    <div class="fields">
-      <div class="field-row">
-        <input type="text" id="f-name" placeholder="Your name" autocomplete="name">
-        <input type="text" id="f-shop" placeholder="Shop name" autocomplete="organization">
+
+  <div id="site-header"></div>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <span class="hero-eyebrow">Cell phone shops only — early access</span>
+    <h1>The website that gets<br><span>your shop</span> found.</h1>
+    <p class="hero-sub">SiteBot builds your site, ranks it on Google, and captures device leads 24 hours a day. All running while you run your shop.</p>
+
+    <div class="counter-wrap">
+      <div class="counter-dot"></div>
+      <span class="counter-text"><strong id="counter-num">...</strong> <span id="counter-label">of 500 early access spots claimed</span></span>
+    </div>
+
+    <form class="waitlist-form" id="waitlist-form">
+      <input type="text" id="field-name" placeholder="Your name" required autocomplete="name">
+      <input type="text" id="field-shop" placeholder="Shop name" required>
+      <input type="email" id="field-email" placeholder="Email address" required autocomplete="email">
+      <button type="submit" class="btn-waitlist" id="submit-btn">Join the Waitlist — It's Free</button>
+      <p class="form-note">Cell phone shops only. No credit card. No spam ever.</p>
+    </form>
+
+    <div class="success-box" id="success-box">
+      <div class="success-icon">✅</div>
+      <div class="success-title">You're in.</div>
+      <div class="success-sub">We will reach out personally when SiteBot is ready for your area. You are ahead of every other shop in your market.</div>
+      <div class="success-code" id="success-code">SB-0000</div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-block">
+        <div class="stat-val">24/7</div>
+        <div class="stat-label">AI answers every lead</div>
       </div>
-      <input type="email" id="f-email" placeholder="Email address" autocomplete="email">
+      <div class="stat-block">
+        <div class="stat-val">&lt;1 day</div>
+        <div class="stat-label">Site live from signup</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-val">$0</div>
+        <div class="stat-label">Setup cost early access</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-val">Auto</div>
+        <div class="stat-label">SMS on every lead</div>
+      </div>
     </div>
-    <button class="cta" id="cta-btn" onclick="go()">Join the Waitlist</button>
-    <p class="fine">Cell phone shops only. No credit card. No spam ever.</p>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ── PROOF ── -->
+  <div class="proof-strip">
+    <div class="proof-label">Live right now — iMobile Repair Center, Detroit</div>
+    <div class="proof-cards">
+      <div class="proof-card">
+        <div class="proof-card-live"><div class="proof-card-live-dot"></div> Live</div>
+        <div class="proof-card-stat">4.9★</div>
+        <div class="proof-card-desc">Google rating with 400+ reviews. Built with SiteBot's Google optimization system.</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-card-live"><div class="proof-card-live-dot"></div> Live</div>
+        <div class="proof-card-stat">30+</div>
+        <div class="proof-card-desc">SEO pages ranking for iPhone repair and sell iPhone searches in Detroit.</div>
+      </div>
+      <div class="proof-card">
+        <div class="proof-card-live"><div class="proof-card-live-dot"></div> Live</div>
+        <div class="proof-card-stat">72hr</div>
+        <div class="proof-card-desc">Device offer codes captured online, emailed automatically, valid 72 hours to bring the customer in.</div>
+      </div>
+    </div>
   </div>
-  <div class="success" id="success">
-    <div class="check">
-      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-        <path d="M4 10.5l4.5 4.5 8-8" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+
+  <hr class="section-divider">
+
+  <!-- ── FEATURES ── -->
+  <section class="features-section">
+    <div class="features-header">
+      <div class="features-eyebrow">What you get</div>
+      <h2>Every tool your shop needs<br>to get found and win leads.</h2>
+      <p>No templates. No DIY. SiteBot builds and runs the whole system for your shop from day one.</p>
     </div>
-    <p class="success-title">You're in.</p>
-    <p class="success-body">We will reach out personally when SiteBot is ready for your area. You are ahead of every other shop in your market.</p>
-    <span class="ref" id="ref-code">SB — 0000</span>
+    <div class="features-grid">
+      <a href="/features/" class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-title">A website that ranks on Google</div>
+        <div class="feature-desc">Repair pages, buyback pages, and SEO articles built to show up when customers in your city search for your services.</div>
+        <div class="feature-link-text">See all features <span>→</span></div>
+      </a>
+      <a href="/demo/" class="feature-card">
+        <div class="feature-icon">💵</div>
+        <div class="feature-title">Device quote calculator</div>
+        <div class="feature-desc">Customers get an instant cash offer for their iPhone or iPad. They lock the price. You get the lead automatically — even at midnight.</div>
+        <div class="feature-link-text">See it live <span>→</span></div>
+      </a>
+      <a href="/features/" class="feature-card">
+        <div class="feature-icon">📧</div>
+        <div class="feature-title">Automated lead capture</div>
+        <div class="feature-desc">Every customer who locks a price gets an offer code by email. You get their contact info in your inbox before they walk through the door.</div>
+        <div class="feature-link-text">How it works <span>→</span></div>
+      </a>
+      <a href="/features/" class="feature-card">
+        <div class="feature-icon">📍</div>
+        <div class="feature-title">Google Business optimization</div>
+        <div class="feature-desc">The map pack is where most repair searches end. We set up your Google presence so you show up in the top three for your city.</div>
+        <div class="feature-link-text">Learn more <span>→</span></div>
+      </a>
+      <a href="/blog/cell-phone-repair-shop-software/" class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-title">SMS follow-up agent</div>
+        <div class="feature-desc">When a lead locks a price and does not show up, automated texts follow up at 24 and 48 hours. More devices come through the door without manual work.</div>
+        <div class="feature-link-text">Coming soon <span>→</span></div>
+      </a>
+      <a href="/case-study/imobile/" class="feature-card">
+        <div class="feature-icon">📊</div>
+        <div class="feature-title">Built on a real shop first</div>
+        <div class="feature-desc">Everything in SiteBot was tested at iMobile Repair Center in Detroit before it became a product. You get what already works, not a prototype.</div>
+        <div class="feature-link-text">Read the case study <span>→</span></div>
+      </a>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="how-section">
+    <div class="how-inner">
+      <div class="how-header">
+        <h2>Up and running in under a day.</h2>
+        <p>No developer needed. No months of setup. You answer a few questions and SiteBot builds the rest.</p>
+      </div>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-num">1</div>
+          <div>
+            <div class="how-step-title">Join the waitlist and tell us about your shop</div>
+            <div class="how-step-desc">Shop name, location, services, what devices you repair and buy. Takes about five minutes. That is the hardest part.</div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">2</div>
+          <div>
+            <div class="how-step-title">SiteBot builds your website and pricing system</div>
+            <div class="how-step-desc">We build every repair and buyback page, write the SEO content, wire up your device calculator to a Google Sheet you control, and set up the lead capture system.</div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">3</div>
+          <div>
+            <div class="how-step-title">Your site goes live and starts pulling in customers</div>
+            <div class="how-step-desc">Pages index on Google. The calculator captures leads while you sleep. Every locked offer sends you an email with the customer's contact info and device details.</div>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-num">4</div>
+          <div>
+            <div class="how-step-title">You update prices in your Google Sheet — site updates automatically</div>
+            <div class="how-step-desc">Change what you pay for an iPhone 14 today and the website shows the new number immediately. No logins, no code, no waiting for someone to make the change for you.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BLOG ── -->
+  <section class="blog-section">
+    <div class="blog-header">
+      <h2>From the blog</h2>
+      <a href="/blog/" class="blog-see-all">See all articles →</a>
+    </div>
+    <div class="blog-grid">
+      <a href="/blog/cell-phone-repair-shop-software/" class="blog-card">
+        <div class="blog-cat">Software</div>
+        <div class="blog-title">Best Cell Phone Repair Shop Software in 2026 — Honest Comparison</div>
+        <div class="blog-desc">RepairDesk, Orderry, RepairShopr compared. What each does well and the one thing none of them do.</div>
+        <span class="blog-arrow">→</span>
+      </a>
+      <a href="/blog/how-to-rank-on-google-phone-repair/" class="blog-card">
+        <div class="blog-cat">SEO</div>
+        <div class="blog-title">How to Rank on Google for Phone Repair in Your City</div>
+        <div class="blog-desc">Step by step. The map pack and organic results — how both work for a repair and buyback shop.</div>
+        <span class="blog-arrow">→</span>
+      </a>
+      <a href="/blog/google-business-profile-phone-repair/" class="blog-card">
+        <div class="blog-cat">SEO</div>
+        <div class="blog-title">Google Business Profile for Phone Repair Shops</div>
+        <div class="blog-desc">Exact categories to pick, what to write in your description, and how to get reviews consistently.</div>
+        <span class="blog-arrow">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── IMOBILE CALLOUT ── -->
+  <div class="imobile-callout">
+    <div class="imobile-inner">
+      <div class="imobile-text">
+        <h3>See the whole system working at a real shop</h3>
+        <p>iMobile Repair Center in Detroit was the first shop SiteBot was built on. Real rankings, real calculator, real results. Visit the site today and see for yourself.</p>
+      </div>
+      <a href="/case-study/imobile/" class="btn-secondary">Read the case study →</a>
+    </div>
   </div>
-  <div class="pillars">
-    <div class="pillar">
-      <div class="pillar-num">24/7</div>
-      <div class="pillar-lbl">AI answers<br>every lead</div>
-    </div>
-    <div class="pillar">
-      <div class="pillar-num">&lt;1 day</div>
-      <div class="pillar-lbl">Site live<br>from signup</div>
-    </div>
-    <div class="pillar">
-      <div class="pillar-num">$0</div>
-      <div class="pillar-lbl">Setup cost<br>early access</div>
-    </div>
-    <div class="pillar">
-      <div class="pillar-num">Auto</div>
-      <div class="pillar-lbl">SMS on<br>every lead</div>
-    </div>
-  </div>
-  <footer>
-    &copy; 2026 SiteBot.tech &nbsp;&middot;&nbsp;
-    <a href="mailto:hello@sitebot.tech">hello@sitebot.tech</a>
-  </footer>
-</div>
-<script>
-var API = 'https://script.google.com/macros/s/AKfycbwYxHykU8gEKdM7jF_KBvCBne3XefSMR5wBEwbJphF9qf-CVaKY4k29mu-y2SkhU3BPmQ/exec';
 
-function loadCount() {
-  fetch(API)
-    .then(function(r){ return r.json(); })
-    .then(function(j){
-      if(j.ok && j.count >= 0){
-        var count = j.count;
-        var pct = Math.min(Math.round((count/500)*100), 100);
-        document.getElementById('spot-count').textContent = count + ' of 500 spots claimed';
-        document.getElementById('bar-fill').style.width = pct + '%';
-      }
-    })
-    .catch(function(){});
-}
+  <!-- ── FINAL CTA ── -->
+  <section class="final-cta">
+    <h2>Your shop deserves a system<br>that works while you do.</h2>
+    <p>Join the waitlist. No setup fee for early access shops. We will reach out when your spot is ready.</p>
+    <a href="#" onclick="document.getElementById('field-name').focus(); window.scrollTo({top:0,behavior:'smooth'}); return false;" class="btn-dark">Join the Waitlist</a>
+    <p class="final-note">Cell phone shops only. No credit card required.</p>
+  </section>
 
-function go(){
-  var fields=[
-    {id:'f-name',check:function(v){return v.length>0}},
-    {id:'f-shop',check:function(v){return v.length>0}},
-    {id:'f-email',check:function(v){return v.includes('@')&&v.includes('.')}}
-  ];
-  var ok=true;
-  fields.forEach(function(f){
-    var el=document.getElementById(f.id);
-    var v=el.value.trim();
-    if(!f.check(v)){el.classList.add('err');ok=false;}
-    else el.classList.remove('err');
-  });
-  if(!ok)return;
+  <div id="site-footer"></div>
 
-  var name = document.getElementById('f-name').value.trim();
-  var shop = document.getElementById('f-shop').value.trim();
-  var email = document.getElementById('f-email').value.trim();
-  var ref = 'SB-' + Math.floor(Math.random()*9000+1000);
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
 
-  var btn=document.getElementById('cta-btn');
-  btn.textContent='Reserving your spot...';
-  btn.disabled=true;
+  <script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYxHykU8gEKdM7jF_KBvCBne3XefSMR5wBEwbJphF9qf-CVaKY4k29mu-y2SkhU3BPmQ/exec';
 
-  var payload = JSON.stringify({name: name, shop: shop, email: email, ref: ref});
+    // ── Load counter ──
+    function loadCounter() {
+      fetch(SCRIPT_URL + '?action=getCount')
+        .then(r => r.json())
+        .then(data => {
+          const count = data.count || 0;
+          document.getElementById('counter-num').textContent = count + ' of 500';
+          document.getElementById('counter-label').textContent = 'early access spots claimed';
+        })
+        .catch(() => {
+          document.getElementById('counter-num').textContent = '100+ of 500';
+          document.getElementById('counter-label').textContent = 'early access spots claimed';
+        });
+    }
 
-  fetch(API, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {'Content-Type': 'application/json'},
-    body: payload
-  })
-  .then(function(){
-    document.getElementById('form-wrap').style.display='none';
-    var s=document.getElementById('success');
-    s.style.display='block';
-    document.getElementById('ref-code').textContent = ref;
-    setTimeout(loadCount, 2000);
-  })
-  .catch(function(){
-    document.getElementById('form-wrap').style.display='none';
-    document.getElementById('success').style.display='block';
-    document.getElementById('ref-code').textContent = ref;
-  });
-}
+    // ── Generate ref code ──
+    function genCode() {
+      return 'SB-' + Math.random().toString(36).substring(2, 6).toUpperCase();
+    }
 
-document.querySelectorAll('input').forEach(function(el){
-  el.addEventListener('input',function(){this.classList.remove('err');});
-  el.addEventListener('keydown',function(e){if(e.key==='Enter')go();});
-});
+    // ── Form submit ──
+    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.disabled = true;
+      btn.textContent = 'Joining...';
 
-loadCount();
-</script>
+      const name  = document.getElementById('field-name').value.trim();
+      const shop  = document.getElementById('field-shop').value.trim();
+      const email = document.getElementById('field-email').value.trim();
+      const code  = genCode();
+
+      const params = new URLSearchParams({
+        action: 'addWaitlist',
+        name, shop, email, code
+      });
+
+      fetch(SCRIPT_URL + '?' + params.toString())
+        .then(r => r.json())
+        .then(() => {
+          document.getElementById('waitlist-form').style.display = 'none';
+          const box = document.getElementById('success-box');
+          box.classList.add('show');
+          document.getElementById('success-code').textContent = code;
+          loadCounter();
+        })
+        .catch(() => {
+          // Still show success — form may have gone through
+          document.getElementById('waitlist-form').style.display = 'none';
+          const box = document.getElementById('success-box');
+          box.classList.add('show');
+          document.getElementById('success-code').textContent = code;
+        });
+    });
+
+    loadCounter();
+  </script>
+
 </body>
 </html>
