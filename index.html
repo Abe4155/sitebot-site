@@ -318,28 +318,25 @@ function go(){
   btn.textContent='Reserving your spot...';
   btn.disabled=true;
 
+  var payload = JSON.stringify({name: name, shop: shop, email: email, ref: ref});
+
   fetch(API, {
     method: 'POST',
+    mode: 'no-cors',
     headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify({name: name, shop: shop, email: email, ref: ref})
+    body: payload
   })
-  .then(function(r){ return r.json(); })
-  .then(function(j){
+  .then(function(){
     document.getElementById('form-wrap').style.display='none';
     var s=document.getElementById('success');
     s.style.display='block';
-    document.getElementById('ref-code').textContent= ref;
-    if(j.ok && j.count){
-      var pct = Math.min(Math.round((j.count/500)*100), 100);
-      document.getElementById('bar-fill').style.width = pct + '%';
-      document.getElementById('spot-count').textContent = j.count + ' of 500 spots claimed';
-    }
+    document.getElementById('ref-code').textContent = ref;
+    setTimeout(loadCount, 2000);
   })
   .catch(function(){
     document.getElementById('form-wrap').style.display='none';
-    var s=document.getElementById('success');
-    s.style.display='block';
-    document.getElementById('ref-code').textContent= ref;
+    document.getElementById('success').style.display='block';
+    document.getElementById('ref-code').textContent = ref;
   });
 }
 
