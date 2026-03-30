@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "SMS Marketing for Phone Repair Shops — What to Send and When",
+    url: "/blog/phone-repair-shop-sms-marketing/",
+    description: "Text messages have a 98% open rate. Here is exactly how phone repair and buyback shops use SMS to update customers, recover lost leads, and bring past customers back without being spammy.",
+    date: "March 2026",
+    category: "Marketing",
+    readTime: "8 min read"
+  },
+  {
     title: "How to Get More Google Reviews for Your Phone Repair Shop",
     url: "/blog/phone-repair-shop-reviews/",
     description: "Reviews are the biggest trust signal a repair shop has. Here is the timing, the ask, how to respond, and how iMobile built 400+ reviews at 4.9 stars.",

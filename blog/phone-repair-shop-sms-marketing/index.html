@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMS Marketing for Phone Repair Shops — What to Send and When</title>
+  <meta name="description" content="Text messages have a 98% open rate. Here is exactly how phone repair and buyback shops use SMS to update customers, recover lost leads, and bring past customers back without being spammy.">
+  <link rel="canonical" href="https://sitebot.tech/blog/phone-repair-shop-sms-marketing/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SMS Marketing for Phone Repair Shops — What to Send and When",
+    "description": "Text messages have a 98% open rate. Here is exactly how phone repair and buyback shops use SMS to update customers, recover lost leads, and bring past customers back.",
+    "author": { "@type": "Organization", "name": "SiteBot" },
+    "publisher": { "@type": "Organization", "name": "SiteBot", "url": "https://sitebot.tech" },
+    "mainEntityOfPage": "https://sitebot.tech/blog/phone-repair-shop-sms-marketing/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can a phone repair shop send text messages to customers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but only to customers who have explicitly opted in to receive texts. Under TCPA regulations, businesses must have written consent before sending marketing messages. Transactional messages like repair status updates have more flexibility but marketing messages require a clear opt-in. Always include an opt-out option in every message."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What SMS messages should a phone repair shop send?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The three highest-value SMS use cases for a repair shop are: repair status updates to customers waiting on their device, offer expiry reminders to buyback leads who locked a price but did not show up, and seasonal promotions to past customers around iPhone release cycles or back-to-school season. Each one either improves the current customer experience or recovers revenue you would otherwise lose."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is TCPA compliance for SMS marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "TCPA is the Telephone Consumer Protection Act. It requires businesses to get explicit written consent before sending marketing text messages to customers. Every marketing message must include a way to opt out, typically by replying STOP. Transactional messages like service updates have more flexibility but it is best practice to get consent for all business texting."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+    .article-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 14px; display: block; }
+    h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 16px; }
+    .article-meta { font-size: 13px; color: var(--gray-400); margin-bottom: 48px; }
+    h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; line-height: 1.2; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* SMS BUBBLE */
+    .sms-block { margin: 28px 0; }
+    .sms-block-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-400); margin-bottom: 10px; }
+    .sms-bubbles { display: flex; flex-direction: column; gap: 8px; }
+    .sms-bubble {
+      background: #1c1c1e; border-radius: 18px 18px 4px 18px;
+      padding: 12px 16px; max-width: 80%; align-self: flex-end;
+      font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.55;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .sms-bubble.inbound {
+      background: rgba(37,99,235,0.12);
+      border-color: rgba(37,99,235,0.2);
+      border-radius: 18px 18px 18px 4px;
+      align-self: flex-start;
+    }
+    .sms-note { font-size: 12px; color: rgba(255,255,255,0.28); margin-top: 6px; text-align: right; }
+
+    /* USE CASE */
+    .use-case {
+      background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px; padding: 28px 28px 24px;
+      margin: 32px 0;
+    }
+    .use-case-eyebrow { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-400); margin-bottom: 8px; }
+    .use-case h3 { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .use-case p { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.72; margin-bottom: 0; }
+
+    /* COMPLIANCE BOX */
+    .compliance-box {
+      background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.18);
+      border-radius: 14px; padding: 22px 24px; margin: 32px 0;
+    }
+    .compliance-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #fcd34d; margin-bottom: 10px; }
+    .compliance-box p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 10px; }
+    .compliance-box p:last-child { margin-bottom: 0; }
+    .compliance-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); }
+    .callout p strong { color: var(--white); }
+
+    .callout-link { background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.18); border-radius: 12px; padding: 18px 22px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-decoration: none; flex-wrap: wrap; transition: border-color .2s; }
+    .callout-link:hover { border-color: rgba(37,99,235,0.35); }
+    .callout-link-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .callout-link-title { font-size: 15px; font-weight: 600; color: #93c5fd; }
+    .callout-link-arrow { color: var(--gray-400); font-size: 20px; flex-shrink: 0; }
+
+    .tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 20px 0; }
+    @media (max-width: 520px) { .tools-grid { grid-template-columns: 1fr; } }
+    .tool-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 10px; padding: 14px 16px; }
+    .tool-name { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .tool-note { font-size: 12px; color: rgba(255,255,255,0.38); line-height: 1.5; }
+    .tool-price { font-size: 11px; color: rgba(255,255,255,0.28); margin-top: 6px; }
+
+    .faq-section { margin-top: 52px; }
+    .faq-heading { font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    .cta-banner { background: var(--white); margin-top: 64px; padding: 48px 32px; border-radius: 16px; text-align: center; }
+    .cta-banner h3 { font-size: clamp(20px, 3.5vw, 30px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 10px; }
+    .cta-banner p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 24px; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 13px 30px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .cta-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+
+    .related { margin-top: 56px; }
+    .related-heading { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 540px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px 18px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; transition: border-color .2s; }
+    .rel-card:hover { border-color: rgba(255,255,255,0.2); }
+    .rel-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .rel-title { font-size: 13px; font-weight: 600; color: var(--white); }
+    .rel-arrow { color: var(--gray-400); font-size: 16px; flex-shrink: 0; margin-left: 10px; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <article class="article-wrap">
+
+    <span class="article-tag">Marketing</span>
+    <h1>SMS Marketing for Phone Repair Shops — What to Send and When</h1>
+    <p class="article-meta">By SiteBot &nbsp;|&nbsp; March 2026 &nbsp;|&nbsp; 8 min read</p>
+
+    <p>Text messages have a 98% open rate. Emails sit at 20 to 30% on a good day. Every shop owner already knows this from personal experience — a text gets read within minutes, an email gets buried. Yet most phone repair shops are not using SMS for anything beyond the occasional "your phone is ready" message, if they are using it at all.</p>
+
+    <p>There are three SMS use cases that matter for a phone repair and buyback shop. Each one either improves the experience for a customer you already have, recovers money you would otherwise lose, or brings a past customer back in at the right moment. None of them require a large budget, a complicated platform, or a developer to set up.</p>
+
+    <h2>Use case 1: Repair status updates</h2>
+
+    <div class="use-case">
+      <div class="use-case-eyebrow">Use case 01</div>
+      <h3>Keep the waiting customer informed automatically</h3>
+      <p>A customer drops off their phone and has nothing to do but wait and wonder. They do not know if the part came in, whether the repair hit a complication, or when they can come back. Without communication, they call the shop every few hours. With one well-timed text update, they stop calling and start trusting.</p>
+    </div>
+
+    <p>Repair status texts are the most straightforward SMS application and the one with the highest customer satisfaction impact. A customer who drops off a phone and receives a text two hours later saying the part is in and the repair is underway feels taken care of. A customer who hears nothing until you call them has been silently stressed the whole time.</p>
+
+    <p>Three messages cover the full repair lifecycle:</p>
+
+    <div class="sms-block">
+      <div class="sms-block-label">Drop-off confirmation</div>
+      <div class="sms-bubbles">
+        <div class="sms-bubble">Hi Marcus, we've got your iPhone 14 Pro in for a screen replacement. We'll text you when it's ready — usually same day. iMobile Repair, Detroit. Reply STOP to opt out.</div>
+        <div class="sms-note">Send immediately at drop-off</div>
+      </div>
+    </div>
+
+    <div class="sms-block">
+      <div class="sms-block-label">Ready for pickup</div>
+      <div class="sms-bubbles">
+        <div class="sms-bubble">Good news — your iPhone 14 Pro is ready. Come in anytime during business hours. iMobile Repair, (313) 900-1032.</div>
+        <div class="sms-note">Send as soon as repair is complete</div>
+      </div>
+    </div>
+
+    <div class="sms-block">
+      <div class="sms-block-label">If the customer has not picked up after 48 hours</div>
+      <div class="sms-bubbles">
+        <div class="sms-bubble">Reminder: your phone is ready at iMobile Repair. We hold devices for 30 days. Come in when you can — (313) 900-1032.</div>
+        <div class="sms-note">Automated follow-up if not retrieved</div>
+      </div>
+    </div>
+
+    <p>Keep every message short. Include your shop name, a phone number, and an opt-out line on the first message. Do not add fluff. The customer wants one piece of information and they want it fast.</p>
+
+    <h2>Use case 2: Offer expiry reminders for buyback leads</h2>
+
+    <div class="use-case">
+      <div class="use-case-eyebrow">Use case 02</div>
+      <h3>Recover the leads who locked a price and did not show up</h3>
+      <p>A customer goes to your website at 10pm, uses the device calculator, locks a price for $340 on their iPhone 14, and enters their email. They have every intention of coming in the next day. Then life happens. Two days go by. The offer code is about to expire and they have forgotten it exists.</p>
+    </div>
+
+    <p>This is one of the highest-return SMS applications available to a buyback shop. A single text sent 24 hours before the offer code expires recovers a meaningful percentage of leads that would otherwise go nowhere. The customer has already made the decision to sell. They just need a nudge at the right moment.</p>
+
+    <div class="sms-block">
+      <div class="sms-block-label">Offer expiry reminder — sent 24 hours before code expires</div>
+      <div class="sms-bubbles">
+        <div class="sms-bubble">Hi Sarah — your iPhone 14 offer of $340 (code IMB-7K2X) expires tomorrow at 5pm. Come in today and we'll pay you on the spot. iMobile Repair, 20503 Dequindre, Detroit. Reply STOP to opt out.</div>
+        <div class="sms-note">Triggered automatically when code is 24 hours from expiry</div>
+      </div>
+    </div>
+
+    <p>The message is direct, includes the specific offer amount and code so the customer recognizes it immediately, includes the address so there is no friction in getting there, and gives a clear deadline that creates urgency without pressure. That is all it needs to be.</p>
+
+    <p>The key detail: the phone number collected at the calculator stage is what makes this possible. If your quote system only captures email, you are limited to email follow-up which has a fraction of the open rate. Building phone number capture into your buyback flow from the start is what makes the SMS follow-up work.</p>
+
+    <a href="/blog/ai-for-phone-repair-shops/" class="callout-link">
+      <div>
+        <div class="callout-link-label">Related article</div>
+        <div class="callout-link-title">How AI and automation work together for phone shop lead capture</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <h2>Use case 3: Seasonal buyback blasts to past customers</h2>
+
+    <div class="use-case">
+      <div class="use-case-eyebrow">Use case 03</div>
+      <h3>Reach past customers at the exact moment they are ready to sell</h3>
+      <p>Every September, Apple announces new iPhones. Every year, a wave of people upgrade. Most of them have an old iPhone sitting in a drawer within weeks of the announcement. Most shops do nothing to reach those people. A well-timed text to past customers who previously sold a device to your shop or visited your website is one of the easiest revenue opportunities of the year.</p>
+    </div>
+
+    <p>The timing window is tight. Values on the outgoing iPhone model are highest in the two weeks before and right after the new model announcement. After that, the market is flooded and prices drop quickly. A text that arrives at the right moment — while values are still strong and the customer is thinking about upgrading — converts at a much higher rate than the same message a month later.</p>
+
+    <div class="sms-block">
+      <div class="sms-block-label">iPhone release season — buyback blast</div>
+      <div class="sms-bubbles">
+        <div class="sms-bubble">New iPhones just dropped. We're paying top cash for iPhone 15 and older models this week while values are high. Get an instant quote: imobilerbb.com/sell/iphone — iMobile Repair, Detroit. Reply STOP to opt out.</div>
+        <div class="sms-note">Send to opted-in past customers in early September</div>
+      </div>
+    </div>
+
+    <div class="sms-block">
+      <div class="sms-block-label">Back-to-school — repair reminder</div>
+      <div class="sms-bubbles">
+        <div class="sms-bubble">School year starting. Cracked screen or dead battery? We fix iPhones same day, most repairs under an hour. iMobile Repair, Dequindre at 8 Mile, Detroit. Reply STOP to opt out.</div>
+        <div class="sms-note">Send to opted-in past repair customers in mid-August</div>
+      </div>
+    </div>
+
+    <p>Two or three seasonal messages a year to a permissioned list are genuinely welcome. The customer sold a device or had a repair done. They have a positive association with your shop. A relevant message at the right time feels like useful information, not spam. That only holds if you are not sending messages every week — frequency is where shops lose the goodwill they built.</p>
+
+    <h2>Compliance — what you must know before sending a single text</h2>
+
+    <div class="compliance-box">
+      <div class="compliance-label">Read this before you start</div>
+      <p><strong>TCPA (Telephone Consumer Protection Act)</strong> governs business text messaging in the US. The core rule: you must have explicit written consent from a customer before sending them marketing messages. This means they have to actively opt in — a checkbox on your website calculator, a written signature at drop-off, or a keyword opt-in (texting JOIN to a number). Simply having a customer's phone number is not enough.</p>
+      <p><strong>Every marketing message must include an opt-out.</strong> "Reply STOP to opt out" at the end of each message is the standard and it is required. When someone replies STOP, you must remove them from your list immediately and permanently.</p>
+      <p><strong>Transactional messages</strong> — repair status updates, appointment confirmations, order notifications — have more flexibility under TCPA because they are service-related rather than promotional. But it is still best practice to get consent at drop-off and note it in your records.</p>
+      <p>This is not legal advice. For specifics on your situation, speak with a lawyer familiar with TCPA. The practical takeaway: build opt-in into your calculator flow and your drop-off process from day one. It protects you and it builds a better list anyway — customers who explicitly opted in respond better than customers added without consent.</p>
+    </div>
+
+    <h2>What to say — and what not to say</h2>
+
+    <p>Every SMS that works follows the same pattern: short, specific, one action, easy to follow through on. Every SMS that fails is long, vague, or asks the customer to do too many things at once.</p>
+
+    <p><strong>Keep it under 160 characters when possible.</strong> That is one SMS segment. Longer messages split into two and cost more to send. More importantly, customers reading texts are not reading carefully — they scan. One sentence with the key information and a link or phone number is enough.</p>
+
+    <p><strong>Always say who you are.</strong> The customer may not have your shop saved in their phone. Start or end with your shop name and city on the first message in any new thread. "iMobile Repair, Detroit" takes five words and eliminates any confusion about who is texting.</p>
+
+    <p><strong>Include exactly one action.</strong> Come in. Click this link. Reply YES. One thing. Not "Come in or call us or check out our website or leave a review." Customers who receive a message with multiple asks choose none of them.</p>
+
+    <p><strong>Do not blast promotions every week.</strong> A customer who receives a marketing text more than once a month starts ignoring them or opting out. Frequency is the fastest way to destroy a list you built over months. Transactional messages can happen as often as the transaction warrants. Marketing messages should be rare enough to feel worth reading.</p>
+
+    <h2>Simple tools to get started</h2>
+
+    <p>You do not need an enterprise SMS platform to run these three use cases. The most practical starting points for a single-location shop:</p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <div class="tool-name">Twilio</div>
+        <div class="tool-note">Developer-friendly API. Powers automated SMS flows when wired to your booking or calculator system. Most flexible option if you have technical help.</div>
+        <div class="tool-price">Pay per message, from ~$0.0079/SMS</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">SimpleTexting</div>
+        <div class="tool-note">No-code platform. Good for sending broadcast messages to a list, setting up keyword opt-ins, and basic automations without a developer.</div>
+        <div class="tool-price">From $39/mo for 500 messages</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">OpenPhone</div>
+        <div class="tool-note">Business phone number with texting built in. Good for repair status updates sent manually or through basic automations. Works from your desktop or phone.</div>
+        <div class="tool-price">From $15/mo per user</div>
+      </div>
+      <div class="tool-card">
+        <div class="tool-name">RepairDesk SMS</div>
+        <div class="tool-note">Built into RepairDesk repair management software. Sends automated repair status updates directly from your ticket system. No separate tool needed if you already use RepairDesk.</div>
+        <div class="tool-price">Included with RepairDesk plans</div>
+      </div>
+    </div>
+
+    <p>Start with whatever tool handles repair status updates first — that is the most immediate improvement to your current customer experience and requires the least list-building work. Add the offer expiry automation once your buyback calculator is capturing phone numbers. Build the seasonal blast list over time as you accumulate opted-in contacts from both repair and buyback transactions.</p>
+
+    <div class="callout">
+      <p><strong>SiteBot's SMS follow-up is coming.</strong> The iMobile device calculator already captures email at the offer lock step. Phone number capture and automated offer expiry reminders via SMS are the next piece of the lead recovery system. If you are on the waitlist, this will be part of your setup when we launch.</p>
+    </div>
+
+    <a href="/blog/phone-repair-shop-marketing/" class="callout-link">
+      <div>
+        <div class="callout-link-label">Related article</div>
+        <div class="callout-link-title">Phone repair shop marketing — the full picture of what actually works</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-heading">Common questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Can a phone repair shop send text messages to customers?</div>
+        <div class="faq-a">Yes, but only to customers who have explicitly opted in to receive texts. Under TCPA regulations in the US, businesses must have written consent before sending marketing messages. Transactional messages like repair status updates have more flexibility but marketing messages require a clear opt-in. Always include an opt-out option in every message and honor it immediately when someone replies STOP.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What SMS messages should a phone repair shop send?</div>
+        <div class="faq-a">The three highest-value use cases are repair status updates for customers waiting on their device, offer expiry reminders for buyback leads who locked a price but did not come in, and seasonal promotions to past customers around iPhone release windows or back-to-school season. Each one either improves the current customer experience or recovers revenue you would otherwise lose without adding manual work once the automation is set up.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is TCPA compliance for SMS marketing?</div>
+        <div class="faq-a">TCPA is the Telephone Consumer Protection Act. It requires businesses to get explicit written consent before sending marketing text messages. Every marketing message must include a way to opt out, typically by replying STOP, and you must honor that immediately. Build opt-in into your website calculator and your drop-off process from the start. It protects you legally and builds a better, more responsive list because customers who opted in actually want to hear from you.</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h3>Want SMS follow-up built into your shop's system?</h3>
+      <p>SiteBot is building automated offer expiry SMS into the device calculator. Join the waitlist to be first in line when it launches.</p>
+      <a href="/" class="btn-dark">Join the Waitlist</a>
+      <p class="cta-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <div class="related-heading">Keep reading</div>
+      <div class="related-grid">
+        <a href="/blog/ai-for-phone-repair-shops/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">AI for phone repair shops — what it can do now</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-repair-shop-marketing/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">Phone repair shop marketing — what actually works</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/how-to-buy-phones-for-cash/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">How to buy phones for cash — shop owner guide</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-repair-shop-reviews/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">How to get more Google reviews for your shop</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
