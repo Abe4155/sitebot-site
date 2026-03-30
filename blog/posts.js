@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "How to Buy Phones for Cash — A Guide for Cell Phone Shop Owners",
+    url: "/blog/how-to-buy-phones-for-cash/",
+    description: "Device buyback is one of the most profitable parts of running a cell phone shop. Here is how to price phones, protect yourself from bad deals, capture leads online, and buy more devices consistently.",
+    date: "March 2026",
+    category: "Buyback",
+    readTime: "10 min read"
+  },
+  {
     title: "AI for Phone Repair Shops — What It Can Do for Your Business Right Now",
     url: "/blog/ai-for-phone-repair-shops/",
     description: "AI is not just for big companies. Here is exactly how cell phone shops are using AI to quote devices, capture leads, follow up automatically, and get found on Google without hiring anyone.",
