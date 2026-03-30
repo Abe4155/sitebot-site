@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service — SiteBot</title>
+  <meta name="description" content="SiteBot terms of service. Read these before joining the waitlist or using the SiteBot platform.">
+  <link rel="canonical" href="https://sitebot.tech/terms/">
+  <meta name="robots" content="noindex">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #000;
+      --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 0 24px; height: 52px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { font-size: 17px; font-weight: 600; color: var(--white); text-decoration: none; letter-spacing: -0.3px; }
+    .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nav-links a { font-size: 13px; color: rgba(255,255,255,0.7); text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--white); }
+    .nav-cta { background: var(--white); color: var(--black) !important; padding: 7px 16px; border-radius: 20px; font-weight: 500; font-size: 13px !important; }
+    @media (max-width: 600px) { .nav-links { gap: 16px; } .nav-links li:not(:last-child) { display: none; } }
+
+    /* PAGE */
+    .page-wrap {
+      max-width: 680px; margin: 0 auto;
+      padding: 72px 24px 96px;
+    }
+
+    .page-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .12em;
+      color: var(--gray-400); margin-bottom: 16px;
+    }
+
+    .page-title {
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.08; margin-bottom: 12px;
+      color: var(--white);
+    }
+
+    .page-updated {
+      font-size: 13px; color: var(--gray-400);
+      margin-bottom: 56px;
+    }
+
+    /* TOC */
+    .toc {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 24px 28px;
+      margin-bottom: 56px;
+    }
+    .toc-label {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: var(--gray-400); margin-bottom: 12px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .toc-list a {
+      font-size: 14px; color: rgba(255,255,255,0.55);
+      text-decoration: none; transition: color .15s;
+    }
+    .toc-list a:hover { color: var(--white); }
+
+    /* SECTIONS */
+    .section { margin-bottom: 52px; }
+
+    h2 {
+      font-size: 20px; font-weight: 700;
+      color: var(--white); margin-bottom: 14px;
+      padding-top: 8px;
+    }
+
+    p {
+      font-size: 15px; color: rgba(255,255,255,0.55);
+      line-height: 1.8; margin-bottom: 14px;
+    }
+    p:last-child { margin-bottom: 0; }
+    p strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+    ul {
+      margin: 12px 0 14px 20px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    li {
+      font-size: 15px; color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+    }
+    li strong { color: rgba(255,255,255,0.85); }
+
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      margin: 48px 0;
+    }
+
+    /* CONTACT BOX */
+    .contact-box {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 24px 28px;
+      margin-top: 48px;
+    }
+    .contact-box p { margin: 0; }
+    .contact-box a { color: #93c5fd; text-decoration: none; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 24px; text-align: center;
+    }
+    .footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 16px; }
+    .footer-links a { font-size: 13px; color: var(--gray-400); text-decoration: none; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-copy { font-size: 13px; color: #444; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="https://sitebot.tech/">SiteBot</a>
+    <ul class="nav-links">
+      <li><a href="/features/">Features</a></li>
+      <li><a href="/demo/">Demo</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/" class="nav-cta">Join the Waitlist</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="page-label">Legal</div>
+    <h1 class="page-title">Terms of Service</h1>
+    <p class="page-updated">Last updated: March 2026</p>
+
+    <!-- TOC -->
+    <div class="toc">
+      <div class="toc-label">On this page</div>
+      <ul class="toc-list">
+        <li><a href="#agreement">1. Agreement to these terms</a></li>
+        <li><a href="#services">2. What SiteBot provides</a></li>
+        <li><a href="#waitlist">3. Waitlist and early access</a></li>
+        <li><a href="#account">4. Your account and responsibilities</a></li>
+        <li><a href="#acceptable">5. Acceptable use</a></li>
+        <li><a href="#content">6. Your content</a></li>
+        <li><a href="#sms">7. SMS communications</a></li>
+        <li><a href="#billing">8. Billing and payments</a></li>
+        <li><a href="#ip">9. Intellectual property</a></li>
+        <li><a href="#disclaimer">10. Disclaimers</a></li>
+        <li><a href="#liability">11. Limitation of liability</a></li>
+        <li><a href="#termination">12. Termination</a></li>
+        <li><a href="#changes">13. Changes to these terms</a></li>
+        <li><a href="#contact">14. Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- 1 -->
+    <div class="section" id="agreement">
+      <h2>1. Agreement to these terms</h2>
+      <p>By accessing sitebot.tech, joining the SiteBot waitlist, or using any SiteBot service, you agree to be bound by these Terms of Service. If you do not agree, do not use the platform.</p>
+      <p>These terms apply to all visitors, waitlist members, and paying customers. <strong>SiteBot</strong> refers to the product and platform operated by iMobile Repair Center and its principals.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 2 -->
+    <div class="section" id="services">
+      <h2>2. What SiteBot provides</h2>
+      <p>SiteBot is a website and lead generation platform built specifically for cell phone repair and device buyback shops. Services include but are not limited to:</p>
+      <ul>
+        <li>A professionally built website for your shop</li>
+        <li>A device quote calculator connected to a Google Sheets pricing backend</li>
+        <li>An offer code and email lead capture system</li>
+        <li>SEO-optimized content pages targeting local repair and buyback searches</li>
+        <li>Google Business Profile optimization guidance</li>
+        <li>Automated lead email notifications</li>
+      </ul>
+      <p>Additional features including SMS follow-up, AI pricing assistance, and lead tracking dashboards are in development and will be offered to qualifying accounts when available. SiteBot reserves the right to add, modify, or discontinue any feature at any time.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 3 -->
+    <div class="section" id="waitlist">
+      <h2>3. Waitlist and early access</h2>
+      <p>Joining the SiteBot waitlist does not guarantee access to the platform or create a contractual obligation on either side. Waitlist signups are collected to gauge interest and prioritize onboarding.</p>
+      <p>Early access shops are onboarded at SiteBot's discretion. Early access terms including pricing, setup fees, and features will be communicated directly before any paid agreement begins.</p>
+      <p><strong>No charges will be made to any waitlist member without explicit agreement.</strong> Joining the waitlist is free and requires no payment information.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 4 -->
+    <div class="section" id="account">
+      <h2>4. Your account and responsibilities</h2>
+      <p>When you become a SiteBot customer you are responsible for:</p>
+      <ul>
+        <li>Providing accurate information about your shop during onboarding</li>
+        <li>Keeping your Google Sheet pricing data accurate and up to date</li>
+        <li>Ensuring the offers displayed on your calculator reflect prices you are actually willing to honor</li>
+        <li>Maintaining the security of any credentials we provide to you</li>
+        <li>Complying with all applicable local, state, and federal laws related to device buyback and repair services in your jurisdiction</li>
+      </ul>
+      <p>You are responsible for the accuracy of pricing, offers, and information displayed on your SiteBot-powered website. SiteBot is not liable for disputes between you and your customers arising from pricing errors or misrepresented offers.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 5 -->
+    <div class="section" id="acceptable">
+      <h2>5. Acceptable use</h2>
+      <p>You may not use SiteBot to:</p>
+      <ul>
+        <li>Display false, misleading, or fraudulent device offers</li>
+        <li>Collect customer information under false pretenses</li>
+        <li>Violate any law or regulation applicable to your business</li>
+        <li>Engage in bait-and-switch pricing tactics</li>
+        <li>Send unsolicited commercial messages to leads captured through your SiteBot system</li>
+        <li>Attempt to reverse-engineer, copy, or resell any part of the SiteBot platform</li>
+      </ul>
+      <p>SiteBot reserves the right to suspend or terminate any account found to be in violation of these acceptable use guidelines without prior notice.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 6 -->
+    <div class="section" id="content">
+      <h2>6. Your content</h2>
+      <p>You retain ownership of any content you provide to SiteBot including your shop name, logo, pricing data, and other materials. By providing content you grant SiteBot a limited license to display and use that content solely for the purpose of operating your website and lead system.</p>
+      <p>SiteBot may use your shop's name, general results, and anonymized data for marketing purposes including case studies and testimonials. We will ask before using your name or likeness publicly in any detailed or identifiable way.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 7 -->
+    <div class="section" id="sms">
+      <h2>7. SMS communications</h2>
+      <p>SiteBot may offer SMS-based lead follow-up as a feature for active subscribers. Any SMS features are subject to the following:</p>
+      <ul>
+        <li><strong>Consent:</strong> Your customers must have explicitly opted in to receive SMS messages before any automated texts are sent on your behalf. SiteBot will only send SMS messages to leads who have provided consent through your website's opt-in flow.</li>
+        <li><strong>Opt-out:</strong> Every SMS sent through SiteBot includes an opt-out option. Customers who reply STOP will be removed from all future messaging immediately.</li>
+        <li><strong>Compliance:</strong> You agree to use SMS features in compliance with the Telephone Consumer Protection Act (TCPA) and all applicable messaging regulations. SiteBot is not responsible for your failure to comply with applicable law.</li>
+        <li><strong>Message frequency:</strong> Message frequency will vary based on customer interactions with your offer system. Standard message and data rates may apply to your customers.</li>
+      </ul>
+      <p>SMS features are currently in development and will be activated for qualifying accounts when available. These terms apply when the feature is enabled on your account.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 8 -->
+    <div class="section" id="billing">
+      <h2>8. Billing and payments</h2>
+      <p>SiteBot operates on a monthly subscription model. Pricing, billing cycles, and included features will be confirmed in writing before your paid account begins. No charges occur during the waitlist or onboarding discussion phase.</p>
+      <ul>
+        <li><strong>Billing cycle:</strong> Subscriptions are billed monthly in advance unless otherwise agreed.</li>
+        <li><strong>Cancellation:</strong> You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period. No partial refunds are issued for unused time within a billing cycle.</li>
+        <li><strong>Late payments:</strong> Accounts with outstanding balances may have services suspended until payment is received.</li>
+        <li><strong>Price changes:</strong> SiteBot reserves the right to adjust pricing with 30 days written notice. Early access pricing is locked for the term specified in your onboarding agreement.</li>
+      </ul>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 9 -->
+    <div class="section" id="ip">
+      <h2>9. Intellectual property</h2>
+      <p>All code, design, systems, and content created by SiteBot remain the property of SiteBot. This includes but is not limited to the website templates, calculator system, email capture flow, and offer code generation logic.</p>
+      <p>The SEO content created for your specific shop is licensed to you for use on your SiteBot-powered site. If your subscription ends, you may request a copy of your shop-specific content. The underlying platform, templates, and systems remain SiteBot property and may not be copied or redistributed.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 10 -->
+    <div class="section" id="disclaimer">
+      <h2>10. Disclaimers</h2>
+      <p>SiteBot is provided on an "as is" and "as available" basis. We make no warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <p>SiteBot does not guarantee specific search engine rankings, lead volumes, or revenue outcomes. SEO results vary based on your market, competition, and factors outside our control. We build the system. Results depend on your market.</p>
+      <p>We are not responsible for downtime, data loss, or interruptions caused by third-party services including Google Sheets, EmailJS, Vercel, or any other infrastructure provider we rely on.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 11 -->
+    <div class="section" id="liability">
+      <h2>11. Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, SiteBot's total liability for any claim arising from or related to these terms or your use of the platform shall not exceed the amount you paid to SiteBot in the three months preceding the claim.</p>
+      <p>SiteBot is not liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business, even if we have been advised of the possibility of such damages.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 12 -->
+    <div class="section" id="termination">
+      <h2>12. Termination</h2>
+      <p>Either party may terminate the service relationship at any time. You may cancel through written notice to info@sitebot.tech. SiteBot may terminate or suspend your account for violations of these terms, non-payment, or any reason with reasonable notice.</p>
+      <p>Upon termination we will provide you with a copy of your shop-specific content within 30 days if requested. Your website will be taken offline at the end of the billing period or immediately in cases of terms violations.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 13 -->
+    <div class="section" id="changes">
+      <h2>13. Changes to these terms</h2>
+      <p>SiteBot may update these terms from time to time. When we do we will update the date at the top of this page. If changes are material we will notify active subscribers by email at least 14 days before the changes take effect.</p>
+      <p>Continued use of the platform after changes take effect constitutes your acceptance of the updated terms.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 14 -->
+    <div class="section" id="contact">
+      <h2>14. Contact</h2>
+      <p>Questions about these terms? Reach us at:</p>
+    </div>
+
+    <div class="contact-box">
+      <p><strong style="color:rgba(255,255,255,0.85);">SiteBot</strong><br>
+      Email: <a href="mailto:info@sitebot.tech">info@sitebot.tech</a><br>
+      Website: <a href="https://sitebot.tech">sitebot.tech</a></p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/features/">Features</a>
+      <a href="/demo/">Demo</a>
+      <a href="/case-study/imobile/">Case Study</a>
+      <a href="/about/">About</a>
+      <a href="/terms/">Terms</a>
+      <a href="/privacy/">Privacy</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 SiteBot. Built by a real cell phone shop owner. info@sitebot.tech</p>
+  </footer>
+
+</body>
+</html>
