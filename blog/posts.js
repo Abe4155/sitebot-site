@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "Phone Repair Lead Capture — How to Catch Customers Before They Go Somewhere Else",
+    url: "/blog/phone-repair-lead-capture/",
+    description: "Most repair and buyback customers find a shop, decide in seconds, and move on. Here is exactly how to capture those leads online before they call a competitor or walk into a kiosk.",
+    date: "March 2026",
+    category: "Marketing",
+    readTime: "9 min read"
+  },
+  {
     title: "How Much Does a Cell Phone Repair Shop Website Cost?",
     url: "/blog/cell-phone-repair-shop-website-cost/",
     description: "DIY builders, freelancers, agencies, and specialized platforms compared honestly. What each costs over 12 months, what you get, and which one makes sense for where your shop is right now.",

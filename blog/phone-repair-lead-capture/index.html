@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Repair Lead Capture — How to Catch Customers Before They Go Somewhere Else</title>
+  <meta name="description" content="Most repair and buyback customers find a shop, decide in seconds, and move on. Here is exactly how to capture those leads online — before they call a competitor or walk into a kiosk.">
+  <link rel="canonical" href="https://sitebot.tech/blog/phone-repair-lead-capture/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Phone Repair Lead Capture — How to Catch Customers Before They Go Somewhere Else",
+    "description": "Most repair and buyback customers find a shop, decide in seconds, and move on. Here is exactly how to capture those leads before they call a competitor.",
+    "author": { "@type": "Organization", "name": "SiteBot" },
+    "publisher": { "@type": "Organization", "name": "SiteBot", "url": "https://sitebot.tech" },
+    "mainEntityOfPage": "https://sitebot.tech/blog/phone-repair-lead-capture/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do phone repair shops get leads online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Repair leads come from Google search — someone with a broken screen searches for a repair shop near them and finds you or does not. Buyback leads come from people searching to sell their phone, and the best way to capture them before they go elsewhere is a device quote calculator on your website that gives them an instant price and collects their contact information when they lock the offer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a device quote calculator?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A device quote calculator is a tool on your website that lets a customer select their phone model, storage, and condition and receive an instant cash offer. When they lock the offer, they enter their email or phone number and receive an offer code valid for a set time period, usually 72 hours. The shop owner receives the lead details automatically — the customer's contact information, the device, and the offered amount — before the customer ever walks in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between a repair lead and a buyback lead?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A repair lead acts on immediate urgency — their screen just broke and they need it fixed today. They search, evaluate options fast, and call or walk in. A buyback lead is comparison shopping — they want to know what their phone is worth before committing. The repair lead needs you to show up in search and answer quickly. The buyback lead needs you to give them a number online before they find another option."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+    .article-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 14px; display: block; }
+    h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 16px; }
+    .article-meta { font-size: 13px; color: var(--gray-400); margin-bottom: 48px; }
+    h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; line-height: 1.2; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* LEAD TYPE SPLIT */
+    .lead-split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .lead-split { grid-template-columns: 1fr; } }
+    .lead-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .lead-card-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+    .repair-label { color: #93c5fd; }
+    .buyback-label { color: #86efac; }
+    .lead-card-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .lead-card-item { font-size: 13px; color: rgba(255,255,255,0.48); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.04); line-height: 1.5; }
+    .lead-card-item:last-child { border-bottom: none; }
+
+    /* FLOW DIAGRAM */
+    .flow { display: flex; flex-direction: column; gap: 0; margin: 24px 0; }
+    .flow-step { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; position: relative; }
+    .flow-step:not(:last-child)::after {
+      content: ''; position: absolute;
+      left: 17px; top: 48px;
+      width: 2px; height: calc(100% - 16px);
+      background: rgba(255,255,255,0.08);
+    }
+    .flow-dot {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.4);
+      flex-shrink: 0;
+    }
+    .flow-dot.active {
+      background: rgba(74,222,128,0.1);
+      border-color: rgba(74,222,128,0.25);
+      color: #4ade80;
+    }
+    .flow-content-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .flow-content-desc { font-size: 14px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* LEAK SCENARIO */
+    .leak-box {
+      background: rgba(239,68,68,0.05);
+      border: 1px solid rgba(239,68,68,0.14);
+      border-radius: 14px; padding: 22px 24px; margin: 28px 0;
+    }
+    .leak-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 10px; }
+    .leak-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .leak-box p:last-child { margin-bottom: 0; }
+    .leak-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); }
+    .callout p strong { color: var(--white); }
+
+    .callout-link { background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.18); border-radius: 12px; padding: 18px 22px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-decoration: none; flex-wrap: wrap; transition: border-color .2s; }
+    .callout-link:hover { border-color: rgba(37,99,235,0.35); }
+    .callout-link-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .callout-link-title { font-size: 15px; font-weight: 600; color: #93c5fd; }
+    .callout-link-arrow { color: var(--gray-400); font-size: 20px; flex-shrink: 0; }
+
+    .checklist { display: flex; flex-direction: column; gap: 0; margin: 20px 0; }
+    .check-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .check-item:last-child { border-bottom: none; }
+    .check-icon { width: 22px; height: 22px; border-radius: 50%; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.22); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; color: #4ade80; margin-top: 1px; }
+    .check-text { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+    .check-text strong { color: var(--white); }
+
+    .faq-section { margin-top: 52px; }
+    .faq-heading { font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    .cta-banner { background: var(--white); margin-top: 64px; padding: 48px 32px; border-radius: 16px; text-align: center; }
+    .cta-banner h3 { font-size: clamp(20px, 3.5vw, 30px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 10px; }
+    .cta-banner p { font-size: 16px; color: #424245; max-width: 440px; margin: 0 auto 24px; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 13px 30px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .cta-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+
+    .related { margin-top: 56px; }
+    .related-heading { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 540px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px 18px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; transition: border-color .2s; }
+    .rel-card:hover { border-color: rgba(255,255,255,0.2); }
+    .rel-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .rel-title { font-size: 13px; font-weight: 600; color: var(--white); }
+    .rel-arrow { color: var(--gray-400); font-size: 16px; flex-shrink: 0; margin-left: 10px; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <article class="article-wrap">
+
+    <span class="article-tag">Marketing</span>
+    <h1>Phone Repair Lead Capture — How to Catch Customers Before They Go Somewhere Else</h1>
+    <p class="article-meta">By SiteBot &nbsp;|&nbsp; March 2026 &nbsp;|&nbsp; 9 min read</p>
+
+    <p>Most generic lead capture advice is built for B2B software companies — nurture sequences, gated ebooks, multi-touch funnels that take weeks to move a prospect from awareness to purchase. None of that applies to a phone repair shop.</p>
+
+    <p>Your customers are not being nurtured. They have a cracked screen or an old phone they want to sell, and they are making a decision within minutes of searching. The window between "they found you" and "they chose someone else" is measured in seconds, not days. Lead capture for a repair shop is not about building a pipeline — it is about converting the intention that already exists before it walks away.</p>
+
+    <h2>Repair leads and buyback leads work completely differently</h2>
+
+    <p>This is the starting point that most articles miss. A repair customer and a buyback customer have entirely different behavior patterns, and the tools you use to capture each one are not the same.</p>
+
+    <div class="lead-split">
+      <div class="lead-card">
+        <div class="lead-card-label repair-label">Repair customer</div>
+        <div class="lead-card-title">Immediate intent, fast decision</div>
+        <div class="lead-card-item">Phone just broke — needs fixing now</div>
+        <div class="lead-card-item">Searches Google within minutes</div>
+        <div class="lead-card-item">Looks at map pack, reads reviews</div>
+        <div class="lead-card-item">Calls or walks in same day</div>
+        <div class="lead-card-item">Does not browse 10 websites first</div>
+        <div class="lead-card-item">Capture method: show up in search</div>
+      </div>
+      <div class="lead-card">
+        <div class="lead-card-label buyback-label">Buyback customer</div>
+        <div class="lead-card-title">Comparison shopping, needs a number</div>
+        <div class="lead-card-item">Has a phone they want to sell</div>
+        <div class="lead-card-item">Searches for price before deciding</div>
+        <div class="lead-card-item">Compares offers across multiple options</div>
+        <div class="lead-card-item">Often searches at night, acts next day</div>
+        <div class="lead-card-item">Will go with whoever gives the best number first</div>
+        <div class="lead-card-item">Capture method: instant quote calculator</div>
+      </div>
+    </div>
+
+    <p>Treating both customer types the same way is where most shops leak revenue. The repair customer needs you to be visible and easy to reach. The buyback customer needs you to give them a number before they find someone else who will. Both are lead capture problems — they just require different solutions.</p>
+
+    <h2>Capturing repair leads: visibility is the funnel</h2>
+
+    <p>For repair customers, the entire funnel happens in Google. There is no email capture, no popup form, no lead magnet. The customer types a search, looks at what comes up, and calls or walks in. The lead is either captured by showing up or lost entirely by not showing up.</p>
+
+    <p>This means the repair lead capture strategy is an SEO strategy. Your shop needs to rank in the Google Maps pack for searches like "iPhone repair near me," "phone screen repair Detroit," and "same day phone repair 48234." Every shop that ranks above yours in those results is capturing the leads you are not.</p>
+
+    <p>The practical requirements for capturing repair leads through search:</p>
+
+    <div class="checklist">
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text"><strong>A Google Business Profile that is complete, reviewed, and active.</strong> This controls your map pack ranking more than anything else. Right primary category, all services listed, consistent reviews coming in monthly, posts going up weekly.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text"><strong>Individual pages for each repair type on your website.</strong> One page targeting "iPhone screen replacement Detroit." Another for battery replacement. Another for Samsung repair. Each page gives Google a specific signal for a specific search.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text"><strong>Your phone number visible and tappable on every page.</strong> A repair customer who finds your page on their phone needs to call in one tap. Any friction between finding you and reaching you loses customers who had already decided to use your shop.</div>
+      </div>
+      <div class="check-item">
+        <div class="check-icon">✓</div>
+        <div class="check-text"><strong>Clear indication that you are open and how fast you can help.</strong> "Same day repairs, walk-ins welcome, most repairs under one hour" on the homepage answers the question every repair customer is asking before they call.</div>
+      </div>
+    </div>
+
+    <p>Notice there is no form here. Repair customers do not fill out forms. They call or they walk in. A contact form on a repair page is fine to have but it is not where repair lead capture happens — it happens in search results before the customer even reaches your site.</p>
+
+    <h2>Capturing buyback leads: the calculator is the funnel</h2>
+
+    <p>Buyback lead capture is where most shops leave the most money on the table, because the problem has a clear solution that almost no local shop has implemented.</p>
+
+    <p>A customer wants to sell their iPhone 15 Pro. They search "sell iPhone near me" or "how much is my iPhone 15 Pro worth." They find a few options. Most of them — a kiosk finder, a national buyback aggregator, maybe a local shop's page that just says "We Buy Phones, Call for a Quote." That last option loses almost every customer who sees it. Nobody is going to call a shop to ask for a price when they can get a number instantly somewhere else.</p>
+
+    <p>The shop that wins this customer is the one that gives them an instant, specific offer without requiring a call. That is what a device quote calculator does.</p>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-dot active">1</div>
+        <div>
+          <div class="flow-content-title">Customer searches "sell iPhone Detroit"</div>
+          <div class="flow-content-desc">Your calculator page ranks in Google results because it targets that keyword specifically.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dot active">2</div>
+        <div>
+          <div class="flow-content-title">They land on your calculator and select their device</div>
+          <div class="flow-content-desc">Model, condition, storage. The calculator reads from your pricing sheet and returns an instant dollar amount.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dot active">3</div>
+        <div>
+          <div class="flow-content-title">They like the number and click "Lock My Price"</div>
+          <div class="flow-content-desc">They enter their name and email. The system generates an offer code valid for 72 hours.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dot active">4</div>
+        <div>
+          <div class="flow-content-title">Offer code emails automatically</div>
+          <div class="flow-content-desc">The customer gets a confirmation with the offer code and your address. You get an email with their name, contact info, device details, and offer amount.</div>
+        </div>
+      </div>
+      <div class="flow-step">
+        <div class="flow-dot">5</div>
+        <div>
+          <div class="flow-content-title">Customer comes in within 72 hours</div>
+          <div class="flow-content-desc">They show the code. You verify the device matches the condition graded, pay them, done. No back-and-forth, no surprise negotiation.</div>
+        </div>
+      </div>
+    </div>
+
+    <p>That entire flow happens without any manual work on your end. The lead is captured, confirmed, and primed to walk in before you do anything. The only thing your team needs to do is honor the offer when the customer arrives.</p>
+
+    <div class="callout">
+      <p><strong>This is exactly how iMobile Repair Center runs their buyback operation in Detroit.</strong> The iPhone and iPad calculators at imobilerbb.com run 24 hours a day. Customers lock prices at 10pm and come in the next morning. The offer code emails go out automatically. Every lead that comes through has already committed to the offer before they walk through the door.</p>
+    </div>
+
+    <a href="/demo/" class="callout-link">
+      <div>
+        <div class="callout-link-label">See it working live</div>
+        <div class="callout-link-title">Try the iMobile device quote calculator right now</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <h2>Where most shops leak leads without realizing it</h2>
+
+    <div class="leak-box">
+      <div class="leak-label">The leaks that cost the most</div>
+      <p><strong>A homepage with no buyback page.</strong> "We Buy Phones" in the navigation that goes nowhere, or a single line on the homepage with no pricing information. A buyback customer who cannot get a number in 30 seconds will leave and get one somewhere else.</p>
+      <p><strong>A buyback page that says "Call for a quote."</strong> This is the biggest single lead leak in most shops. Requiring a phone call to get a price converts almost nobody who found you online at night. The customer will not call back in the morning — they already found a number on another site.</p>
+      <p><strong>A website that does not rank for local buyback searches.</strong> You can have a calculator on your site and still capture zero buyback leads if no one searching "sell iPhone Detroit" ever finds you. The calculator only captures leads from people who reach your page. Getting those people there requires SEO targeting the right keywords.</p>
+      <p><strong>A repair page that loads slowly on mobile.</strong> The repair customer searching on their cracked phone will abandon a page that takes five seconds to load. Most repair customers are searching on the exact device they are trying to fix. Speed on mobile is not optional.</p>
+    </div>
+
+    <h2>What happens after the lead is captured</h2>
+
+    <p>Lead capture is the beginning of the transaction, not the end. What happens in the hours after a lead is captured determines how many of them convert into actual revenue.</p>
+
+    <p>For buyback leads who lock a price and do not come in: a single automated text or email 24 hours before the offer code expires recovers a meaningful percentage. The customer meant to come in. Life got in the way. The reminder nudges them back at the right moment without requiring any manual work from your team. This is the SMS follow-up system covered in detail in the SMS marketing article.</p>
+
+    <p>For repair customers who call but do not commit immediately: speed of response is the conversion variable. A customer who calls two shops and one answers and one does not will go to the one that answered. A shop with a clear, fast phone presence — or an after-hours AI that captures the name and number and promises a callback first thing — recovers calls that would otherwise disappear.</p>
+
+    <p>The leads you work hardest to capture should not disappear because nobody followed up. The automation that sends the offer expiry reminder, the voicemail setup that promises a callback, the review request that goes out after a successful repair — these are the systems that turn captured leads into loyal customers rather than one-time transactions.</p>
+
+    <a href="/blog/phone-repair-shop-sms-marketing/" class="callout-link">
+      <div>
+        <div class="callout-link-label">Related article</div>
+        <div class="callout-link-title">SMS marketing for phone repair shops — what to send and when</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <h2>The full lead capture picture for a repair and buyback shop</h2>
+
+    <p>Put it all together and the lead capture system for a complete repair and buyback shop looks like this: repair customers are captured by showing up in local search at the exact moment they need a repair. Buyback customers are captured by an online calculator that gives them an instant number and locks the lead with an offer code before they call anyone else. Both are followed up automatically — repair pickups get a review request, buyback leads get an offer expiry reminder.</p>
+
+    <p>None of this is complicated in principle. The shops that do it well are not doing anything exotic — they have the right pages ranking for the right searches, a calculator that works at midnight, and a follow-up system that runs without manual effort. The shops that do not have these things are relying on whoever happens to walk in, which is a much smaller percentage of the customers who were already searching for them.</p>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-heading">Common questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How do phone repair shops get leads online?</div>
+        <div class="faq-a">Repair leads come from Google search — someone with a broken screen finds you in the map pack or organic results and calls or walks in. Buyback leads are captured best with a device quote calculator on your website that gives an instant price and collects contact information when the customer locks the offer. Getting both types of leads requires showing up in local search and giving customers something to act on when they land on your site.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is a device quote calculator?</div>
+        <div class="faq-a">A device quote calculator lets a customer select their phone model, storage, and condition on your website and receive an instant cash offer. When they lock the offer they enter their contact information and receive an offer code valid for 72 hours. You get their name, contact details, device information, and offer amount automatically before they ever visit the shop. It captures the lead at the moment of highest intent — when they are actively trying to sell their device right now.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between a repair lead and a buyback lead?</div>
+        <div class="faq-a">A repair customer is acting on urgent need — their screen just broke and they want it fixed today. They search, evaluate fast, and call or walk in. A buyback customer is comparison shopping — they want to know what their phone is worth before committing. The repair lead needs you to be visible and accessible in search. The buyback lead needs you to give them a price online before a competitor does, which is what a quote calculator handles.</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h3>Ready to capture leads your shop is currently missing?</h3>
+      <p>SiteBot builds the SEO pages that rank, the calculator that captures buyback leads, and the follow-up system that brings them in. Join the waitlist.</p>
+      <a href="/" class="btn-dark">Join the Waitlist</a>
+      <p class="cta-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <div class="related-heading">Keep reading</div>
+      <div class="related-grid">
+        <a href="/blog/how-to-buy-phones-for-cash/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">How to buy phones for cash — shop guide</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-repair-shop-sms-marketing/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">SMS marketing — what to send and when</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/ai-for-phone-repair-shops/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">AI for phone repair shops — what works now</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/how-to-rank-on-google-phone-repair/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">How to rank on Google for phone repair</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
