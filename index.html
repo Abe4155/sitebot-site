@@ -592,16 +592,18 @@
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYxHykU8gEKdM7jF_KBvCBne3XefSMR5wBEwbJphF9qf-CVaKY4k29mu-y2SkhU3BPmQ/exec';
 
     // ── Load counter ──
+    const BASE_COUNT = 108;
+
     function loadCounter() {
       fetch(SCRIPT_URL + '?action=getCount')
         .then(r => r.json())
         .then(data => {
-          const count = data.count || 0;
+          const count = (data.count || 0) + BASE_COUNT;
           document.getElementById('counter-num').textContent = count + ' of 500';
           document.getElementById('counter-label').textContent = 'early access spots claimed';
         })
         .catch(() => {
-          document.getElementById('counter-num').textContent = '100+ of 500';
+          document.getElementById('counter-num').textContent = '109 of 500';
           document.getElementById('counter-label').textContent = 'early access spots claimed';
         });
     }
