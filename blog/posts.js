@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "How Much Does a Cell Phone Repair Shop Website Cost?",
+    url: "/blog/cell-phone-repair-shop-website-cost/",
+    description: "DIY builders, freelancers, agencies, and specialized platforms compared honestly. What each costs over 12 months, what you get, and which one makes sense for where your shop is right now.",
+    date: "March 2026",
+    category: "Website",
+    readTime: "9 min read"
+  },
+  {
     title: "SMS Marketing for Phone Repair Shops — What to Send and When",
     url: "/blog/phone-repair-shop-sms-marketing/",
     description: "Text messages have a 98% open rate. Here is exactly how phone repair and buyback shops use SMS to update customers, recover lost leads, and bring past customers back without being spammy.",
