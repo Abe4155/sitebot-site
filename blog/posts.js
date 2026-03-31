@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "How to Start a Cell Phone Repair Shop — From Someone Who Actually Did It",
+    url: "/blog/how-to-start-cell-phone-repair-shop/",
+    description: "Location is everything. Marketing is second. You do not need years of experience. Here is what actually matters — including real startup costs — when opening a phone repair shop from scratch.",
+    date: "March 2026",
+    category: "Starting Out",
+    readTime: "10 min read"
+  },
+  {
     title: "Phone Repair Lead Capture — How to Catch Customers Before They Go Somewhere Else",
     url: "/blog/phone-repair-lead-capture/",
     description: "Most repair and buyback customers find a shop, decide in seconds, and move on. Here is exactly how to capture those leads online before they call a competitor or walk into a kiosk.",
