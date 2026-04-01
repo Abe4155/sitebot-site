@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "What a Phone Buyback Website Needs to Actually Bring in Sellers",
+    url: "/blog/phone-buyback-website/",
+    description: "A buyback website is not the same as a repair website. Here is exactly what it needs — the calculator, the SEO pages, the trust signals — to convert online searchers into sellers who show up.",
+    date: "March 2026",
+    category: "Buyback",
+    readTime: "8 min read"
+  },
+  {
     title: "How to Get More People to Sell Phones to Your Shop",
     url: "/blog/how-to-get-people-to-sell-phones-to-your-shop/",
     description: "Most sellers choose the shop they can find, not the one paying the most. Here is how to be visible in person and online so sellers find you before they find a kiosk.",
