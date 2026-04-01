@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Phone Repair Shop Website for Dallas, TX — Built and Ready</title>
+  <meta name="description" content="DFW is one of the fastest-growing metros in the country. The tech workers pouring into Plano, Frisco, and Uptown Dallas upgrade devices constantly — and they search Google first. SiteBot builds the website that puts your shop in front of them.">
+  <link rel="canonical" href="https://sitebot.tech/cell-phone-repair-shop-website-dallas/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cell Phone Repair Shop Website — Dallas, TX",
+    "description": "SiteBot builds done-for-you websites for cell phone repair and buyback shops in Dallas and the DFW metroplex. Repair pages, buyback pages, local SEO, and device quote calculator included.",
+    "url": "https://sitebot.tech/cell-phone-repair-shop-website-dallas/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 860px; margin: 0 auto; padding: 80px 24px 56px; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 30px; padding: 5px 14px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(32px, 5.5vw, 58px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.06; margin-bottom: 20px; }
+    .hero h1 span { color: #4ade80; }
+    .hero-sub { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+    .hero-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-green { display: inline-block; background: #4ade80; color: #000; font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-green:hover { opacity: 0.88; }
+    .btn-outline { display: inline-block; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: border-color .2s; }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
+
+    /* PROOF STRIP */
+    .proof-strip { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 18px 24px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .proof-item { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .proof-item strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+
+    /* CONTENT */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin: 56px 0 16px; line-height: 1.15; }
+    p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* CORRIDOR GRID */
+    .corridor-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .corridor-grid { grid-template-columns: 1fr; } }
+    .corridor-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .c-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; }
+    .c1 { color: #fcd34d; }
+    .c2 { color: #93c5fd; }
+    .c3 { color: #f9a8d4; }
+    .c4 { color: #86efac; }
+    .c-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .c-body { font-size: 12px; color: rgba(255,255,255,0.38); line-height: 1.65; }
+
+    /* INCLUDE GRID */
+    .include-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .include-grid { grid-template-columns: 1fr; } }
+    .include-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .ic-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .ic-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .ic-body { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* NEIGHBORHOOD */
+    .neighborhood-box { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; margin: 28px 0; }
+    .nb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-400); margin-bottom: 14px; }
+    .nb-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .nb-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 5px 14px; font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nb-footer { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 16px; line-height: 1.6; }
+
+    /* COMPETE */
+    .compete-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .compete-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 10px; }
+    .compete-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .compete-box p:last-child { margin-bottom: 0; }
+    .compete-box p strong { color: rgba(255,255,255,0.85); }
+
+    /* GROWTH BOX */
+    .growth-box { background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.15); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .growth-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #4ade80; margin-bottom: 10px; }
+    .growth-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .growth-box p:last-child { margin-bottom: 0; }
+    .growth-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(74,222,128,0.4); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* PRICING COMING SOON */
+    .pricing-soon { border: 1px dashed rgba(255,255,255,0.12); border-radius: 16px; padding: 48px 32px; text-align: center; margin: 28px 0; }
+    .ps-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+    .ps-title { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .ps-body { font-size: 15px; color: rgba(255,255,255,0.4); max-width: 380px; margin: 0 auto; line-height: 1.65; }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin: 64px 0 80px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; line-height: 1.6; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 700; padding: 15px 34px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge"><span>📍</span> Dallas / Fort Worth, Texas</div>
+    <h1>DFW is adding a hundred thousand people<br><span>a year — and they all need phone repair</span></h1>
+    <p class="hero-sub">The Dallas–Fort Worth metroplex is one of the fastest-growing in the country. The tech workers arriving in Plano, Frisco, and Uptown bring high-end devices and fast upgrade cycles. SiteBot builds the website that puts your shop in front of them the moment they search.</p>
+    <div class="hero-cta-row">
+      <a href="/#waitlist" class="btn-green">Join the Waitlist</a>
+      <a href="/blog/cell-phone-shop-seo/" class="btn-outline">How it works</a>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div class="proof-strip">
+    <div class="proof-item">Live proof of concept: <strong>iMobile Repair Center, Detroit</strong></div>
+    <div class="proof-item"><strong>4.9 stars</strong> · 400+ reviews</div>
+    <div class="proof-item"><strong>30+ pages</strong> live and ranking</div>
+    <div class="proof-item">Device calculator captures leads <strong>24/7</strong></div>
+  </div>
+
+  <div class="wrap">
+
+    <h2>DFW is not Dallas — it is a dozen separate markets sharing a metro code</h2>
+
+    <p>When people say Dallas, they usually mean the DFW metroplex — a sprawling region of over 8 million people spread across dozens of distinct cities. Dallas proper is just one of them. Plano, Frisco, McKinney, Allen, Garland, Irving, Grand Prairie, Carrollton, Richardson, Lewisville, Denton, Arlington, and Fort Worth each have their own populations, their own commercial corridors, and their own customers searching locally for repair shops.</p>
+
+    <p>The sprawl is the defining feature of this market. Nobody in Frisco drives to Oak Cliff for a battery replacement. Nobody in Arlington crosses the freeway to Uptown Dallas to sell an old iPhone. People in DFW search for what they need near where they already are — and the shop that shows up in that search gets the walk-in, the call, or the buyback lead. The shop that does not appear loses every one of those customers by default.</p>
+
+    <div class="corridor-grid">
+      <div class="corridor-card">
+        <div class="c-label c1">The North Corridor</div>
+        <div class="c-name">The fastest-growing part of DFW</div>
+        <div class="c-body">Plano · Frisco · McKinney · Allen · Richardson · The Colony — massive corporate campuses, Toyota, Liberty Mutual, JPMorgan Chase. High income, tech-forward, fast device upgrade cycles and strong buyback demand.</div>
+      </div>
+      <div class="corridor-card">
+        <div class="c-label c2">Intown Dallas</div>
+        <div class="c-name">Young professional and creative core</div>
+        <div class="c-body">Uptown · Deep Ellum · Lower Greenville · Bishop Arts · Oak Lawn · Design District — walkable pockets with dense young professional populations who search from their phones and want same-day service.</div>
+      </div>
+      <div class="corridor-card">
+        <div class="c-label c3">Mid-Cities and West</div>
+        <div class="c-name">High-volume suburban market</div>
+        <div class="c-body">Irving · Grand Prairie · Arlington · Carrollton · Farmers Branch — large mixed communities including significant Spanish-speaking populations, heavy daily traffic, and consistent repair demand year-round.</div>
+      </div>
+      <div class="corridor-card">
+        <div class="c-label c4">Fort Worth and Tarrant County</div>
+        <div class="c-name">Its own city within the metro</div>
+        <div class="c-body">Fort Worth · Hurst · Euless · Bedford · Keller · Southlake · Mansfield — 950,000+ residents in Fort Worth alone, a distinct identity from Dallas, and a repair market that most Dallas-focused shops are not touching at all.</div>
+      </div>
+    </div>
+
+    <div class="compete-box">
+      <div class="compete-label">The DFW repair market reality</div>
+      <p>The DFW metroplex has CPR and uBreakiFix locations spread across the metro, plus regional independents that have been building their presence for years. They hold broad Dallas-level searches and benefit from franchise brand recognition at the city level.</p>
+      <p><strong>At the city and corridor level, the searches are far more open.</strong> "Phone repair Frisco TX," "sell iPhone Plano," "iPhone screen repair Allen," "battery replacement Richardson" — those specific searches often have minimal competition from well-built independent shops. The franchises have one Dallas page. A local shop in Frisco with a page targeting Frisco searches wins that market without fighting anyone at the metro level.</p>
+    </div>
+
+    <!-- GROWTH BOX -->
+    <div class="growth-box">
+      <div class="growth-label">The relocation wave driving repair volume</div>
+      <p>DFW has absorbed hundreds of thousands of relocating workers from California, New York, and the northeast over the past several years. Toyota moved its North American headquarters to Plano. Goldman Sachs, Oracle, and dozens of financial and tech firms have established major DFW presences. These relocating workers bring California and New York device habits — premium iPhones, fast upgrade cycles, and familiarity with getting repairs done quickly.</p>
+      <p><strong>That workforce is arriving constantly, is tech-comfortable, and searches Google before going anywhere.</strong> A repair shop in Plano or Frisco that is well-positioned online is capturing a customer base that is growing every quarter. A shop that is invisible online is watching that same customer base walk past on the way to whoever does show up.</p>
+    </div>
+
+    <h2>What SiteBot builds for your DFW shop</h2>
+
+    <div class="include-grid">
+      <div class="include-card">
+        <span class="ic-icon">🔧</span>
+        <div class="ic-title">Repair pages targeting your DFW area</div>
+        <div class="ic-body">iPhone screen repair Plano TX. Battery replacement Frisco. Samsung repair Irving. Pages built for your specific city in the metro — not a single Dallas page competing against every shop in eight counties.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">💵</span>
+        <div class="ic-title">Buyback pages for DFW sellers</div>
+        <div class="ic-body">Sell iPhone Plano. Cash for iPhones Frisco. Pages targeting the area-level sell-phone searches that the north corridor's upgrading tech workforce runs — with a calculator that gives them an instant price before they look anywhere else.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📱</span>
+        <div class="ic-title">Device quote calculator</div>
+        <div class="ic-body">A Plano tech worker upgrades their iPhone and searches to sell the old one at 10pm. Your calculator gives them a quote, they lock it with their email, and walk in the next day with a code. Captured automatically while every competitor was closed.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📍</span>
+        <div class="ic-title">Google Business Profile setup</div>
+        <div class="ic-body">DFW's car-dependent geography makes the map pack the primary decision tool for local repair searches. A properly configured profile with repair and buyback services listed ensures your shop appears for both customer types in your area.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📊</span>
+        <div class="ic-title">Prices via Google Sheet</div>
+        <div class="ic-body">DFW's fast-growing tech workforce drives rapid upgrade cycles. When buyback prices shift — especially around Apple announcements — update your calculator prices from your phone in thirty seconds and the change goes live immediately.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">✉️</span>
+        <div class="ic-title">Automated offer emails</div>
+        <div class="ic-body">Every seller who locks a price receives an automatic offer code email. Every lead lands in your inbox with device model, condition, and offer amount already captured — before they walk through the door.</div>
+      </div>
+    </div>
+
+    <!-- NEIGHBORHOODS -->
+    <div class="neighborhood-box">
+      <div class="nb-label">DFW cities and areas SiteBot pages target</div>
+      <div class="nb-grid">
+        <span class="nb-pill">Plano</span>
+        <span class="nb-pill">Frisco</span>
+        <span class="nb-pill">McKinney</span>
+        <span class="nb-pill">Allen</span>
+        <span class="nb-pill">Richardson</span>
+        <span class="nb-pill">Uptown Dallas</span>
+        <span class="nb-pill">Deep Ellum</span>
+        <span class="nb-pill">Irving</span>
+        <span class="nb-pill">Carrollton</span>
+        <span class="nb-pill">Grand Prairie</span>
+        <span class="nb-pill">Garland</span>
+        <span class="nb-pill">Mesquite</span>
+        <span class="nb-pill">Arlington</span>
+        <span class="nb-pill">Fort Worth</span>
+        <span class="nb-pill">Southlake</span>
+        <span class="nb-pill">Lewisville</span>
+        <span class="nb-pill">Denton</span>
+        <span class="nb-pill">Grapevine</span>
+      </div>
+      <div class="nb-footer">Each DFW city functions as its own local market. A shop in McKinney serves McKinney customers — not a Dallas-wide audience. Pages built for the specific city your shop is in will always outperform a generic "Dallas" page for the searches your actual customers are running.</div>
+    </div>
+
+    <h2>DFW's buyback market is still largely unclaimed online</h2>
+
+    <p>The north DFW corridor — Plano, Frisco, Allen, McKinney — has one of the highest concentrations of tech and finance workers in the southern US. Device upgrade rates in this corridor are among the highest in the country. When those workers upgrade to a new iPhone, the outgoing device is worth hundreds of dollars to the right buyer.</p>
+
+    <p>Most of those devices end up at ecoATM kiosks or carrier trade-in programs that pay well below market value — not because local shops are not there, but because local shops have no online presence targeting "sell iPhone Plano" or "cash for iPhones Frisco." <strong>Those searches exist, the volume is real, and the competition from properly built local buyback pages is nearly zero in most DFW suburbs.</strong> That gap will not stay open as the market matures — but it is open right now.</p>
+
+    <div class="callout">
+      <p><strong>iMobile Repair Center in Detroit runs this exact system.</strong> The device calculator captures buyback leads overnight — device details, offer amount, and contact info arrive in the inbox before the shop opens. The website acquires the customer. The shop handles the transaction. That loop is what SiteBot builds for DFW shops from day one.</p>
+    </div>
+
+    <h2>Pricing</h2>
+
+    <div class="pricing-soon">
+      <span class="ps-icon">🛠️</span>
+      <div class="ps-title">Pricing coming soon</div>
+      <div class="ps-body">We are still building the tools. Join the waitlist now and you will be the first to know when pricing is announced — early access shops get the best rate.</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Ready to be the DFW shop customers find first?</h2>
+      <p>Join the waitlist and be among the first Dallas–Fort Worth repair shops on SiteBot. No setup fee. No credit card required.</p>
+      <a href="/#waitlist" class="btn-dark">Join the Waitlist</a>
+      <p class="final-note">Early access · $0 setup fee · DFW shops reviewed first</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
