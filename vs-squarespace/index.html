@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteBot vs Squarespace for Phone Repair Shops — What's the Difference?</title>
+  <meta name="description" content="Squarespace makes beautiful websites. But a beautiful website that nobody finds for 'iPhone repair near me' doesn't bring in customers. Here is what phone repair shops actually need.">
+  <link rel="canonical" href="https://sitebot.tech/vs-squarespace/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SiteBot vs Squarespace for Phone Repair Shops",
+    "description": "Squarespace is excellent for photographers, portfolios, and retail. It is not built for phone repair and buyback shops. An honest comparison of what each does and why it matters for your shop.",
+    "url": "https://sitebot.tech/vs-squarespace/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 800px; margin: 0 auto; padding: 80px 24px 48px; text-align: center; }
+    .hero-eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 18px; display: block; }
+    .hero h1 { font-size: clamp(30px, 5.5vw, 54px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 18px; }
+    .hero-sub { font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.5); max-width: 540px; margin: 0 auto 40px; line-height: 1.6; }
+
+    /* VS ROW */
+    .vs-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; max-width: 900px; margin: 0 auto 64px; padding: 0 24px; }
+    @media (max-width: 640px) { .vs-row { grid-template-columns: 1fr; } }
+    .vs-badge { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.22); text-align: center; }
+    .vs-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px; }
+    .vs-card.sitebot { border-color: rgba(74,222,128,0.2); }
+    .vs-card-name { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .vs-card-tag { font-size: 12px; color: var(--gray-400); margin-bottom: 16px; }
+    .vs-card-line { font-size: 13px; color: rgba(255,255,255,0.48); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.5; display: flex; align-items: flex-start; gap: 8px; }
+    .vs-card-line:last-child { border-bottom: none; }
+    .vs-icon-yes { color: #4ade80; flex-shrink: 0; }
+    .vs-icon-no { color: #f87171; flex-shrink: 0; }
+    .vs-icon-partial { color: #fcd34d; flex-shrink: 0; }
+
+    /* CONTENT */
+    .content-wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* TABLE */
+    .comp-table { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin: 28px 0; overflow-x: auto; }
+    .ct-row { display: grid; grid-template-columns: 1.8fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05); min-width: 480px; }
+    .ct-row:last-child { border-bottom: none; }
+    .ct-row.header { background: #111; }
+    .ct-cell { padding: 12px 16px; font-size: 13px; color: rgba(255,255,255,0.5); border-right: 1px solid rgba(255,255,255,0.04); line-height: 1.4; }
+    .ct-cell:last-child { border-right: none; }
+    .ct-row.header .ct-cell { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,0.25); }
+    .ct-cell.feature { color: rgba(255,255,255,0.75); font-weight: 500; }
+    .ct-cell.yes { color: #4ade80; font-weight: 600; }
+    .ct-cell.no { color: rgba(255,255,255,0.2); }
+    .ct-cell.partial { color: #fcd34d; }
+
+    /* BUILT FOR */
+    .built-for { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .built-for { grid-template-columns: 1fr; } }
+    .bf-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px; }
+    .bf-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+    .bf-label.ss { color: #93c5fd; }
+    .bf-label.sb { color: #4ade80; }
+    .bf-item { font-size: 13px; color: rgba(255,255,255,0.45); padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .bf-item:last-child { border-bottom: none; }
+
+    /* DESIGN BOX */
+    .design-box { background: rgba(147,197,253,0.05); border: 1px solid rgba(147,197,253,0.14); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .design-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #93c5fd; margin-bottom: 10px; }
+    .design-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .design-box p:last-child { margin-bottom: 0; }
+    .design-box p strong { color: rgba(255,255,255,0.85); }
+
+    /* SCENARIO */
+    .scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    @media (max-width: 520px) { .scenario-grid { grid-template-columns: 1fr; } }
+    .scenario { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px; }
+    .scenario-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .scenario-body { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .scenario-rec { font-size: 12px; font-weight: 600; margin-top: 10px; padding: 6px 10px; border-radius: 6px; }
+    .rec-ss { background: rgba(147,197,253,0.08); color: #93c5fd; border: 1px solid rgba(147,197,253,0.18); }
+    .rec-sb { background: rgba(74,222,128,0.08); color: #4ade80; border: 1px solid rgba(74,222,128,0.18); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin-top: 64px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 14px 32px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="hero-eyebrow">Comparison</span>
+    <h1>SiteBot vs Squarespace for Phone Repair Shops</h1>
+    <p class="hero-sub">Squarespace makes some of the most beautiful websites available. But a beautiful website that ranks for nothing and has no device calculator is not what a phone repair shop needs.</p>
+  </div>
+
+  <!-- VS CARDS -->
+  <div class="vs-row">
+    <div class="vs-card">
+      <div class="vs-card-name">Squarespace</div>
+      <div class="vs-card-tag">General website builder — from $16/mo</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Best-in-class design templates</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Clean, polished layouts</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Basic SEO tools included</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Good for portfolios and retail</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> You build and maintain everything</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No repair-specific pages or SEO</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No device quote calculator</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No buyback lead capture</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No Google Business Profile help</div>
+    </div>
+
+    <div class="vs-badge">VS</div>
+
+    <div class="vs-card sitebot">
+      <div class="vs-card-name">SiteBot</div>
+      <div class="vs-card-tag">Built for phone repair shops — from $99/mo</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Built and maintained for you</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Repair and buyback pages included</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Local SEO targeting your city</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Device quote calculator 24/7</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Automated offer emails and codes</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Prices update via Google Sheet</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Google Business Profile setup</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Not a general website builder</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Built for repair shops only</div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-wrap">
+
+    <h2>Squarespace is excellent — for the wrong type of business</h2>
+
+    <p>Squarespace is genuinely one of the best website builders available. The templates are polished, the editor is smooth, and the results look professional without needing a designer. For a photographer, a restaurant, a boutique clothing store, or a portfolio — Squarespace is often the right answer. It is built to make things look beautiful, and it does that well.</p>
+
+    <p>A cell phone repair and buyback shop is a different kind of business entirely. What drives customers to a repair shop is not visual polish — it is showing up first when someone in your city searches "iPhone screen repair" or "sell iPhone Chicago." What converts a visitor to a seller is not a clean font choice — it is an instant price quote delivered in thirty seconds without a phone call. What captures a buyback lead at midnight is not a beautiful homepage — it is a device calculator that emails an offer code automatically.</p>
+
+    <p>Squarespace has none of those things. Not on the $16 plan, not on the $99 plan. It is a general-purpose builder with general-purpose tools. Building a repair shop website that actually works on Squarespace requires the same expertise and time investment as any other DIY platform — and most shop owners do not have either.</p>
+
+    <h2>What each platform was actually built for</h2>
+
+    <div class="built-for">
+      <div class="bf-card">
+        <div class="bf-label ss">Squarespace is built for</div>
+        <div class="bf-item">Photographers and creatives</div>
+        <div class="bf-item">Restaurants and food brands</div>
+        <div class="bf-item">Boutique retail and fashion</div>
+        <div class="bf-item">Personal portfolios and blogs</div>
+        <div class="bf-item">Event and wedding businesses</div>
+        <div class="bf-item">Any business that sells on aesthetics</div>
+      </div>
+      <div class="bf-card">
+        <div class="bf-label sb">SiteBot is built for</div>
+        <div class="bf-item">Cell phone repair shops</div>
+        <div class="bf-item">iPhone and device buyback shops</div>
+        <div class="bf-item">Shops running repair and buyback together</div>
+        <div class="bf-item">Shops targeting local search traffic</div>
+        <div class="bf-item">Shops that need a 24/7 lead system</div>
+        <div class="bf-item">One type of business, done completely</div>
+      </div>
+    </div>
+
+    <p>The difference is specificity. Squarespace's strength — serving any business well — is also the reason it cannot serve a repair shop the way a purpose-built system can. A platform designed for everyone cannot include a device quote calculator connected to a live pricing spreadsheet. It cannot generate repair pages targeting "battery replacement Detroit" automatically. It was not built with those use cases in mind because they apply to a narrow category of businesses.</p>
+
+    <h2>Side-by-side comparison</h2>
+
+    <div class="comp-table">
+      <div class="ct-row header">
+        <div class="ct-cell">Feature</div>
+        <div class="ct-cell">Squarespace</div>
+        <div class="ct-cell">SiteBot</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Built and maintained for you</div>
+        <div class="ct-cell no">No — DIY</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Repair pages targeting local searches</div>
+        <div class="ct-cell partial">You write and build them</div>
+        <div class="ct-cell yes">Included</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Buyback / sell-phone pages</div>
+        <div class="ct-cell partial">You build them</div>
+        <div class="ct-cell yes">Included</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Device quote calculator</div>
+        <div class="ct-cell no">Not available at any plan</div>
+        <div class="ct-cell yes">Included — runs 24/7</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Automated offer emails and codes</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Prices via Google Sheet</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes — instant updates</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Google Business Profile setup</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Local SEO for repair searches</div>
+        <div class="ct-cell partial">Basic tools — you do the work</div>
+        <div class="ct-cell yes">Built for repair shops</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Design quality</div>
+        <div class="ct-cell yes">Best in class</div>
+        <div class="ct-cell partial">Professional — functional first</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Built for creatives and portfolios</div>
+        <div class="ct-cell yes">Yes — core audience</div>
+        <div class="ct-cell no">No</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Starting price (annual)</div>
+        <div class="ct-cell">$16/mo — $23/mo for full features</div>
+        <div class="ct-cell">$99/mo — fully built</div>
+      </div>
+    </div>
+
+    <h2>Design does not rank. Pages rank.</h2>
+
+    <div class="design-box">
+      <div class="design-label">The beautiful site problem</div>
+      <p>A shop owner hires a Squarespace designer, spends $2,000–$3,000 on a polished site, and launches with a homepage that looks genuinely great. Clean layout, professional photography, smooth animations. They share it with friends and everyone says it looks amazing.</p>
+      <p>Six months later the site is getting twelve visitors a month and the phone is not ringing any more than it was before.</p>
+      <p><strong>The site looks great. It ranks for nothing.</strong> There is no page titled "iPhone screen repair Detroit." There is no buyback page targeting "sell iPhone Chicago." The Google Business Profile is still unoptimized. The title tags all say "Home" and "Services." The calculator does not exist, so every seller who lands on the site and wants to know what their iPhone is worth bounces immediately.</p>
+      <p>This is not a Squarespace failure specifically — it is what happens when a general builder is used without the specific knowledge of what a repair shop site needs to do to generate customers. The design was executed perfectly. The function was never built.</p>
+    </div>
+
+    <p>For a repair shop, function is everything. A page that ranks for "iPhone battery replacement Chicago" and loads in two seconds on a mid-range Android phone is worth more than a beautifully designed homepage that nobody finds. A calculator that gives an instant quote is worth more than a premium font pairing. The customers your shop needs are not evaluating your design — they are evaluating whether you come up when they search and whether you give them a number fast.</p>
+
+    <h2>Which situation is yours?</h2>
+
+    <div class="scenario-grid">
+      <div class="scenario">
+        <div class="scenario-title">You need a beautiful portfolio or creative site</div>
+        <div class="scenario-body">Photography, events, food, fashion, personal brand. Design is what drives decisions in your industry. Aesthetics directly influence whether customers choose you.</div>
+        <div class="scenario-rec rec-ss">Squarespace is excellent for this</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You need repair and buyback customers this month</div>
+        <div class="scenario-body">You need to rank when someone searches "iPhone repair near me" in your city. You need a calculator that captures buyback leads at night. Design is secondary to function.</div>
+        <div class="scenario-rec rec-sb">SiteBot is built for this</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You have a Squarespace site that is not ranking</div>
+        <div class="scenario-body">The site exists and looks good but Google traffic is near zero. The repair pages are not structured for local search and the buyback side has no calculator or lead capture.</div>
+        <div class="scenario-rec rec-sb">SiteBot solves the function gap</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You buy phones and need online lead capture</div>
+        <div class="scenario-body">You need a system that captures sellers who search online, gives them a number instantly, and emails them an offer code automatically. Squarespace has no tool for this.</div>
+        <div class="scenario-rec rec-sb">SiteBot is the only option</div>
+      </div>
+    </div>
+
+    <h2>The price difference in honest terms</h2>
+
+    <p>Squarespace at $16 to $23 per month is significantly cheaper than SiteBot at $99 per month. That gap is real. But the comparison that matters is not monthly cost — it is what each dollar produces for your shop.</p>
+
+    <p>At $23 per month, Squarespace gives you a platform and tools to build whatever you want. The building is entirely on you. If you never build the right pages, that $23 per month produces nothing for your business. At $99 per month, SiteBot gives you a complete system — repair pages, buyback pages, calculator, Google Business Profile, lead capture — all built and working from day one. The first buyback lead that walks in with an offer code covers the cost of the month.</p>
+
+    <p>If you have already paid a designer $2,000–$3,000 for a Squarespace site that looks great but ranks for nothing, the monthly platform cost was never the issue. The issue was that the site was built without the specific structure a repair shop needs to get found and convert visitors. That is the gap SiteBot was built to close.</p>
+
+    <div class="callout">
+      <p><strong>The simplest test:</strong> search "iPhone repair" followed by your city name right now. If your Squarespace site does not appear on the first page, it is not bringing you customers regardless of how it looks. That ranking gap is a page structure and SEO problem — not a design problem — and Squarespace's tools do not fix it automatically.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Want a site built to rank and convert — not just look good?</h2>
+      <p>SiteBot builds the repair pages, the buyback calculator, and the local SEO structure for phone repair shops. Function first. Join the waitlist.</p>
+      <a href="/" class="btn-dark">Join the Waitlist — It's Free</a>
+      <p class="final-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
