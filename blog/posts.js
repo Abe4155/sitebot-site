@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "Cell Phone Repair Shop Checklist — Everything You Need Before You Open and After",
+    url: "/blog/cell-phone-repair-shop-checklist/",
+    description: "The complete checklist for opening and running a cell phone repair and buyback shop. Pre-opening, physical setup, online presence, buyback systems, and daily operations — all in one place.",
+    date: "March 2026",
+    category: "Starting Out",
+    readTime: "10 min read"
+  },
+  {
     title: "Cell Phone Shop SEO — How to Rank for Repair and Buyback Searches in Your City",
     url: "/blog/cell-phone-shop-seo/",
     description: "A cell phone shop has two different customer types searching for two different things. Here is the page structure, keywords, and Google profile setup that ranks for both simultaneously.",
