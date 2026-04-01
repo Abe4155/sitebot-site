@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteBot vs RepairDesk — What's the Difference?</title>
+  <meta name="description" content="RepairDesk manages the customers already inside your shop. SiteBot gets customers to walk in. They solve different problems. Here is how they compare and which shops need both.">
+  <link rel="canonical" href="https://sitebot.tech/vs-repairdesk/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SiteBot vs RepairDesk",
+    "description": "RepairDesk manages repair operations. SiteBot builds the website and leads that bring customers in. An honest comparison of what each does and why most shops need both.",
+    "url": "https://sitebot.tech/vs-repairdesk/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* ── HERO ── */
+    .hero { max-width: 800px; margin: 0 auto; padding: 80px 24px 48px; text-align: center; }
+    .hero-eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 18px; display: block; }
+    .hero h1 { font-size: clamp(32px, 5.5vw, 56px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.06; margin-bottom: 18px; }
+    .hero-sub { font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto 40px; line-height: 1.6; }
+
+    /* ── VS CARDS ── */
+    .vs-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; max-width: 900px; margin: 0 auto 64px; padding: 0 24px; }
+    @media (max-width: 640px) { .vs-row { grid-template-columns: 1fr; } }
+    .vs-badge { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.25); text-align: center; }
+    .vs-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px; }
+    .vs-card.sitebot { border-color: rgba(74,222,128,0.2); }
+    .vs-card-name { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .vs-card-tag { font-size: 12px; color: var(--gray-400); margin-bottom: 16px; }
+    .vs-card-line { font-size: 13px; color: rgba(255,255,255,0.48); padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.5; display: flex; align-items: flex-start; gap: 8px; }
+    .vs-card-line:last-child { border-bottom: none; }
+    .vs-card-line-icon { flex-shrink: 0; margin-top: 1px; font-size: 12px; }
+
+    /* ── MAIN CONTENT ── */
+    .content-wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; line-height: 1.2; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── COMPARISON TABLE ── */
+    .comp-table { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin: 28px 0; overflow-x: auto; }
+    .ct-row { display: grid; grid-template-columns: 1.8fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05); min-width: 480px; }
+    .ct-row:last-child { border-bottom: none; }
+    .ct-row.header { background: #111; }
+    .ct-cell { padding: 13px 16px; font-size: 13px; color: rgba(255,255,255,0.5); border-right: 1px solid rgba(255,255,255,0.04); line-height: 1.4; }
+    .ct-cell:last-child { border-right: none; }
+    .ct-row.header .ct-cell { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,0.28); }
+    .ct-cell.feature { color: rgba(255,255,255,0.75); font-weight: 500; }
+    .ct-cell.yes { color: #4ade80; font-weight: 600; }
+    .ct-cell.no { color: rgba(255,255,255,0.2); }
+    .ct-cell.partial { color: #fcd34d; }
+
+    /* ── SCENARIO CARDS ── */
+    .scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    @media (max-width: 520px) { .scenario-grid { grid-template-columns: 1fr; } }
+    .scenario { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px; }
+    .scenario-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .scenario-body { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .scenario-rec { font-size: 12px; font-weight: 600; margin-top: 10px; padding: 6px 10px; border-radius: 6px; }
+    .rec-both { background: rgba(74,222,128,0.08); color: #4ade80; border: 1px solid rgba(74,222,128,0.18); }
+    .rec-rd { background: rgba(147,197,253,0.08); color: #93c5fd; border: 1px solid rgba(147,197,253,0.18); }
+    .rec-sb { background: rgba(134,239,172,0.08); color: #86efac; border: 1px solid rgba(134,239,172,0.18); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* ── FINAL CTA ── */
+    .final-cta { background: var(--white); margin-top: 64px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; line-height: 1.6; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 14px 32px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="hero-eyebrow">Comparison</span>
+    <h1>SiteBot vs RepairDesk</h1>
+    <p class="hero-sub">RepairDesk manages the customers already inside your shop. SiteBot gets customers to walk in. They solve different problems — and the best shops use both.</p>
+  </div>
+
+  <!-- VS CARDS -->
+  <div class="vs-row">
+    <div class="vs-card">
+      <div class="vs-card-name">RepairDesk</div>
+      <div class="vs-card-tag">Repair operations software — from $79/mo</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Repair ticket management</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Parts inventory tracking</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Customer SMS updates</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> MobileSentrix parts ordering</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Multi-location support</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon" style="color:#f87171">✕</span> No website or SEO pages</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon" style="color:#f87171">✕</span> No device quote calculator</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon" style="color:#f87171">✕</span> No online lead capture</div>
+    </div>
+
+    <div class="vs-badge">VS</div>
+
+    <div class="vs-card sitebot">
+      <div class="vs-card-name">SiteBot</div>
+      <div class="vs-card-tag">Website and lead system — from $99/mo</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Website built for your shop</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> SEO pages targeting local searches</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Device quote calculator 24/7</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Automated offer emails and codes</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon">✓</span> Google Business Profile setup</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon" style="color:#f87171">✕</span> Not a repair ticketing system</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon" style="color:#f87171">✕</span> Does not manage inventory</div>
+      <div class="vs-card-line"><span class="vs-card-line-icon" style="color:#f87171">✕</span> Not a POS system</div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-wrap">
+
+    <h2>They do not compete — they do different jobs</h2>
+
+    <p>RepairDesk is repair operations software. When a customer drops off their phone, RepairDesk is what creates the ticket, tracks the device, orders the part, notifies the customer when it is ready, and closes the transaction. It is a strong, well-built platform that has been used by thousands of shops for over a decade. For managing repairs you already have, it does the job well.</p>
+
+    <p>SiteBot is customer acquisition software. It is what gets customers to find your shop on Google when they search "iPhone repair near me" or "sell iPhone Chicago." It runs the device quote calculator that captures a seller's contact details at midnight. It sends the offer code email automatically. It is the system that brings people in before RepairDesk ever sees them.</p>
+
+    <p>The difference matters because a lot of shops buy RepairDesk hoping it will help them grow, then wonder why the shop is still quiet. RepairDesk makes your operations more efficient — it does not bring in a single new customer. SiteBot does the opposite. It fills your calendar but it does not track what happens once the customer walks in. Most shops that are growing fast are running both.</p>
+
+    <h2>Side-by-side comparison</h2>
+
+    <div class="comp-table">
+      <div class="ct-row header">
+        <div class="ct-cell">Feature</div>
+        <div class="ct-cell">RepairDesk</div>
+        <div class="ct-cell">SiteBot</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Repair ticket management</div>
+        <div class="ct-cell yes">Yes — core feature</div>
+        <div class="ct-cell no">No</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Parts inventory tracking</div>
+        <div class="ct-cell yes">Yes</div>
+        <div class="ct-cell no">No</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Customer SMS repair updates</div>
+        <div class="ct-cell yes">Yes — automated</div>
+        <div class="ct-cell partial">Via SMS platform</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">POS and payment processing</div>
+        <div class="ct-cell yes">Yes</div>
+        <div class="ct-cell no">No</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">MobileSentrix parts ordering</div>
+        <div class="ct-cell yes">Yes — direct integration</div>
+        <div class="ct-cell no">No</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Multi-location management</div>
+        <div class="ct-cell yes">Yes</div>
+        <div class="ct-cell partial">Coming</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Website that ranks on Google</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes — core feature</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">SEO pages for local searches</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes — built in</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Device quote calculator</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes — runs 24/7</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Automated offer emails</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Online lead capture</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Google Business Profile setup</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Prices controlled via Google Sheet</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes — instant updates</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Starting price</div>
+        <div class="ct-cell">$79/mo per location</div>
+        <div class="ct-cell">$99/mo</div>
+      </div>
+    </div>
+
+    <h2>Which one does your shop actually need right now?</h2>
+
+    <div class="scenario-grid">
+      <div class="scenario">
+        <div class="scenario-title">Your shop is busy and operations feel chaotic</div>
+        <div class="scenario-body">Devices going missing, parts running out unexpectedly, no clear ticket system, customers calling to check repair status. Operations are the problem.</div>
+        <div class="scenario-rec rec-rd">Start with RepairDesk</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">Your shop is quiet and you need more customers</div>
+        <div class="scenario-body">The shop runs fine but the phone does not ring enough. You are not showing up in Google. Sellers go to the kiosk. The marketing side is the gap.</div>
+        <div class="scenario-rec rec-sb">Start with SiteBot</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You buy phones and the website says "call for a quote"</div>
+        <div class="scenario-body">You are losing every seller who searches to sell their phone at night. A calculator that captures leads automatically is the highest-return fix available.</div>
+        <div class="scenario-rec rec-sb">Start with SiteBot</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You are growing and need both sides working together</div>
+        <div class="scenario-body">SiteBot brings customers in and captures buyback leads. RepairDesk manages the repair workflow once they arrive. Both running is the full picture.</div>
+        <div class="scenario-rec rec-both">Use both together</div>
+      </div>
+    </div>
+
+    <h2>What RepairDesk does well</h2>
+
+    <p>This is worth saying clearly because most comparison pages are not honest about this. RepairDesk is genuinely good at what it does. Repair ticket management is thorough — pre-repair photos, parts assignment, technician notes, customer signature, IMEI tracking. The integration with MobileSentrix means you can order parts directly from within RepairDesk without switching platforms. The customer communication tools are solid. The reporting gives you real visibility into which repairs are most profitable and which technicians are most productive.</p>
+
+    <p><strong>If your shop is doing significant repair volume and you do not have a ticket system, RepairDesk is worth the $79 per month.</strong> The time saved on tracking alone pays for it within the first week for most shops.</p>
+
+    <h2>What RepairDesk does not do</h2>
+
+    <p>RepairDesk does not build you a website. It does not write SEO pages targeting "iPhone repair Chicago." It does not give you a device quote calculator that captures buyback leads while the shop is closed. It does not send offer code emails when a seller locks a price at 11pm. It does not optimize your Google Business Profile for both repair and sell-phone searches.</p>
+
+    <p>None of those omissions are criticisms — RepairDesk was built to manage operations, not to acquire customers. But if you are paying $79 a month for RepairDesk hoping it will help you grow and the shop is still quiet, that is the disconnect. Operations software does not solve a customer acquisition problem.</p>
+
+    <div class="callout">
+      <p><strong>The simplest way to think about it:</strong> RepairDesk manages the customers already inside your shop. SiteBot gets customers inside your shop in the first place. If you have the first problem and not the second, RepairDesk alone is enough. If you have the second problem — or both — you need SiteBot in the picture.</p>
+    </div>
+
+    <h2>How they work together</h2>
+
+    <p>The shops that use both are running a complete loop. SiteBot brings in the repair customer who searched Google and found the shop's iPhone repair page. SiteBot captures the buyback seller who used the calculator at 10pm and walks in with an offer code in the morning. Once those customers walk in, RepairDesk handles everything — the ticket, the repair, the customer update, the invoice, the review request.</p>
+
+    <p>The two tools do not overlap. There is nothing in RepairDesk that SiteBot replaces and nothing in SiteBot that RepairDesk replaces. They are sequential: SiteBot fills the top of the funnel, RepairDesk manages the middle and bottom. Together they cover the full customer journey from "found the shop on Google" to "repair complete, invoice paid, review left."</p>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Ready to get more customers through the door?</h2>
+      <p>SiteBot builds the website, the SEO pages, and the device calculator that RepairDesk does not include. Join the waitlist.</p>
+      <a href="/" class="btn-dark">Join the Waitlist — It's Free</a>
+      <p class="final-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
