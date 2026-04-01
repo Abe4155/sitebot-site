@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "SEO for Phone Buyback — How to Rank When People Search to Sell Their Phone",
+    url: "/blog/seo-for-phone-buyback/",
+    description: "National platforms own the generic buyback searches. Local shops win by targeting city-specific sell-phone keywords. Here is the exact strategy, keyword map, and page structure.",
+    date: "March 2026",
+    category: "SEO",
+    readTime: "9 min read"
+  },
+  {
     title: "How to Price Used Phones for Cash — The Method That Actually Works",
     url: "/blog/how-to-price-used-phones/",
     description: "Static price sheets go stale fast. Here is the pricing method experienced buyback shops use — eBay sold data, condition adjustments, IMEI checks, and the timing variables that protect your margin.",
