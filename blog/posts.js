@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "Phone Repair Shop Automation — The Parts of Your Business That Should Run Themselves",
+    url: "/blog/phone-repair-shop-automation/",
+    description: "Lead capture, offer emails, review requests, SMS follow-up, and live pricing — the six business-side automations that protect revenue while you work and while you sleep.",
+    date: "March 2026",
+    category: "Automation",
+    readTime: "8 min read"
+  },
+  {
     title: "SEO for Phone Buyback — How to Rank When People Search to Sell Their Phone",
     url: "/blog/seo-for-phone-buyback/",
     description: "National platforms own the generic buyback searches. Local shops win by targeting city-specific sell-phone keywords. Here is the exact strategy, keyword map, and page structure.",

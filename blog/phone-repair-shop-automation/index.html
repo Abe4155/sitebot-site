@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Repair Shop Automation — The Parts of Your Business That Should Run Themselves</title>
+  <meta name="description" content="Most automation articles for repair shops are about diagnostic robots. This one is about the business side — lead capture, offer emails, review requests, and follow-up that run while you work.">
+  <link rel="canonical" href="https://sitebot.tech/blog/phone-repair-shop-automation/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Phone Repair Shop Automation — The Parts of Your Business That Should Run Themselves",
+    "description": "Lead capture, offer emails, review requests, SMS follow-up, and price updates — the business-side automation that actually moves revenue for a local repair and buyback shop.",
+    "author": { "@type": "Organization", "name": "SiteBot" },
+    "publisher": { "@type": "Organization", "name": "SiteBot", "url": "https://sitebot.tech" },
+    "mainEntityOfPage": "https://sitebot.tech/blog/phone-repair-shop-automation/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What can a phone repair shop automate?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The highest-value automation for a local repair and buyback shop is on the business side: a device quote calculator that captures leads and sends offer emails automatically, SMS repair status updates that go out without manual work, Google review request messages triggered after repair pickup, offer expiry reminders that bring back leads who did not show up, and pricing updates that flow from a spreadsheet to your website instantly. None of these require a developer or expensive software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I automate review requests for my repair shop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The simplest approach is a text message template saved on your phone with a direct link to your Google review page. Send it at the moment the customer picks up their repaired phone. More advanced options include repair shop software like RepairDesk or Orderry that can trigger automated review request messages after a ticket is closed. Either way, the timing matters more than the automation — ask at peak satisfaction, right when the customer's phone is working again."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the most valuable automation for a buyback shop?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A device quote calculator connected to your website that captures leads automatically. When a customer locks a price, the system sends them an offer code by email and sends you their contact details and device information — all without any manual work. An automated follow-up message sent 24 hours before the offer code expires recovers a meaningful percentage of leads who meant to come in but got distracted."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+    .article-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 14px; display: block; }
+    h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 16px; }
+    .article-meta { font-size: 13px; color: var(--gray-400); margin-bottom: 48px; }
+    h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; line-height: 1.2; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* AUTOMATION CARD */
+    .auto-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px; padding: 28px;
+      margin: 28px 0;
+    }
+    .auto-card-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+    .auto-icon { font-size: 26px; flex-shrink: 0; }
+    .auto-title { font-size: 19px; font-weight: 700; color: var(--white); }
+    .auto-subtitle { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+    .auto-body { font-size: 15px; color: rgba(255,255,255,0.52); line-height: 1.72; margin-bottom: 14px; }
+    .auto-example {
+      background: #111; border-radius: 10px;
+      padding: 14px 16px;
+      border-left: 3px solid rgba(74,222,128,0.3);
+    }
+    .auto-example-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #4ade80; margin-bottom: 6px; }
+    .auto-example-text { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.65; font-style: italic; }
+
+    /* PRIORITY TABLE */
+    .priority-table { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; margin: 24px 0; }
+    .pt-row { display: grid; grid-template-columns: 1.6fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .pt-row:last-child { border-bottom: none; }
+    .pt-row.header { background: #111; }
+    .pt-cell { padding: 12px 16px; font-size: 13px; color: rgba(255,255,255,0.5); border-right: 1px solid rgba(255,255,255,0.04); line-height: 1.4; }
+    .pt-cell:last-child { border-right: none; }
+    .pt-row.header .pt-cell { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,0.28); }
+    .pt-cell.label { color: rgba(255,255,255,0.75); font-weight: 500; }
+    .pt-cell.high { color: #4ade80; font-weight: 600; }
+    .pt-cell.med { color: #fcd34d; }
+    .pt-cell.low { color: rgba(255,255,255,0.3); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); }
+    .callout p strong { color: var(--white); }
+
+    .callout-link { background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.18); border-radius: 12px; padding: 18px 22px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-decoration: none; flex-wrap: wrap; transition: border-color .2s; }
+    .callout-link:hover { border-color: rgba(37,99,235,0.35); }
+    .callout-link-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .callout-link-title { font-size: 15px; font-weight: 600; color: #93c5fd; }
+    .callout-link-arrow { color: var(--gray-400); font-size: 20px; flex-shrink: 0; }
+
+    .faq-section { margin-top: 52px; }
+    .faq-heading { font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    .cta-banner { background: var(--white); margin-top: 64px; padding: 48px 32px; border-radius: 16px; text-align: center; }
+    .cta-banner h3 { font-size: clamp(20px, 3.5vw, 30px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 10px; }
+    .cta-banner p { font-size: 16px; color: #424245; max-width: 440px; margin: 0 auto 24px; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 13px 30px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .cta-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+
+    .related { margin-top: 56px; }
+    .related-heading { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 540px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px 18px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; transition: border-color .2s; }
+    .rel-card:hover { border-color: rgba(255,255,255,0.2); }
+    .rel-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .rel-title { font-size: 13px; font-weight: 600; color: var(--white); }
+    .rel-arrow { color: var(--gray-400); font-size: 16px; flex-shrink: 0; margin-left: 10px; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <article class="article-wrap">
+
+    <span class="article-tag">Automation</span>
+    <h1>Phone Repair Shop Automation — The Parts of Your Business That Should Run Themselves</h1>
+    <p class="article-meta">By SiteBot &nbsp;|&nbsp; March 2026 &nbsp;|&nbsp; 8 min read</p>
+
+    <p>When people write about automation for phone repair shops they usually mean AI diagnostic tools, robotic soldering stations, or enterprise refurbishment systems. That equipment exists. It is also irrelevant to most local shop owners who are fixing screens and buying phones — not running a hundred-location chain.</p>
+
+    <p>The automation that matters for a local repair and buyback shop is on the business side. The things that happen — or fail to happen — outside of business hours. The leads that get captured or lost while you are doing repairs. The review requests that go out or never do. The follow-up messages that either bring a seller back or let them forget about you entirely. None of it requires a robotics degree or an enterprise budget. It requires setting up a few systems once and letting them run.</p>
+
+    <h2>The parts of your business that benefit most from automation</h2>
+
+    <p>Every hour your shop is closed is revenue that either gets captured by the systems you have built or disappears to a competitor who was easier to find. A customer who searches to sell their iPhone at 11pm is not going to call you. But if your website has a calculator that gives them a number and emails them an offer code, that sale is captured before you wake up. That is automation doing what a person cannot — being available every hour without being present.</p>
+
+    <p>Here are the six automations worth building, in order of the revenue they protect:</p>
+
+    <div class="auto-card">
+      <div class="auto-card-header">
+        <div class="auto-icon">💵</div>
+        <div>
+          <div class="auto-title">Device quote calculator and offer email</div>
+          <div class="auto-subtitle">Buyback lead capture — runs 24 hours a day</div>
+        </div>
+      </div>
+      <div class="auto-body">The single most valuable automation for any shop that buys phones. A customer selects their device model and condition, gets an instant cash offer, locks the price with their email, and receives an offer code automatically. You get an email with their name, contact information, device, and offer amount — before they ever walk in. This happens while the shop is closed, while you are doing repairs, while you are anywhere else. Every lead it captures is one that would have gone to a kiosk or a national platform without it.</div>
+      <div class="auto-example">
+        <div class="auto-example-label">What gets automated</div>
+        <div class="auto-example-text">Customer locks price at 10:43pm. System generates offer code IMB-7K2X. Offer email goes to customer with code, your address, and 72-hour expiry. Lead email goes to shop owner with device details and offer amount. Zero manual work. Lead is live in the morning.</div>
+      </div>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-card-header">
+        <div class="auto-icon">⏰</div>
+        <div>
+          <div class="auto-title">Offer expiry reminder</div>
+          <div class="auto-subtitle">Buyback lead recovery — runs automatically</div>
+        </div>
+      </div>
+      <div class="auto-body">A customer locked a price and meant to come in. Life got in the way. Day two is almost over. Without a reminder, that lead goes cold and the offer expires. An automated text or email sent 24 hours before the code expires recovers a meaningful percentage of those leads. The message is short — the offer amount, the code, your address, the expiry time. It does not need to be clever. It just needs to arrive at the right moment when the customer is reminded that they still have money sitting on the table.</div>
+      <div class="auto-example">
+        <div class="auto-example-label">What gets automated</div>
+        <div class="auto-example-text">"Reminder: your iPhone 14 offer of $340 (code IMB-7K2X) expires tomorrow at 5pm. Come in today — iMobile Repair, 20503 Dequindre, Detroit." Sent automatically 24 hours before expiry to every locked offer that has not been redeemed.</div>
+      </div>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-card-header">
+        <div class="auto-icon">🔧</div>
+        <div>
+          <div class="auto-title">Repair status SMS updates</div>
+          <div class="auto-subtitle">Customer communication — reduces calls, builds trust</div>
+        </div>
+      </div>
+      <div class="auto-body">A customer who drops off their phone and hears nothing will call. Multiple times. Each call interrupts a repair. An automated SMS at drop-off confirmation and again when the repair is complete eliminates most of those calls without any effort. The customer is informed. They stop wondering. They trust the shop more because it communicated without being asked. Repair shop software like RepairDesk and Orderry both handle this automatically when a ticket status changes — set it up once and it runs on every repair from that point forward.</div>
+      <div class="auto-example">
+        <div class="auto-example-label">What gets automated</div>
+        <div class="auto-example-text">Ticket created → customer receives drop-off confirmation with estimated ready time. Ticket marked complete → customer receives "your phone is ready" text with your address and hours. No manual sending. No missed notifications. No repeat calls asking for updates.</div>
+      </div>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-card-header">
+        <div class="auto-icon">⭐</div>
+        <div>
+          <div class="auto-title">Review request at pickup</div>
+          <div class="auto-subtitle">Reputation building — consistent and low effort</div>
+        </div>
+      </div>
+      <div class="auto-body">The repair is done. The customer picks up their phone and it works. That is the peak satisfaction moment — the exact point when they are most likely to leave a review if asked. A text message with a direct link to your Google review page, sent while they are still standing at the counter or immediately after they leave, converts a high percentage of satisfied customers into reviewers. RepairDesk has a review automation feature. If you are not using dedicated software, a saved text message template takes thirty seconds to send manually and gets the job done just as well at low volume.</div>
+      <div class="auto-example">
+        <div class="auto-example-label">What gets automated</div>
+        <div class="auto-example-text">Repair ticket closed and payment collected → automated review request message fires 10 minutes later: "Thanks for choosing iMobile Repair — if you have 30 seconds, a Google review means a lot to a local shop: [direct review link]"</div>
+      </div>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-card-header">
+        <div class="auto-icon">📊</div>
+        <div>
+          <div class="auto-title">Live pricing from a Google Sheet</div>
+          <div class="auto-subtitle">Buyback pricing — update in seconds from anywhere</div>
+        </div>
+      </div>
+      <div class="auto-body">Phone values change constantly. If your website's quote calculator reads from a Google Sheet you control, updating a price takes thirty seconds from your phone and the change is live on your website immediately. No developer, no website login, no waiting. When iPhone values drop after a new release announcement — which they do, fast — you open the sheet, lower the relevant rows, and every quote generated from that moment forward reflects the updated number. This prevents the most damaging scenario in buyback: a customer walks in with an offer code at a price that no longer reflects the market, and you either honor a losing trade or break trust by refusing.</div>
+      <div class="auto-example">
+        <div class="auto-example-label">What gets automated</div>
+        <div class="auto-example-text">Calculator reads device prices from Google Sheet on every page load. You update iPhone 15 Pro 256GB from $420 to $390 in the sheet. Every quote generated after that reflects $390. No code changes, no deploys, no tickets to a developer. Done in under a minute.</div>
+      </div>
+    </div>
+
+    <div class="auto-card">
+      <div class="auto-card-header">
+        <div class="auto-icon">📱</div>
+        <div>
+          <div class="auto-title">Seasonal buyback SMS blast</div>
+          <div class="auto-subtitle">Past customer reactivation — two or three times a year</div>
+        </div>
+      </div>
+      <div class="auto-body">Your opted-in past customer list is one of the highest-converting marketing assets you have. These are people who already know your shop, already had a good experience, and may be sitting on a device ready to sell. A short SMS sent to that list during peak buyback windows — right before a new iPhone release, during back-to-school, after the holidays — converts at a rate that cold outreach never achieves. Set the list up as you go. Every customer who locks a price adds to it. Every repair customer who opts in adds to it. Over time it becomes a list worth thousands of dollars per blast.</div>
+      <div class="auto-example">
+        <div class="auto-example-label">What gets automated</div>
+        <div class="auto-example-text">"New iPhones just dropped — we're paying top cash for iPhone 15 and older models this week while values are still high. Instant quote: [link] — iMobile Repair, Detroit." Sent to opted-in list in the first week of September. Two minutes to write, scheduled to go, done.</div>
+      </div>
+    </div>
+
+    <h2>Where to start — priority order</h2>
+
+    <div class="priority-table">
+      <div class="pt-row header">
+        <div class="pt-cell">Automation</div>
+        <div class="pt-cell">Revenue impact</div>
+        <div class="pt-cell">Effort to set up</div>
+      </div>
+      <div class="pt-row">
+        <div class="pt-cell label">Device quote calculator + offer email</div>
+        <div class="pt-cell high">Highest</div>
+        <div class="pt-cell">One-time build</div>
+      </div>
+      <div class="pt-row">
+        <div class="pt-cell label">Offer expiry reminder</div>
+        <div class="pt-cell high">High</div>
+        <div class="pt-cell">Requires SMS tool</div>
+      </div>
+      <div class="pt-row">
+        <div class="pt-cell label">Live pricing via Google Sheet</div>
+        <div class="pt-cell high">High</div>
+        <div class="pt-cell">Built into calculator</div>
+      </div>
+      <div class="pt-row">
+        <div class="pt-cell label">Repair status SMS updates</div>
+        <div class="pt-cell">Medium</div>
+        <div class="pt-cell">Built into repair software</div>
+      </div>
+      <div class="pt-row">
+        <div class="pt-cell label">Review request at pickup</div>
+        <div class="pt-cell">Medium</div>
+        <div class="pt-cell">Low — template + habit</div>
+      </div>
+      <div class="pt-row">
+        <div class="pt-cell label">Seasonal SMS blast</div>
+        <div class="pt-cell">Medium</div>
+        <div class="pt-cell">Requires list building first</div>
+      </div>
+    </div>
+
+    <p>The calculator is the foundation. Everything else — the expiry reminder, the live pricing, the SMS blast — builds on top of the leads and contacts the calculator captures. Build that first. Once it is running and generating leads consistently, the other automations layer on top without starting from scratch each time.</p>
+
+    <div class="callout">
+      <p><strong>This is exactly the system running at iMobile Repair Center in Detroit.</strong> The iPhone and iPad calculators capture leads 24 hours a day. Offer codes go out by email automatically. Prices update from a Google Sheet in seconds. The shop owner wakes up to leads already in the inbox every morning. None of it requires daily management once it is set up.</p>
+    </div>
+
+    <a href="/blog/ai-for-phone-repair-shops/" class="callout-link">
+      <div>
+        <div class="callout-link-label">Related article</div>
+        <div class="callout-link-title">AI for phone repair shops — what it can do for your business right now</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <a href="/blog/phone-repair-shop-sms-marketing/" class="callout-link">
+      <div>
+        <div class="callout-link-label">Related article</div>
+        <div class="callout-link-title">SMS marketing for phone repair shops — what to send and when</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-heading">Common questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">What can a phone repair shop automate?</div>
+        <div class="faq-a">The highest-value automation for a local repair and buyback shop is on the business side: a device quote calculator that captures leads and sends offer emails automatically, SMS repair status updates that go out without manual work, Google review request messages triggered after repair pickup, offer expiry reminders for leads who did not show up, and pricing that updates from a spreadsheet to your website instantly. None of these require a developer or expensive software to run.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How do I automate review requests for my repair shop?</div>
+        <div class="faq-a">The simplest approach is a saved text message template with a direct link to your Google review page — send it at the moment a customer picks up their repaired phone. Repair shop software like RepairDesk or Orderry can trigger these automatically when a ticket is closed. Either way, timing matters more than the tool. Ask at peak satisfaction, right when the customer's phone is working again, and you get a far higher conversion rate than any delayed follow-up email.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the most valuable automation for a buyback shop?</div>
+        <div class="faq-a">A device quote calculator connected to your website that captures leads automatically. When a customer locks a price, the system sends them an offer code by email and sends you their contact details and device information — all without manual work. An automated follow-up message sent 24 hours before the offer code expires then recovers a meaningful percentage of leads who meant to come in but got distracted. Together those two automations protect buyback revenue around the clock.</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h3>Want the automation built for your shop?</h3>
+      <p>SiteBot sets up the calculator, the offer emails, the live pricing, and the lead capture system for cell phone shops. Join the waitlist.</p>
+      <a href="/" class="btn-dark">Join the Waitlist</a>
+      <p class="cta-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <div class="related-heading">Keep reading</div>
+      <div class="related-grid">
+        <a href="/blog/ai-for-phone-repair-shops/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">AI for phone repair shops — what works now</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-repair-shop-sms-marketing/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">SMS marketing — what to send and when</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-repair-lead-capture/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">Phone repair lead capture — catch online leads</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-repair-shop-reviews/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">How to get more Google reviews for your shop</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
