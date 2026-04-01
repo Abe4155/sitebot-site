@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "How to Get More People to Sell Phones to Your Shop",
+    url: "/blog/how-to-get-people-to-sell-phones-to-your-shop/",
+    description: "Most sellers choose the shop they can find, not the one paying the most. Here is how to be visible in person and online so sellers find you before they find a kiosk.",
+    date: "March 2026",
+    category: "Buyback",
+    readTime: "8 min read"
+  },
+  {
     title: "How to Start a Cell Phone Repair Shop — From Someone Who Actually Did It",
     url: "/blog/how-to-start-cell-phone-repair-shop/",
     description: "Location is everything. Marketing is second. You do not need years of experience. Here is what actually matters — including real startup costs — when opening a phone repair shop from scratch.",
