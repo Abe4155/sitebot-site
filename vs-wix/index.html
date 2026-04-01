@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteBot vs Wix for Phone Repair Shops — What's the Difference?</title>
+  <meta name="description" content="Wix builds websites. SiteBot builds phone repair shop websites. Here is what is different, what each costs, and which one makes more sense depending on your shop and your time.">
+  <link rel="canonical" href="https://sitebot.tech/vs-wix/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SiteBot vs Wix for Phone Repair Shops",
+    "description": "Wix is a general website builder. SiteBot is built specifically for phone repair and buyback shops. An honest comparison of what each does and which is right for your situation.",
+    "url": "https://sitebot.tech/vs-wix/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 800px; margin: 0 auto; padding: 80px 24px 48px; text-align: center; }
+    .hero-eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 18px; display: block; }
+    .hero h1 { font-size: clamp(30px, 5.5vw, 54px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 18px; }
+    .hero-sub { font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto 40px; line-height: 1.6; }
+
+    /* VS ROW */
+    .vs-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; max-width: 900px; margin: 0 auto 64px; padding: 0 24px; }
+    @media (max-width: 640px) { .vs-row { grid-template-columns: 1fr; } }
+    .vs-badge { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.22); text-align: center; }
+    .vs-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px; }
+    .vs-card.sitebot { border-color: rgba(74,222,128,0.2); }
+    .vs-card-name { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .vs-card-tag { font-size: 12px; color: var(--gray-400); margin-bottom: 16px; }
+    .vs-card-line { font-size: 13px; color: rgba(255,255,255,0.48); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.5; display: flex; align-items: flex-start; gap: 8px; }
+    .vs-card-line:last-child { border-bottom: none; }
+    .vs-icon-yes { color: #4ade80; flex-shrink: 0; }
+    .vs-icon-no { color: #f87171; flex-shrink: 0; }
+    .vs-icon-partial { color: #fcd34d; flex-shrink: 0; }
+
+    /* CONTENT */
+    .content-wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* TABLE */
+    .comp-table { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin: 28px 0; overflow-x: auto; }
+    .ct-row { display: grid; grid-template-columns: 1.8fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05); min-width: 480px; }
+    .ct-row:last-child { border-bottom: none; }
+    .ct-row.header { background: #111; }
+    .ct-cell { padding: 12px 16px; font-size: 13px; color: rgba(255,255,255,0.5); border-right: 1px solid rgba(255,255,255,0.04); line-height: 1.4; }
+    .ct-cell:last-child { border-right: none; }
+    .ct-row.header .ct-cell { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,0.25); }
+    .ct-cell.feature { color: rgba(255,255,255,0.75); font-weight: 500; }
+    .ct-cell.yes { color: #4ade80; font-weight: 600; }
+    .ct-cell.no { color: rgba(255,255,255,0.2); }
+    .ct-cell.partial { color: #fcd34d; }
+
+    /* THE WIX REALITY */
+    .reality-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .reality-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 10px; }
+    .reality-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .reality-box p:last-child { margin-bottom: 0; }
+    .reality-box p strong { color: rgba(255,255,255,0.85); }
+
+    /* SCENARIO CARDS */
+    .scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    @media (max-width: 520px) { .scenario-grid { grid-template-columns: 1fr; } }
+    .scenario { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px; }
+    .scenario-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .scenario-body { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .scenario-rec { font-size: 12px; font-weight: 600; margin-top: 10px; padding: 6px 10px; border-radius: 6px; }
+    .rec-wix { background: rgba(147,197,253,0.08); color: #93c5fd; border: 1px solid rgba(147,197,253,0.18); }
+    .rec-sb { background: rgba(74,222,128,0.08); color: #4ade80; border: 1px solid rgba(74,222,128,0.18); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin-top: 64px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 14px 32px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="hero-eyebrow">Comparison</span>
+    <h1>SiteBot vs Wix for Phone Repair Shops</h1>
+    <p class="hero-sub">Wix builds websites for anyone. SiteBot builds websites specifically for cell phone repair and buyback shops. Here is what that difference actually means for your shop.</p>
+  </div>
+
+  <!-- VS CARDS -->
+  <div class="vs-row">
+    <div class="vs-card">
+      <div class="vs-card-name">Wix</div>
+      <div class="vs-card-tag">General website builder — from $17/mo</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> 800+ templates for any business</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Drag-and-drop editor</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Basic SEO tools built in</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Low monthly cost</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> You build and maintain everything</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No repair-specific page templates</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No device quote calculator</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No buyback lead capture</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No Google Business Profile help</div>
+    </div>
+
+    <div class="vs-badge">VS</div>
+
+    <div class="vs-card sitebot">
+      <div class="vs-card-name">SiteBot</div>
+      <div class="vs-card-tag">Built for phone repair shops — from $99/mo</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Built and maintained for you</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Repair pages targeting local searches</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Buyback pages and sell-phone SEO</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Device quote calculator 24/7</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Automated offer emails and codes</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Google Business Profile setup</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Prices update via Google Sheet</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Not a general website builder</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Built for repair shops only</div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-wrap">
+
+    <h2>The real difference: you build it vs we build it for you</h2>
+
+    <p>Wix is a tool. A very capable tool with hundreds of templates, a solid drag-and-drop editor, and basic SEO features built in. If you have the time, interest, and patience to build a website, Wix can work. Plenty of businesses have good Wix sites.</p>
+
+    <p>The honest question is whether you actually have that time and whether you will build the right thing. A phone repair shop website that ranks locally and converts visitors into customers is not a template you fill in over a weekend. It needs individual pages for each repair type targeting your city name, buyback pages targeting sell-phone searches, a device quote calculator wired to your pricing, and a Google Business Profile aligned with everything on the site. Most shop owners who start on Wix open three or four pages, get busy with actual repairs, and the site stays like that indefinitely.</p>
+
+    <p>SiteBot removes that problem entirely. The website is built for you — repair pages, buyback pages, SEO structure, calculator — and maintained as part of the service. You do not touch it unless you want to. You run your shop. The website runs in the background.</p>
+
+    <h2>Side-by-side comparison</h2>
+
+    <div class="comp-table">
+      <div class="ct-row header">
+        <div class="ct-cell">Feature</div>
+        <div class="ct-cell">Wix</div>
+        <div class="ct-cell">SiteBot</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Built and maintained for you</div>
+        <div class="ct-cell no">No — DIY</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Repair pages targeting local searches</div>
+        <div class="ct-cell partial">You write them</div>
+        <div class="ct-cell yes">Included</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Buyback / sell-phone pages</div>
+        <div class="ct-cell partial">You build them</div>
+        <div class="ct-cell yes">Included</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Device quote calculator</div>
+        <div class="ct-cell no">Not available</div>
+        <div class="ct-cell yes">Included — runs 24/7</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Automated offer emails and codes</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Prices via Google Sheet</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes — instant updates</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Google Business Profile setup</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Local SEO built in</div>
+        <div class="ct-cell partial">Basic tools — you do the work</div>
+        <div class="ct-cell yes">Built for repair shops</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">General website builder</div>
+        <div class="ct-cell yes">Yes — any business</div>
+        <div class="ct-cell no">Repair shops only</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">800+ templates</div>
+        <div class="ct-cell yes">Yes</div>
+        <div class="ct-cell no">Not needed — built for you</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Starting price (annual)</div>
+        <div class="ct-cell">$17/mo — $29/mo for full features</div>
+        <div class="ct-cell">$99/mo</div>
+      </div>
+    </div>
+
+    <h2>The Wix repair shop problem</h2>
+
+    <div class="reality-box">
+      <div class="reality-label">What usually happens with Wix for a repair shop</div>
+      <p>A shop owner signs up for Wix, picks a template, writes a homepage about their shop, adds a services page with a bulleted list, puts a contact form at the bottom, and calls it done. The site has no pages targeting "iPhone screen repair Detroit" or "sell iPhone Chicago." The title tags say "Home" and "Services." The Google Business Profile is not connected to anything on the site. The buyback section is one sentence that says "we also buy phones — call for a quote."</p>
+      <p><strong>That site ranks for nothing and converts nobody.</strong> Not because Wix is bad software — it is fine software. Because building a repair shop site that actually works takes specific knowledge of what pages to create, what keywords to target, and what tools to include. Most shop owners are not SEO professionals and do not have time to become one. The Wix site ends up as a digital placeholder that looks like a website but functions like nothing.</p>
+    </div>
+
+    <p>This is not speculation. It is the most common pattern for repair shops that show up with a Wix site and wonder why Google is not sending them customers. The gap is not the platform — it is the expertise and time required to build the right thing on the platform.</p>
+
+    <h2>When Wix actually makes sense</h2>
+
+    <p>Wix is the right choice in specific situations. If you genuinely enjoy building websites and have the time to do it properly — meaning researching repair keywords in your city, writing individual pages for each service, building a buyback page with proper SEO, and maintaining all of it over time — Wix at $17 to $29 per month is a very cost-effective option. The tools are capable. The results are achievable if you put in the work.</p>
+
+    <p>Wix also makes sense if you already have someone — a family member, a part-time hire, a friend — who does web work and can build and maintain the repair shop site for you. In that case the platform cost is low and the execution is handled by someone who knows what they are doing.</p>
+
+    <p>And if your shop is purely in the idea stage and you have no budget at all, starting on Wix free to have any online presence is better than nothing. You can always migrate later once the business is generating revenue.</p>
+
+    <h2>Which situation is yours?</h2>
+
+    <div class="scenario-grid">
+      <div class="scenario">
+        <div class="scenario-title">You like building things and have the time</div>
+        <div class="scenario-body">You are comfortable with web tools, you will actually build the right pages, and you have ongoing time to maintain and update the site as your business grows.</div>
+        <div class="scenario-rec rec-wix">Wix can work for you</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You are busy running the shop every day</div>
+        <div class="scenario-body">You need the website done right without spending your evenings building it. You want the SEO, the calculator, and the leads — not a DIY project on top of your actual job.</div>
+        <div class="scenario-rec rec-sb">SiteBot is for you</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You built a Wix site and it is not ranking</div>
+        <div class="scenario-body">The site exists but Google is not sending you customers. The pages are not structured correctly, the buyback side has nothing, and the calculator does not exist.</div>
+        <div class="scenario-rec rec-sb">SiteBot fixes this</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You buy phones and need a lead capture system</div>
+        <div class="scenario-body">You need a calculator that captures sellers at 10pm, emails them an offer code, and sends you the lead automatically. Wix has no tool for this at any price point.</div>
+        <div class="scenario-rec rec-sb">SiteBot is the only option</div>
+      </div>
+    </div>
+
+    <h2>The price difference in context</h2>
+
+    <p>Wix at $29 per month is significantly cheaper than SiteBot at $99 per month. That math is accurate. But the right comparison is not platform cost versus platform cost — it is what you actually get for each dollar.</p>
+
+    <p>At $29 per month, Wix gives you a tool to build a website. The building is on you. If you never build the right pages, the $29 per month is not producing anything for your shop. At $99 per month, SiteBot gives you a built website with the repair pages, buyback pages, calculator, and Google presence all in place and working from day one. The first week the calculator captures a single buyback lead that walks in with an offer code, the monthly cost is covered.</p>
+
+    <p>The shops that get the most out of Wix are the ones who invest real time into it. The shops that get the most out of SiteBot are the ones who want to focus on fixing phones and buying devices rather than managing a website.</p>
+
+    <div class="callout">
+      <p><strong>The calculator is the decision point.</strong> If you buy phones and want a system that captures those leads online automatically — at night, on weekends, when the shop is closed — Wix cannot do that at any price point. That tool does not exist on any general website builder. It is a repair and buyback specific feature that SiteBot was built around.</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Want the website built specifically for your shop?</h2>
+      <p>SiteBot builds the repair pages, the buyback calculator, and the local SEO system for cell phone shops. No DIY required. Join the waitlist.</p>
+      <a href="/" class="btn-dark">Join the Waitlist — It's Free</a>
+      <p class="final-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
