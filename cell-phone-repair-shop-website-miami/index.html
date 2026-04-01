@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Phone Repair Shop Website for Miami, FL — Built and Ready</title>
+  <meta name="description" content="Miami's bilingual market, tourist foot traffic, and spread-out neighborhoods create a unique opportunity for repair shops that show up online. SiteBot builds the website, SEO pages, and device calculator for Miami shops.">
+  <link rel="canonical" href="https://sitebot.tech/cell-phone-repair-shop-website-miami/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cell Phone Repair Shop Website — Miami, FL",
+    "description": "SiteBot builds done-for-you websites for cell phone repair and buyback shops in Miami. Repair pages, buyback pages, local SEO, and device quote calculator included.",
+    "url": "https://sitebot.tech/cell-phone-repair-shop-website-miami/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 860px; margin: 0 auto; padding: 80px 24px 56px; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 30px; padding: 5px 14px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(32px, 5.5vw, 58px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.06; margin-bottom: 20px; }
+    .hero h1 span { color: #4ade80; }
+    .hero-sub { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+    .hero-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-green { display: inline-block; background: #4ade80; color: #000; font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-green:hover { opacity: 0.88; }
+    .btn-outline { display: inline-block; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: border-color .2s; }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
+
+    /* PROOF STRIP */
+    .proof-strip { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 18px 24px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .proof-item { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .proof-item strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+
+    /* CONTENT */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin: 56px 0 16px; line-height: 1.15; }
+    p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* MARKET CARDS */
+    .market-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 560px) { .market-grid { grid-template-columns: 1fr; } }
+    .mkt-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .mkt-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+    .mkt-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .mkt-body { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* INCLUDE GRID */
+    .include-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .include-grid { grid-template-columns: 1fr; } }
+    .include-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .ic-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .ic-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .ic-body { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* NEIGHBORHOOD */
+    .neighborhood-box { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; margin: 28px 0; }
+    .nb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-400); margin-bottom: 14px; }
+    .nb-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .nb-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 5px 14px; font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nb-footer { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 16px; line-height: 1.6; }
+
+    /* COMPETE */
+    .compete-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .compete-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 10px; }
+    .compete-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .compete-box p:last-child { margin-bottom: 0; }
+    .compete-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(74,222,128,0.4); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* BILINGUAL BOX */
+    .bilingual-box { background: rgba(74,222,128,0.05); border: 1px solid rgba(74,222,128,0.15); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .bilingual-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #4ade80; margin-bottom: 10px; }
+    .bilingual-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .bilingual-box p:last-child { margin-bottom: 0; }
+    .bilingual-box p strong { color: rgba(255,255,255,0.85); }
+
+    /* PRICING COMING SOON */
+    .pricing-soon {
+      border: 1px dashed rgba(255,255,255,0.12);
+      border-radius: 16px; padding: 48px 32px;
+      text-align: center; margin: 28px 0;
+    }
+    .ps-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+    .ps-title { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .ps-body { font-size: 15px; color: rgba(255,255,255,0.4); max-width: 380px; margin: 0 auto; line-height: 1.65; }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin: 64px 0 80px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; line-height: 1.6; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 700; padding: 15px 34px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge"><span>📍</span> Miami, Florida</div>
+    <h1>Miami repair shops that show up on Google<br><span>never run out of customers</span></h1>
+    <p class="hero-sub">Between its bilingual communities, steady tourist foot traffic, and fast-upgrading Brickell professional class, Miami is one of the strongest repair and buyback markets in the country. SiteBot builds the website that puts your shop in front of every one of those customers.</p>
+    <div class="hero-cta-row">
+      <a href="/#waitlist" class="btn-green">Join the Waitlist</a>
+      <a href="/blog/cell-phone-shop-seo/" class="btn-outline">How it works</a>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div class="proof-strip">
+    <div class="proof-item">Live proof of concept: <strong>iMobile Repair Center, Detroit</strong></div>
+    <div class="proof-item"><strong>4.9 stars</strong> · 400+ reviews</div>
+    <div class="proof-item"><strong>30+ pages</strong> live and ranking</div>
+    <div class="proof-item">Device calculator captures leads <strong>24/7</strong></div>
+  </div>
+
+  <div class="wrap">
+
+    <h2>Miami's repair market has three distinct customer types — most shops are only visible to one</h2>
+
+    <p>Miami is not a single repair market. It is at least three running simultaneously, each with different search patterns and different reasons for walking through your door.</p>
+
+    <div class="market-grid">
+      <div class="mkt-card">
+        <span class="mkt-icon">🌴</span>
+        <div class="mkt-title">The tourist with a cracked screen</div>
+        <div class="mkt-body">Visiting South Beach or Brickell, dropped their phone at the pool, and needs it fixed same day before their flight. They search immediately from wherever they are and go with the first credible option nearby. Speed and proximity are everything.</div>
+      </div>
+      <div class="mkt-card">
+        <span class="mkt-icon">🏢</span>
+        <div class="mkt-title">The Brickell professional upgrading devices</div>
+        <div class="mkt-body">Finance and tech workers in Brickell and Wynwood upgrade iPhones on a regular cycle. When they upgrade, the outgoing device needs to go somewhere. They research buyback options online before committing — and they pay attention to price.</div>
+      </div>
+      <div class="mkt-card">
+        <span class="mkt-icon">🏘️</span>
+        <div class="mkt-title">The local community customer</div>
+        <div class="mkt-body">Hialeah, Little Havana, Westchester, Doral, Kendall — densely populated areas where residents search in their own language and trust shops in their community. A shop that shows up locally and communicates in their language wins loyalty that franchises never build.</div>
+      </div>
+    </div>
+
+    <p>Most Miami repair shops are capturing one of those customer types by accident — whoever walks past the sign. A properly built website captures all three: repair pages for the tourist and local searching by location, buyback pages for the professional looking to sell, and the right local signals for the community customer searching in Spanish or searching their neighborhood name.</p>
+
+    <!-- BILINGUAL -->
+    <div class="bilingual-box">
+      <div class="bilingual-label">The bilingual opportunity most shops miss</div>
+      <p>Miami's Hispanic population is one of the largest in any US city. Hialeah is among the most Spanish-dominant cities in the country. Doral, Little Havana, Westchester, and large parts of Miami Lakes have significant Spanish-speaking customer bases who search Google in Spanish — "reparación de iPhone Miami," "vender iPhone Miami," "cambio de pantalla cerca de mí."</p>
+      <p><strong>Almost no independent repair shops in Miami have any Spanish-language SEO presence.</strong> National franchise pages are in English only. A local shop with even basic Spanish-language pages targeting those searches is unchallenged for that traffic in most of Miami's largest neighborhoods. That gap is an open opportunity right now.</p>
+    </div>
+
+    <div class="compete-box">
+      <div class="compete-label">The Miami repair market reality</div>
+      <p>Miami has CPR locations, uBreakiFix franchises, and Techy stores across the metro. They own the generic "phone repair Miami" searches on the strength of national SEO infrastructure and brand recognition.</p>
+      <p><strong>They do not own the neighborhood and community-level searches.</strong> "Phone repair Wynwood," "sell iPhone Hialeah," "reparación iPhone Doral," "iPhone screen repair Coral Gables" — these area-specific searches are wide open. A local shop with the right pages for their part of Miami wins those searches without competing at the citywide level.</p>
+    </div>
+
+    <h2>What SiteBot builds for your Miami shop</h2>
+
+    <div class="include-grid">
+      <div class="include-card">
+        <span class="ic-icon">🔧</span>
+        <div class="ic-title">Repair pages for Miami</div>
+        <div class="ic-body">iPhone screen repair Miami. Samsung repair Miami. Battery replacement Coral Gables. Pages for your specific area — including Spanish-language versions for neighborhoods where they make the difference.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">💵</span>
+        <div class="ic-title">Buyback pages for Miami sellers</div>
+        <div class="ic-body">Sell iPhone Miami. Cash for phones Brickell. Dedicated pages targeting local sell-phone searches in English and Spanish — with a calculator that gives an instant quote before the seller goes anywhere else.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📱</span>
+        <div class="ic-title">Device quote calculator</div>
+        <div class="ic-body">A Brickell professional searching to sell their iPhone at 10pm gets an instant offer, locks the price with their email, and walks in the next day with a code. Captured automatically — no calls, no back and forth.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📍</span>
+        <div class="ic-title">Google Business Profile setup</div>
+        <div class="ic-body">Configured for both repair and buyback searches in your specific Miami area. The map pack is how most local repair searches end — your profile needs to be set up to appear for both service types.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📊</span>
+        <div class="ic-title">Prices via Google Sheet</div>
+        <div class="ic-body">Miami sees fast device turnover with its young professional population. Update your buyback prices from your phone in thirty seconds and the change goes live on your site immediately — no developer needed.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">✉️</span>
+        <div class="ic-title">Automated offer emails</div>
+        <div class="ic-body">Every locked buyback price sends an automatic offer code email to the seller and a lead notification to you — device details and contact info included before they walk in. Works overnight and on weekends.</div>
+      </div>
+    </div>
+
+    <!-- NEIGHBORHOODS -->
+    <div class="neighborhood-box">
+      <div class="nb-label">Miami areas SiteBot pages target</div>
+      <div class="nb-grid">
+        <span class="nb-pill">Brickell</span>
+        <span class="nb-pill">Wynwood</span>
+        <span class="nb-pill">Little Havana</span>
+        <span class="nb-pill">Hialeah</span>
+        <span class="nb-pill">Coral Gables</span>
+        <span class="nb-pill">Coconut Grove</span>
+        <span class="nb-pill">South Beach</span>
+        <span class="nb-pill">Doral</span>
+        <span class="nb-pill">Westchester</span>
+        <span class="nb-pill">Kendall</span>
+        <span class="nb-pill">North Miami</span>
+        <span class="nb-pill">Aventura</span>
+        <span class="nb-pill">Miami Lakes</span>
+        <span class="nb-pill">Homestead</span>
+        <span class="nb-pill">Midtown Miami</span>
+        <span class="nb-pill">Miami Gardens</span>
+      </div>
+      <div class="nb-footer">Miami's communities are geographically close but culturally distinct. A page targeting Hialeah reads differently — and ideally sounds different — than one targeting Brickell. That specificity is what earns local trust and what Google rewards with local map pack rankings for each area's searches.</div>
+    </div>
+
+    <h2>Why Miami's buyback market is especially strong</h2>
+
+    <p>Miami has one of the highest concentrations of iPhone users in the country, driven by its young professional class in Brickell and the Design District, its large Latin American population that strongly prefers Apple devices, and the steady inflow of visitors who travel with newer handsets. All of those groups upgrade at high rates.</p>
+
+    <p>When they upgrade, those devices need somewhere to go. Most of them end up at ecoATM kiosks at Walmart or CVS — paying thirty to forty percent below what a local shop would offer — simply because the local shop has no online presence targeting "sell iPhone Miami" or "cash for iPhones Doral." The seller does not know the better option exists because they cannot find it. <strong>The shop that shows up in that search captures not just the sale but often a long-term customer who comes back for every subsequent upgrade.</strong></p>
+
+    <div class="callout">
+      <p><strong>iMobile Repair Center in Detroit proves the model.</strong> The device calculator runs overnight. Sellers lock prices and receive offer codes automatically. The shop owner opens each morning to leads already in the inbox — device details, condition, and offer amount captured before the customer walks through the door. The website acquires. The shop transacts.</p>
+    </div>
+
+    <!-- PRICING COMING SOON -->
+    <h2>Pricing</h2>
+
+    <div class="pricing-soon">
+      <span class="ps-icon">🛠️</span>
+      <div class="ps-title">Pricing coming soon</div>
+      <div class="ps-body">We are still building the tools. Join the waitlist now and you will be the first to know when pricing is announced — early access shops get the best rate.</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Ready to be the Miami shop customers find first?</h2>
+      <p>Join the waitlist and be among the first Miami repair shops on SiteBot. No setup fee. No credit card required.</p>
+      <a href="/#waitlist" class="btn-dark">Join the Waitlist</a>
+      <p class="final-note">Early access · $0 setup fee · Miami shops reviewed first</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
