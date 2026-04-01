@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Phone Repair Shop Website for Houston, TX — Built and Ready</title>
+  <meta name="description" content="Houston is a massive market spread across dozens of distinct areas. SiteBot builds the website, local SEO pages, and device calculator for independent phone repair and buyback shops in Houston.">
+  <link rel="canonical" href="https://sitebot.tech/cell-phone-repair-shop-website-houston/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cell Phone Repair Shop Website — Houston, TX",
+    "description": "SiteBot builds done-for-you websites for cell phone repair and buyback shops in Houston. Repair pages, buyback pages, local SEO, and device quote calculator included.",
+    "url": "https://sitebot.tech/cell-phone-repair-shop-website-houston/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 860px; margin: 0 auto; padding: 80px 24px 56px; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,222,128,0.08);
+      border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 30px; padding: 5px 14px;
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(32px, 5.5vw, 58px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.06; margin-bottom: 20px; }
+    .hero h1 span { color: #4ade80; }
+    .hero-sub { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+    .hero-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-green { display: inline-block; background: #4ade80; color: #000; font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-green:hover { opacity: 0.88; }
+    .btn-outline { display: inline-block; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: border-color .2s; }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
+
+    /* PROOF STRIP */
+    .proof-strip { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 18px 24px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .proof-item { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .proof-item strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+
+    /* CONTENT */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin: 56px 0 16px; line-height: 1.15; }
+    p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* INCLUDE GRID */
+    .include-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .include-grid { grid-template-columns: 1fr; } }
+    .include-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .ic-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .ic-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .ic-body { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* NEIGHBORHOOD */
+    .neighborhood-box { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; margin: 28px 0; }
+    .nb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-400); margin-bottom: 14px; }
+    .nb-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .nb-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 5px 14px; font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nb-footer { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 16px; line-height: 1.6; }
+
+    /* COMPETE */
+    .compete-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .compete-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 10px; }
+    .compete-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .compete-box p:last-child { margin-bottom: 0; }
+    .compete-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(74,222,128,0.4); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* PRICING */
+    .pricing-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 560px) { .pricing-row { grid-template-columns: 1fr; } }
+    .plan-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; }
+    .plan-card.featured { border-color: rgba(74,222,128,0.25); background: rgba(74,222,128,0.04); }
+    .plan-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #4ade80; margin-bottom: 8px; }
+    .plan-name { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .plan-price { font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+    .plan-price span { font-size: 14px; font-weight: 400; color: var(--gray-400); }
+    .plan-desc { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 16px; line-height: 1.5; }
+    .plan-feature { font-size: 12px; color: rgba(255,255,255,0.48); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: flex-start; gap: 7px; line-height: 1.4; }
+    .plan-feature:last-child { border-bottom: none; }
+    .pf-icon { color: #4ade80; flex-shrink: 0; }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin: 64px 0 80px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; line-height: 1.6; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 700; padding: 15px 34px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge"><span>📍</span> Houston, Texas</div>
+    <h1>Your Houston repair shop needs<br><span>to be found before they drive past</span></h1>
+    <p class="hero-sub">Houston is one of the largest cities in the country. When someone in Montrose searches "iPhone repair near me," only the shops that show up on Google get the call. SiteBot builds the website that puts independent Houston shops on that first page.</p>
+    <div class="hero-cta-row">
+      <a href="/#waitlist" class="btn-green">Join the Waitlist</a>
+      <a href="/blog/cell-phone-shop-seo/" class="btn-outline">How it works</a>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div class="proof-strip">
+    <div class="proof-item">Live proof of concept: <strong>iMobile Repair Center, Detroit</strong></div>
+    <div class="proof-item"><strong>4.9 stars</strong> · 400+ reviews</div>
+    <div class="proof-item"><strong>30+ pages</strong> live and ranking</div>
+    <div class="proof-item">Device calculator captures leads <strong>24/7</strong></div>
+  </div>
+
+  <div class="wrap">
+
+    <h2>Houston's size is your biggest opportunity — if you show up where customers search</h2>
+
+    <p>Houston is massive. The fourth-largest city in the country with over two million residents spread across 670 square miles of metro area. That spread is what makes local SEO so valuable for independent repair shops. A customer in Katy is not driving to the Galleria for a screen replacement. A customer in the Heights is not going to Sugar Land. They are searching "iPhone repair near me" and choosing whoever comes up first within a reasonable distance.</p>
+
+    <p>The city's size means the customer pool is enormous — and it also means a well-positioned shop in the right area does not need citywide dominance. A shop on Westheimer that ranks for "iPhone repair Montrose" or "phone repair Galleria area" is capturing customers who are already nearby and already decided to get a repair. That specificity is exactly what builds consistent walk-in traffic in a city this spread out.</p>
+
+    <div class="compete-box">
+      <div class="compete-label">The Houston repair market reality</div>
+      <p>Houston has dozens of CPR and uBreakiFix locations, Cellairis kiosks inside major retailers, and well-established independents like CellFix that have been building their online presence for over a decade. They own broad Houston searches.</p>
+      <p><strong>What they do not own is the neighborhood and corridor-level searches.</strong> "Phone repair Montrose," "sell iPhone Midtown Houston," "iPhone battery replacement Heights TX" — those area-specific searches are lower competition and higher converting because the customer is already signaling they want something nearby. An independent shop with the right pages targeting those searches wins that traffic without competing on a city-wide scale.</p>
+    </div>
+
+    <h2>What SiteBot builds for your Houston shop</h2>
+
+    <div class="include-grid">
+      <div class="include-card">
+        <span class="ic-icon">🔧</span>
+        <div class="ic-title">Repair pages for Houston</div>
+        <div class="ic-body">iPhone screen repair Houston. Battery replacement Houston. Samsung repair Houston. Pages targeting the specific searches customers run before choosing where to go.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">💵</span>
+        <div class="ic-title">Buyback pages for Houston sellers</div>
+        <div class="ic-body">Sell iPhone Houston. Cash for iPhones Houston. Dedicated pages targeting local sell-phone searches — with a calculator that gives an instant number before they leave home.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📱</span>
+        <div class="ic-title">Device quote calculator</div>
+        <div class="ic-body">A Houston seller searching at 9pm gets an instant cash offer, locks the price with their email, and walks in the next morning with an offer code. Captured automatically — zero work on your end.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📍</span>
+        <div class="ic-title">Google Business Profile setup</div>
+        <div class="ic-body">Profile configured with both repair and buyback services listed explicitly so your shop appears in map pack results for both types of searches in your area of Houston.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📊</span>
+        <div class="ic-title">Prices via Google Sheet</div>
+        <div class="ic-body">iPhone values shift constantly — especially around new release cycles. Update your buyback prices from your phone in thirty seconds and the change goes live on your site immediately.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">✉️</span>
+        <div class="ic-title">Automated offer emails</div>
+        <div class="ic-body">Every locked buyback price sends an automatic offer code email to the seller and a lead notification to you — device details and contact info included before they walk in.</div>
+      </div>
+    </div>
+
+    <!-- NEIGHBORHOODS -->
+    <div class="neighborhood-box">
+      <div class="nb-label">Houston areas and corridors SiteBot pages target</div>
+      <div class="nb-grid">
+        <span class="nb-pill">Montrose</span>
+        <span class="nb-pill">The Heights</span>
+        <span class="nb-pill">Midtown</span>
+        <span class="nb-pill">River Oaks</span>
+        <span class="nb-pill">Galleria</span>
+        <span class="nb-pill">Westheimer</span>
+        <span class="nb-pill">Katy</span>
+        <span class="nb-pill">Sugar Land</span>
+        <span class="nb-pill">Pearland</span>
+        <span class="nb-pill">The Woodlands</span>
+        <span class="nb-pill">Memorial</span>
+        <span class="nb-pill">Energy Corridor</span>
+        <span class="nb-pill">Spring Branch</span>
+        <span class="nb-pill">East End</span>
+        <span class="nb-pill">Third Ward</span>
+        <span class="nb-pill">Harwin</span>
+      </div>
+      <div class="nb-footer">Houston's geography means neighborhood-level pages work differently here than in denser cities. A shop on the Westheimer corridor serves a completely different customer than one near Harwin or The Woodlands. Pages can be targeted to the area your shop actually serves — not a generic Houston-wide page that competes with every shop in the metro.</div>
+    </div>
+
+    <h2>Repair customers and sellers: two different searches, one website</h2>
+
+    <p>A person with a cracked screen in Midtown searches "iPhone screen repair Midtown Houston" or just "phone repair near me" from their location. They pick whoever is within a mile or two and has solid reviews. If your shop is in Midtown and you have a page targeting that search with good local signals, you get the walk-in. If your website has no Houston-specific pages, the CPR on Shepherd gets it instead.</p>
+
+    <p>The buyback customer behaves differently. They are sitting at home in the Heights with an iPhone 15 they just upgraded from. They search "sell iPhone Houston" or "cash for iPhones near me." They are comparison shopping before they go anywhere. <strong>If your website gives them an instant quote through the calculator and lets them lock a price with their email, you have captured that lead before they drive to an ecoATM and accept whatever the machine offers.</strong> If your site has nothing or just says "call for a quote," they are gone in under ten seconds.</p>
+
+    <div class="callout">
+      <p><strong>iMobile Repair Center in Detroit runs this exact system.</strong> The calculator captures buyback leads around the clock. Offer codes go out automatically. The shop owner opens each morning to new leads already sitting in the inbox — device model, condition, offer amount, and contact info — ready to be walked in and closed. The website does the acquisition. The shop handles the transaction.</p>
+    </div>
+
+    <h2>Pricing</h2>
+
+    <div class="pricing-row">
+      <div class="plan-card">
+        <div class="plan-name">Website</div>
+        <div class="plan-price">$99<span>/mo</span></div>
+        <div class="plan-desc">Website, repair pages, buyback pages, local SEO structure</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Built and launched for you</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Repair pages targeting Houston</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Buyback pages and sell-phone SEO</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Device quote calculator</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Google Business Profile setup</div>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Most popular</div>
+        <div class="plan-name">Website + SEO</div>
+        <div class="plan-price">$299<span>/mo</span></div>
+        <div class="plan-desc">Everything in Website plus ongoing SEO content and ranking growth</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Everything in Website tier</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Monthly SEO content published</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Area-specific pages added</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Ranking tracking and reporting</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Priority support</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Full Growth</div>
+        <div class="plan-price">$499<span>/mo</span></div>
+        <div class="plan-desc">The complete system with SMS follow-up, lead tracking, and chatbot</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Everything in Website + SEO</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> SMS follow-up automation</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Lead tracking dashboard</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> AI chatbot for lead capture</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Phone agent for missed calls</div>
+      </div>
+    </div>
+
+    <p>Early access shops pay $0 setup fee. No credit card required to reserve your spot on the waitlist.</p>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Ready to be the Houston shop customers find first?</h2>
+      <p>Join the waitlist and be among the first Houston repair shops on SiteBot. No setup fee. No credit card required.</p>
+      <a href="/#waitlist" class="btn-dark">Join the Waitlist</a>
+      <p class="final-note">Early access · $0 setup fee · Houston shops reviewed first</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
