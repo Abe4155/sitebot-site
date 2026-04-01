@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "How to Price Used Phones for Cash — The Method That Actually Works",
+    url: "/blog/how-to-price-used-phones/",
+    description: "Static price sheets go stale fast. Here is the pricing method experienced buyback shops use — eBay sold data, condition adjustments, IMEI checks, and the timing variables that protect your margin.",
+    date: "March 2026",
+    category: "Buyback",
+    readTime: "9 min read"
+  },
+  {
     title: "What a Phone Buyback Website Needs to Actually Bring in Sellers",
     url: "/blog/phone-buyback-website/",
     description: "A buyback website is not the same as a repair website. Here is exactly what it needs — the calculator, the SEO pages, the trust signals — to convert online searchers into sellers who show up.",

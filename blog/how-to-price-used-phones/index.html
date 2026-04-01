@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Price Used Phones for Cash — The Method That Actually Works</title>
+  <meta name="description" content="Static price sheets go stale fast. Here is the pricing method experienced buyback shops use — eBay sold data, condition adjustments, IMEI checks, and the variables that actually move the number.">
+  <link rel="canonical" href="https://sitebot.tech/blog/how-to-price-used-phones/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Price Used Phones for Cash — The Method That Actually Works",
+    "description": "Static price sheets go stale fast. Here is the pricing method experienced buyback shops use — eBay sold data, condition adjustments, IMEI checks, and the timing variables that protect your margin.",
+    "author": { "@type": "Organization", "name": "SiteBot" },
+    "publisher": { "@type": "Organization", "name": "SiteBot", "url": "https://sitebot.tech" },
+    "mainEntityOfPage": "https://sitebot.tech/blog/how-to-price-used-phones/"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do you price used phones for buyback?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check recent sold listings on eBay for the exact model, storage, and condition. Filter by sold — not just listed. Average the last 10 to 15 sales to find the current market price. Your buy price is typically 40 to 55 percent of that average depending on condition, carrier lock status, battery health, and how fast you need to move the device. Adjust down for any repairs, aftermarket parts, heavy scratches, or non-working components."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a repaired phone have lower buyback value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A phone that has had a screen replaced, battery swapped, or any other repair — especially with aftermarket parts — is worth less than an original unrepaired device in the same cosmetic condition. Aftermarket parts lower the resale value because buyers and wholesalers pay less for them. Always ask if the device has been repaired before making an offer, and adjust your buy price accordingly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does carrier lock status affect buyback value?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes significantly. Unlocked phones sell to a wider pool of buyers and command higher prices on every resale channel. A carrier-locked device limits who can use it and lowers demand, which directly lowers what you can resell it for. Always check carrier status before making an offer and factor the difference into your buy price."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do phone prices drop after a new iPhone release?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "When Apple announces new iPhones, millions of people upgrade and flood the market with the outgoing model. More supply with similar demand pushes prices down. The steepest drop happens in the two weeks after the announcement. Shops that buy heavily before the announcement and move inventory quickly capture better margins. Shops that hold devices through the drop lose money on what they already paid."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    .article-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+    .article-tag { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 14px; display: block; }
+    h1 { font-size: clamp(28px, 5vw, 44px); font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 16px; }
+    .article-meta { font-size: 13px; color: var(--gray-400); margin-bottom: 48px; }
+    h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; line-height: 1.2; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ADJUSTMENT TABLE */
+    .adj-table { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; overflow: hidden; margin: 24px 0; }
+    .adj-row { display: grid; grid-template-columns: 1.8fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .adj-row:last-child { border-bottom: none; }
+    .adj-row.header { background: #111; }
+    .adj-cell { padding: 12px 16px; font-size: 13px; color: rgba(255,255,255,0.5); border-right: 1px solid rgba(255,255,255,0.04); line-height: 1.45; }
+    .adj-cell:last-child { border-right: none; }
+    .adj-row.header .adj-cell { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,0.28); }
+    .adj-cell.label { color: rgba(255,255,255,0.75); font-weight: 500; }
+    .adj-cell.up { color: #4ade80; font-weight: 600; }
+    .adj-cell.down { color: #f87171; font-weight: 600; }
+
+    /* INSPECTION CHECKLIST */
+    .inspection { display: flex; flex-direction: column; gap: 0; margin: 20px 0; }
+    .insp-item { display: flex; align-items: flex-start; gap: 14px; padding: 13px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .insp-item:last-child { border-bottom: none; }
+    .insp-icon { width: 22px; height: 22px; border-radius: 50%; background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.22); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 11px; color: #4ade80; margin-top: 2px; }
+    .insp-icon.warn { background: rgba(251,191,36,0.08); border-color: rgba(251,191,36,0.2); color: #fcd34d; }
+    .insp-text { font-size: 15px; color: rgba(255,255,255,0.6); line-height: 1.65; }
+    .insp-text strong { color: var(--white); }
+
+    /* CALLOUT */
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); }
+    .callout p strong { color: var(--white); }
+
+    .warning-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 14px; padding: 20px 24px; margin: 28px 0; }
+    .warning-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 8px; }
+    .warning-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin: 0; line-height: 1.7; }
+    .warning-box p strong { color: rgba(255,255,255,0.85); }
+
+    .season-box { background: rgba(251,191,36,0.06); border: 1px solid rgba(251,191,36,0.18); border-radius: 14px; padding: 20px 24px; margin: 28px 0; }
+    .season-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #fcd34d; margin-bottom: 8px; }
+    .season-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .season-box p:last-child { margin-bottom: 0; }
+    .season-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout-link { background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.18); border-radius: 12px; padding: 18px 22px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-decoration: none; flex-wrap: wrap; transition: border-color .2s; }
+    .callout-link:hover { border-color: rgba(37,99,235,0.35); }
+    .callout-link-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .callout-link-title { font-size: 15px; font-weight: 600; color: #93c5fd; }
+    .callout-link-arrow { color: var(--gray-400); font-size: 20px; flex-shrink: 0; }
+
+    .faq-section { margin-top: 52px; }
+    .faq-heading { font-size: 22px; font-weight: 700; color: var(--white); margin-bottom: 24px; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.07); padding: 20px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 16px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+    .faq-a { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    .cta-banner { background: var(--white); margin-top: 64px; padding: 48px 32px; border-radius: 16px; text-align: center; }
+    .cta-banner h3 { font-size: clamp(20px, 3.5vw, 30px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 10px; }
+    .cta-banner p { font-size: 16px; color: #424245; max-width: 440px; margin: 0 auto 24px; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 13px 30px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .cta-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+
+    .related { margin-top: 56px; }
+    .related-heading { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--gray-400); margin-bottom: 16px; }
+    .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 540px) { .related-grid { grid-template-columns: 1fr; } }
+    .rel-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 16px 18px; text-decoration: none; display: flex; align-items: center; justify-content: space-between; transition: border-color .2s; }
+    .rel-card:hover { border-color: rgba(255,255,255,0.2); }
+    .rel-label { font-size: 11px; color: var(--gray-400); margin-bottom: 3px; }
+    .rel-title { font-size: 13px; font-weight: 600; color: var(--white); }
+    .rel-arrow { color: var(--gray-400); font-size: 16px; flex-shrink: 0; margin-left: 10px; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <article class="article-wrap">
+
+    <span class="article-tag">Buyback</span>
+    <h1>How to Price Used Phones for Cash — The Method That Actually Works</h1>
+    <p class="article-meta">By SiteBot &nbsp;|&nbsp; March 2026 &nbsp;|&nbsp; 9 min read</p>
+
+    <p>A static price sheet for used phones is outdated the day you make it. An iPhone 15 Pro is worth a different number today than it was last month, and it will be worth less next month than it is today. The shop that prices from a spreadsheet they updated two months ago is either overpaying on devices that dropped in value or turning away sellers by underpaying on ones that held strong. Either way, the margin suffers.</p>
+
+    <p>The shops that run profitable buyback operations do not use static price sheets as their source of truth. They use a method — one that takes about two minutes per device and tells them what the market is actually paying right now before they make a single offer.</p>
+
+    <h2>Step 1: Check eBay sold listings before you quote anything</h2>
+
+    <p>The most reliable live market data available to any buyback shop is free and takes ninety seconds to access. Go to eBay, search the exact device — model, storage, carrier status — and filter the results to show only completed sold listings from the last 30 days. Not active listings of what people are asking. Sold listings of what buyers actually paid.</p>
+
+    <p>Look at ten to fifteen recent sales for the specific device in front of you. Average them. That number is the current real market price. It is what your resale channel will pay and what your buyer will expect to pay. Everything else — your buy price, your adjustments for condition, your margin — builds from that number.</p>
+
+    <p>The reason this beats any other pricing tool is that it updates itself constantly. The market for a given iPhone model changes week by week based on supply, new releases, and seasonal demand. Checking sold listings means your offer is always based on what is actually happening right now, not what was true last quarter.</p>
+
+    <h2>Step 2: Apply your buy percentage</h2>
+
+    <p>Once you have the current market price, your buy price is a percentage of that number. The range most local shops work within is <strong>40 to 55 percent of the average recent sold price</strong> before condition adjustments. Where you land within that range depends on your resale channel and how fast you need to turn inventory.</p>
+
+    <p>If you are selling to a wholesaler, your margin is lower because the wholesaler takes a cut. You buy closer to 40 percent. If you are selling direct — through your own website, to local customers, or on eBay yourself — you capture more margin and can afford to pay closer to 55 percent while still hitting your target.</p>
+
+    <p>Those percentages are a starting point. Every device gets adjusted up or down from there based on what the inspection reveals. Which brings you to the most important part of pricing used phones correctly.</p>
+
+    <h2>Step 3: Inspect the device before you commit to a number</h2>
+
+    <p>The condition of the device in front of you is what determines where in your buy range you land — or whether you make an offer at all. A quick but thorough inspection takes two to three minutes and protects you from every common pricing mistake. Here is what to check, in order:</p>
+
+    <div class="inspection">
+      <div class="insp-item">
+        <div class="insp-icon">✓</div>
+        <div class="insp-text"><strong>Ask if it has been repaired.</strong> Before you even pick it up. A device with a replaced screen, battery, or any other part — especially aftermarket parts — is worth less than an original unrepaired phone in the same cosmetic condition. Wholesalers and direct buyers both pay less for repaired devices. Get this information upfront and price accordingly before you form any number in your head.</div>
+      </div>
+      <div class="insp-item">
+        <div class="insp-icon warn">!</div>
+        <div class="insp-text"><strong>Check for aftermarket parts.</strong> A screen replaced with a genuine Apple or OEM-quality part is different from one replaced with a cheap aftermarket screen. Look at the display in bright light. Aftermarket screens often have warmer color tones, less sharp edges, or a slightly different texture around the bezel. If it has been repaired with aftermarket parts, your offer comes down further — because when you resell it, your buyer will notice too.</div>
+      </div>
+      <div class="insp-item">
+        <div class="insp-icon warn">!</div>
+        <div class="insp-text"><strong>Screen and cosmetic condition.</strong> Heavy scratches on the screen or back glass reduce resale value significantly. Minor scuffs on the edges of an aluminum frame are normal and acceptable. Deep scratches across the display, cracked back glass, or visible dents are all deductions. Look at the device in good lighting, not just a quick glance.</div>
+      </div>
+      <div class="insp-item">
+        <div class="insp-icon">✓</div>
+        <div class="insp-text"><strong>Battery health.</strong> Go to Settings &gt; Battery &gt; Battery Health. A battery at 85 percent capacity or above is acceptable. Below 80 percent is a meaningful deduction — you will either need to replace the battery before resale or discount the sale price to the next buyer. Factor the replacement cost directly into your offer if the battery is low.</div>
+      </div>
+      <div class="insp-item">
+        <div class="insp-icon">✓</div>
+        <div class="insp-text"><strong>Quick function test — microphone, speakers, cameras.</strong> Make a call or use the voice memo app to test both the earpiece and the bottom microphone. Play audio through the speaker. Open both cameras and check they focus and switch cleanly. A phone with a dead microphone or distorted speaker sells for significantly less. These tests take thirty seconds and tell you whether you are holding a clean device or a problem device.</div>
+      </div>
+      <div class="insp-item">
+        <div class="insp-icon">✓</div>
+        <div class="insp-text"><strong>Face ID or Touch ID working.</strong> For iPhones, Face ID not working is a significant value hit — especially on newer models where it is the primary security and authentication feature. Test it before quoting. A broken Face ID on an iPhone 14 Pro is a different device than one with a working Face ID, and your offer should reflect that.</div>
+      </div>
+      <div class="insp-item">
+        <div class="insp-icon">✓</div>
+        <div class="insp-text"><strong>iCloud or Google lock — verify it is off.</strong> This is not optional. Confirm that Find My iPhone is disabled and the Apple ID is signed out before any money changes hands. A device with an active iCloud lock has almost no resale value. Never pay for a device and expect the seller to remove the lock later — it may never come off.</div>
+      </div>
+    </div>
+
+    <h2>Step 4: Run the IMEI check</h2>
+
+    <p>Before the transaction closes, check the IMEI number against a blacklist database. This tells you whether the device has been reported stolen, is flagged by the carrier, or is still under a finance agreement that has not been paid off.</p>
+
+    <p>A device on the blacklist cannot be activated on a carrier network in the US. It has extremely limited resale value and buying it — even unknowingly — puts you in a difficult position. The IMEI check is the one step you never skip regardless of how legitimate the seller seems or how smooth the transaction feels.</p>
+
+    <p>Free IMEI checkers exist but paid services return more complete information including finance status and carrier lock details. For a shop doing consistent buyback volume, a paid IMEI check service is worth the cost. One bad purchase that a basic check would have caught costs more than months of checking fees.</p>
+
+    <div class="warning-box">
+      <div class="warning-label">Never skip the IMEI check</div>
+      <p><strong>A clean IMEI is the foundation of every buyback transaction.</strong> A device that looks perfect, tests perfectly, and comes with a friendly seller story can still be blacklisted or financed. The IMEI check is the one thing you cannot verify by looking at the device itself. It takes thirty seconds and costs almost nothing compared to the cost of holding a device you cannot resell.</p>
+    </div>
+
+    <h2>The condition adjustments that move the number the most</h2>
+
+    <div class="adj-table">
+      <div class="adj-row header">
+        <div class="adj-cell">Condition factor</div>
+        <div class="adj-cell">Impact on value</div>
+        <div class="adj-cell">Direction</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Unlocked — any carrier</div>
+        <div class="adj-cell">10 to 20%</div>
+        <div class="adj-cell up">Higher</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Carrier locked</div>
+        <div class="adj-cell">10 to 20%</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Battery health 85%+</div>
+        <div class="adj-cell">Neutral baseline</div>
+        <div class="adj-cell up">Standard</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Battery health below 80%</div>
+        <div class="adj-cell">10 to 25%</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Previously repaired (any part)</div>
+        <div class="adj-cell">10 to 20%</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Aftermarket parts (screen, battery)</div>
+        <div class="adj-cell">15 to 25%</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Heavy screen scratches</div>
+        <div class="adj-cell">5 to 15%</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Cracked back glass</div>
+        <div class="adj-cell">15 to 30%</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Face ID / Touch ID not working</div>
+        <div class="adj-cell">Significant</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Mic, speaker, camera all working</div>
+        <div class="adj-cell">Baseline</div>
+        <div class="adj-cell up">Standard</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Any mic, speaker, or camera issue</div>
+        <div class="adj-cell">15 to 35%</div>
+        <div class="adj-cell down">Lower</div>
+      </div>
+      <div class="adj-row">
+        <div class="adj-cell label">Higher storage (256GB vs 128GB)</div>
+        <div class="adj-cell">Varies by model</div>
+        <div class="adj-cell up">Higher</div>
+      </div>
+    </div>
+
+    <p>Unlocked versus carrier locked is the variable that surprises the most new shop owners. An unlocked phone sells to every buyer on every carrier. A carrier-locked phone sells to a significantly smaller pool, which depresses price on every resale channel. The difference in what you can resell it for directly translates to a lower buy price. Never pay unlocked rates for a carrier-locked device.</p>
+
+    <h2>The timing factor — when you buy matters as much as what you pay</h2>
+
+    <div class="season-box">
+      <div class="season-label">The September trap</div>
+      <p>Every year in September, Apple announces new iPhones. In the two weeks that follow, millions of people upgrade and list their old devices for sale. The market is suddenly flooded with the outgoing model. More supply without a proportional jump in demand means prices drop — sometimes 15 to 20 percent within days of the announcement.</p>
+      <p><strong>Shops that buy aggressively in the two weeks before the announcement and move inventory quickly before the drop protect their margins.</strong> Shops that hold devices they bought at pre-announcement prices through the post-announcement dip lose money on transactions they thought were profitable when they made them. The price you paid last week may already be above what the market will pay this week.</p>
+      <p>The practical rule: after a major release announcement, check eBay sold listings again before making new offers. The market moved. Your buy prices need to move with it.</p>
+    </div>
+
+    <h2>Keeping your calculator prices current without touching your website</h2>
+
+    <p>If your website has a device quote calculator — which it should — the prices showing to customers need to reflect current market reality, not what was accurate two months ago. A seller who gets a quote of $380 for their iPhone 15 Pro and walks in to find you offering $310 will not sell to you, will not come back, and may leave a negative review about the experience.</p>
+
+    <p>The cleanest solution is a calculator connected to a Google Sheet you control. When market prices shift, you open the sheet, update the number for the affected model, and every quote the calculator generates from that point forward reflects the new price. No developer, no website login, no waiting. The entire update takes thirty seconds from your phone.</p>
+
+    <p>This is how the iMobile calculator at imobilerbb.com works — prices live in a Google Sheet that the shop controls directly. Any price change is live on the website within seconds of updating the sheet. That alignment between what the website shows and what you actually pay is what makes the offer code system trustworthy to sellers and credible to your business.</p>
+
+    <a href="/blog/phone-buyback-website/" class="callout-link">
+      <div>
+        <div class="callout-link-label">Related article</div>
+        <div class="callout-link-title">What a phone buyback website needs to actually bring in sellers</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <a href="/blog/how-to-buy-phones-for-cash/" class="callout-link">
+      <div>
+        <div class="callout-link-label">Related article</div>
+        <div class="callout-link-title">How to buy phones for cash — the full shop owner guide</div>
+      </div>
+      <span class="callout-link-arrow">→</span>
+    </a>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2 class="faq-heading">Common questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How do you price used phones for buyback?</div>
+        <div class="faq-a">Check recent sold listings on eBay for the exact model, storage, and condition — filter by sold, not listed. Average the last 10 to 15 sales to find the current market price. Your buy price is typically 40 to 55 percent of that average depending on condition, carrier lock status, battery health, and your resale channel. Adjust down for any prior repairs, aftermarket parts, heavy cosmetic damage, or non-working components.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does a repaired phone have lower buyback value?</div>
+        <div class="faq-a">Yes. A phone that has had a screen, battery, or any other part replaced — especially with aftermarket parts — is worth less than an original unrepaired device in the same cosmetic condition. Aftermarket parts reduce resale value because every buyer in your resale chain will discount for them. Always ask if the device has been repaired before quoting, and reduce your offer accordingly.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does carrier lock status affect buyback value?</div>
+        <div class="faq-a">Yes, significantly. Unlocked phones sell to a wider pool of buyers and command higher resale prices on every channel. A carrier-locked device limits who can use it and lowers demand, which directly reduces what you can resell it for. The difference is typically 10 to 20 percent. Never pay unlocked rates for a carrier-locked phone.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Why do phone prices drop after a new iPhone release?</div>
+        <div class="faq-a">When Apple announces new iPhones, millions of upgrading customers flood the market with the outgoing model. More supply with similar demand pushes prices down — sometimes 15 to 20 percent within days. Shops that buy before the announcement and move inventory quickly capture better margins. Shops that hold devices through the drop lose money on purchases that seemed profitable at the time. Check eBay sold listings again after any major announcement before making new offers.</div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-banner">
+      <h3>Want a calculator that updates prices in seconds?</h3>
+      <p>SiteBot connects your device quote calculator to a Google Sheet you control. Change a price in the sheet — the website updates instantly. Join the waitlist.</p>
+      <a href="/" class="btn-dark">Join the Waitlist</a>
+      <p class="cta-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+    <!-- RELATED -->
+    <div class="related">
+      <div class="related-heading">Keep reading</div>
+      <div class="related-grid">
+        <a href="/blog/how-to-buy-phones-for-cash/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">How to buy phones for cash — full guide</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-buyback-website/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">What a phone buyback website needs</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/how-to-get-people-to-sell-phones-to-your-shop/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">How to get more people to sell phones to you</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+        <a href="/blog/phone-repair-shop-sms-marketing/" class="rel-card">
+          <div>
+            <div class="rel-label">From the blog</div>
+            <div class="rel-title">SMS marketing — follow up with buyback leads</div>
+          </div>
+          <span class="rel-arrow">→</span>
+        </a>
+      </div>
+    </div>
+
+  </article>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
