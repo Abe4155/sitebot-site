@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteBot vs R3up — What's the Difference for Phone Repair and Buyback Shops?</title>
+  <meta name="description" content="R3up builds websites for mail-in buyback businesses. SiteBot builds websites for local repair and walk-in buyback shops. The model is different. Here is which one fits your business.">
+  <link rel="canonical" href="https://sitebot.tech/vs-r3up/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "SiteBot vs R3up",
+    "description": "R3up is built for mail-in buyback operations. SiteBot is built for local walk-in repair and buyback shops. An honest comparison of which model fits your business.",
+    "url": "https://sitebot.tech/vs-r3up/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 800px; margin: 0 auto; padding: 80px 24px 48px; text-align: center; }
+    .hero-eyebrow { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--gray-400); margin-bottom: 18px; display: block; }
+    .hero h1 { font-size: clamp(30px, 5.5vw, 54px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-bottom: 18px; }
+    .hero-sub { font-size: clamp(16px, 2vw, 19px); color: rgba(255,255,255,0.5); max-width: 540px; margin: 0 auto 40px; line-height: 1.6; }
+
+    /* VS ROW */
+    .vs-row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; max-width: 900px; margin: 0 auto 64px; padding: 0 24px; }
+    @media (max-width: 640px) { .vs-row { grid-template-columns: 1fr; } }
+    .vs-badge { font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.22); text-align: center; }
+    .vs-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 26px; }
+    .vs-card.sitebot { border-color: rgba(74,222,128,0.2); }
+    .vs-card-name { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .vs-card-tag { font-size: 12px; color: var(--gray-400); margin-bottom: 16px; }
+    .vs-card-line { font-size: 13px; color: rgba(255,255,255,0.48); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.5; display: flex; align-items: flex-start; gap: 8px; }
+    .vs-card-line:last-child { border-bottom: none; }
+    .vs-icon-yes { color: #4ade80; flex-shrink: 0; }
+    .vs-icon-no { color: #f87171; flex-shrink: 0; }
+    .vs-icon-partial { color: #fcd34d; flex-shrink: 0; }
+
+    /* CONTENT */
+    .content-wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    h2 { font-size: clamp(20px, 3vw, 28px); font-weight: 700; letter-spacing: -0.015em; color: var(--white); margin: 44px 0 14px; }
+    p { font-size: 17px; color: rgba(255,255,255,0.65); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* MODEL COMPARISON */
+    .model-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .model-grid { grid-template-columns: 1fr; } }
+    .model-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 22px; }
+    .model-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 10px; }
+    .model-label.r3up { color: #93c5fd; }
+    .model-label.sb { color: #4ade80; }
+    .model-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .model-item { font-size: 13px; color: rgba(255,255,255,0.45); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); line-height: 1.5; display: flex; gap: 8px; }
+    .model-item:last-child { border-bottom: none; }
+    .mi-icon { flex-shrink: 0; }
+
+    /* TABLE */
+    .comp-table { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; overflow: hidden; margin: 28px 0; overflow-x: auto; }
+    .ct-row { display: grid; grid-template-columns: 1.8fr 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.05); min-width: 480px; }
+    .ct-row:last-child { border-bottom: none; }
+    .ct-row.header { background: #111; }
+    .ct-cell { padding: 12px 16px; font-size: 13px; color: rgba(255,255,255,0.5); border-right: 1px solid rgba(255,255,255,0.04); line-height: 1.4; }
+    .ct-cell:last-child { border-right: none; }
+    .ct-row.header .ct-cell { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,0.25); }
+    .ct-cell.feature { color: rgba(255,255,255,0.75); font-weight: 500; }
+    .ct-cell.yes { color: #4ade80; font-weight: 600; }
+    .ct-cell.no { color: rgba(255,255,255,0.2); }
+    .ct-cell.partial { color: #fcd34d; }
+
+    /* SCENARIO */
+    .scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 20px 0; }
+    @media (max-width: 520px) { .scenario-grid { grid-template-columns: 1fr; } }
+    .scenario { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 18px; }
+    .scenario-title { font-size: 14px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .scenario-body { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+    .scenario-rec { font-size: 12px; font-weight: 600; margin-top: 10px; padding: 6px 10px; border-radius: 6px; }
+    .rec-r3up { background: rgba(147,197,253,0.08); color: #93c5fd; border: 1px solid rgba(147,197,253,0.18); }
+    .rec-sb { background: rgba(74,222,128,0.08); color: #4ade80; border: 1px solid rgba(74,222,128,0.18); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(255,255,255,0.18); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin-top: 64px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 36px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 600; padding: 14px 32px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <span class="hero-eyebrow">Comparison</span>
+    <h1>SiteBot vs R3up</h1>
+    <p class="hero-sub">Both build done-for-you buyback websites. The business model they are built for is completely different. Which one fits your shop depends on one question: are customers coming to you, or mailing devices in?</p>
+  </div>
+
+  <!-- VS CARDS -->
+  <div class="vs-row">
+    <div class="vs-card">
+      <div class="vs-card-name">R3up</div>
+      <div class="vs-card-tag">Mail-in buyback website platform — pricing by demo</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Done-for-you buyback website</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Automated online quote system</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Prepaid shipping label generation</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Chatbot add-on available</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> SEO and marketing add-ons</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Built for online/mail-in model</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Repair is an optional add-on only</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> No local walk-in SEO focus</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Pricing requires demo — not public</div>
+    </div>
+
+    <div class="vs-badge">VS</div>
+
+    <div class="vs-card sitebot">
+      <div class="vs-card-name">SiteBot</div>
+      <div class="vs-card-tag">Local repair and buyback shop website — from $99/mo</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Done-for-you website</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Device quote calculator 24/7</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Walk-in and same-day cash focus</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Local SEO targeting your city</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Repair pages built alongside buyback</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Google Business Profile setup</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Prices live via Google Sheet</div>
+      <div class="vs-card-line"><span class="vs-icon-yes">✓</span> Transparent pricing — $99/mo</div>
+      <div class="vs-card-line"><span class="vs-icon-no">✕</span> Not built for mail-in operations</div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content-wrap">
+
+    <h2>The core difference: mail-in vs walk-in</h2>
+
+    <p>R3up and SiteBot are the two done-for-you options in this category. Both build your buyback website so you do not have to. But they are designed around fundamentally different business models, and choosing the wrong one means paying for a system that was never built for how your shop actually works.</p>
+
+    <p>R3up is built for buyback businesses that operate primarily online. A customer visits the site, gets a quote, ships their device with a prepaid label, and gets paid when it arrives and passes inspection. This is the model national platforms like Gazelle use. It works well for flippers, recyclers, and businesses that want to buy devices from anywhere in the country without a physical counter. The prepaid shipping label system is central to the entire platform.</p>
+
+    <p>SiteBot is built for local shops with a physical location. A customer searches "sell iPhone Detroit," finds your site, uses the calculator, locks a price, and walks in the same day with an offer code to collect cash in person. The customer is in your city. The transaction happens face to face. The entire system is built around driving walk-in traffic and same-day in-store conversions — not shipping logistics.</p>
+
+    <div class="model-grid">
+      <div class="model-card">
+        <div class="model-label r3up">R3up model</div>
+        <div class="model-title">Online mail-in buyback</div>
+        <div class="model-item"><span class="mi-icon">📦</span> Customer ships device to you nationwide</div>
+        <div class="model-item"><span class="mi-icon">🏷️</span> Prepaid shipping labels generated automatically</div>
+        <div class="model-item"><span class="mi-icon">💳</span> Payment after device received and inspected</div>
+        <div class="model-item"><span class="mi-icon">🌐</span> National reach, no geographic limit</div>
+        <div class="model-item"><span class="mi-icon">🔧</span> Repair is an optional add-on</div>
+      </div>
+      <div class="model-card">
+        <div class="model-label sb">SiteBot model</div>
+        <div class="model-title">Local walk-in repair and buyback</div>
+        <div class="model-item"><span class="mi-icon">🏪</span> Customer walks in to your shop today</div>
+        <div class="model-item"><span class="mi-icon">💵</span> Cash paid same day at the counter</div>
+        <div class="model-item"><span class="mi-icon">📍</span> Local SEO drives foot traffic from your city</div>
+        <div class="model-item"><span class="mi-icon">🔧</span> Repair and buyback built together from the start</div>
+        <div class="model-item"><span class="mi-icon">📱</span> Calculator captures leads 24/7 for morning walk-ins</div>
+      </div>
+    </div>
+
+    <p>If your shop has a physical address and you want customers in your city to walk through the door — either for repairs or to sell a device for cash same day — R3up's platform was not designed for that workflow. The shipping label infrastructure, the mail-in quote system, and the national-reach positioning are built for a fundamentally different operation.</p>
+
+    <h2>Side-by-side comparison</h2>
+
+    <div class="comp-table">
+      <div class="ct-row header">
+        <div class="ct-cell">Feature</div>
+        <div class="ct-cell">R3up</div>
+        <div class="ct-cell">SiteBot</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Done-for-you website build</div>
+        <div class="ct-cell yes">Yes</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Device quote / price calculator</div>
+        <div class="ct-cell yes">Yes — online quotes</div>
+        <div class="ct-cell yes">Yes — 24/7 local leads</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Prepaid shipping labels</div>
+        <div class="ct-cell yes">Yes — core feature</div>
+        <div class="ct-cell no">No — walk-in model</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Walk-in / same-day cash focus</div>
+        <div class="ct-cell no">No — mail-in focused</div>
+        <div class="ct-cell yes">Yes — core feature</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Local SEO for your city</div>
+        <div class="ct-cell partial">Add-on — national focus</div>
+        <div class="ct-cell yes">Built in — city-level pages</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Repair shop website pages</div>
+        <div class="ct-cell partial">Optional add-on only</div>
+        <div class="ct-cell yes">Included — core use case</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Google Business Profile setup</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Prices update via Google Sheet</div>
+        <div class="ct-cell no">No</div>
+        <div class="ct-cell yes">Yes — instant updates</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">National buying reach</div>
+        <div class="ct-cell yes">Yes — ships from anywhere</div>
+        <div class="ct-cell no">Local focus only</div>
+      </div>
+      <div class="ct-row">
+        <div class="ct-cell feature">Pricing transparency</div>
+        <div class="ct-cell partial">Demo required — not public</div>
+        <div class="ct-cell yes">$99/mo — clearly stated</div>
+      </div>
+    </div>
+
+    <h2>What R3up does well</h2>
+
+    <p>R3up fills a real gap for a real type of business. If you are running or want to run a primarily online buyback operation — buying devices from customers across the country who mail them in — R3up gives you the infrastructure to do that without building it yourself. The automated shipping label generation, the quote system, and the order management tools are all designed specifically for that workflow.</p>
+
+    <p>For phone flippers and recyclers who do not have a fixed physical storefront but want a professional online buying presence, R3up is a purpose-built option. The marketing and chatbot add-ons extend the platform for businesses trying to grow their online reach beyond organic search.</p>
+
+    <h2>Where R3up falls short for local shops</h2>
+
+    <p>If you have a repair shop and you buy phones from walk-in customers, the mail-in infrastructure R3up is built around is largely irrelevant to your daily operation. Your customer is not shipping a device from Ohio — they are driving down the street, walking in, and expecting cash today.</p>
+
+    <p>The local SEO piece is where the gap is most significant. R3up's primary positioning is national online reach. Getting your shop to rank for "iPhone screen repair Detroit" or "sell iPhone Chicago" in the local map pack requires city-specific page structure, a well-configured Google Business Profile, and local keyword targeting — none of which are core to R3up's platform. These are the searches that drive walk-in customers to a local shop, and they require a fundamentally different approach than national buyback SEO.</p>
+
+    <p>Repair is also an add-on for R3up rather than a native capability. For a shop that does equal or more volume in repair than buyback, a system where repair is bolted on as an optional extra is not the right foundation.</p>
+
+    <div class="callout">
+      <p><strong>The test that separates them:</strong> when your next buyback customer calls, are they asking "where do I drop it off?" or "where do I ship it?" If the answer is almost always drop it off — you are a local walk-in shop and you need a system built for that. R3up is built for the second customer. SiteBot is built for the first.</p>
+    </div>
+
+    <h2>Which one fits your shop?</h2>
+
+    <div class="scenario-grid">
+      <div class="scenario">
+        <div class="scenario-title">You want to buy phones from customers nationwide online</div>
+        <div class="scenario-body">You are building an online buyback business where customers mail in devices. Shipping infrastructure, national reach, and online order management are the priority.</div>
+        <div class="scenario-rec rec-r3up">R3up is built for this</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You have a local shop and want walk-in sellers</div>
+        <div class="scenario-body">Customers in your city find you on Google, use the calculator, and come in for cash same day. Your shop does repairs and buyback at the same counter.</div>
+        <div class="scenario-rec rec-sb">SiteBot is built for this</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You do repairs alongside buyback</div>
+        <div class="scenario-body">Screen replacements, battery swaps, and device purchases are all part of what you offer. You need repair pages and buyback pages on the same site, both ranking locally.</div>
+        <div class="scenario-rec rec-sb">SiteBot covers both natively</div>
+      </div>
+      <div class="scenario">
+        <div class="scenario-title">You want to know the price before committing</div>
+        <div class="scenario-body">R3up requires a demo call before pricing is disclosed. SiteBot is $99 per month, clearly stated, with no setup fee for early access shops.</div>
+        <div class="scenario-rec rec-sb">SiteBot is transparent on pricing</div>
+      </div>
+    </div>
+
+    <h2>The pricing question</h2>
+
+    <p>R3up does not publish pricing. Three tiers are mentioned on the site but the cost of each requires a demo call to discover. That is a common sales approach for custom-built platforms, but it makes direct cost comparison difficult. You may find after the demo that it is reasonably priced for what it provides — or that the higher tiers needed for SEO and marketing add-ons push the total well above alternatives.</p>
+
+    <p>SiteBot is $99 per month with no setup fee for early access shops. No demo required to find that out. If cost transparency matters to you as you evaluate options, that difference is worth factoring in before you spend time on calls.</p>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Built for local shops that do repairs and buy phones.</h2>
+      <p>SiteBot builds the website, the calculator, the repair pages, and the local SEO for walk-in shops. Join the waitlist.</p>
+      <a href="/" class="btn-dark">Join the Waitlist — It's Free</a>
+      <p class="final-note">No setup fee for early access shops. No credit card required.</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
