@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Phone Repair Shop Website for Chicago, IL — Built and Ready</title>
+  <meta name="description" content="Chicago repair shops that rank on Google get the walk-ins. SiteBot builds the website, the local SEO pages, and the device calculator for independent phone repair and buyback shops in Chicago.">
+  <link rel="canonical" href="https://sitebot.tech/cell-phone-repair-shop-website-chicago/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cell Phone Repair Shop Website — Chicago, IL",
+    "description": "SiteBot builds done-for-you websites for cell phone repair and buyback shops in Chicago. Repair pages, buyback pages, local SEO, and device quote calculator included.",
+    "url": "https://sitebot.tech/cell-phone-repair-shop-website-chicago/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 860px; margin: 0 auto;
+      padding: 80px 24px 56px; text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,222,128,0.08);
+      border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 30px; padding: 5px 14px;
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5.5vw, 58px);
+      font-weight: 700; letter-spacing: -0.03em;
+      line-height: 1.06; margin-bottom: 20px;
+    }
+    .hero h1 span { color: #4ade80; }
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,255,255,0.5);
+      max-width: 560px; margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+    .hero-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-green {
+      display: inline-block; background: #4ade80;
+      color: #000; font-size: 15px; font-weight: 700;
+      padding: 14px 28px; border-radius: 30px;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn-green:hover { opacity: 0.88; }
+    .btn-outline {
+      display: inline-block; background: transparent;
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.7); font-size: 15px; font-weight: 600;
+      padding: 14px 28px; border-radius: 30px;
+      text-decoration: none; transition: border-color .2s;
+    }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
+
+    /* ── PROOF STRIP ── */
+    .proof-strip {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 18px 24px; text-align: center;
+      display: flex; align-items: center;
+      justify-content: center; gap: 32px; flex-wrap: wrap;
+    }
+    .proof-item { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .proof-item strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+
+    /* ── CONTENT ── */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    h2 {
+      font-size: clamp(22px, 3.5vw, 32px);
+      font-weight: 700; letter-spacing: -0.02em;
+      color: var(--white); margin: 56px 0 16px;
+      line-height: 1.15;
+    }
+    p {
+      font-size: 17px; color: rgba(255,255,255,0.6);
+      line-height: 1.78; margin-bottom: 20px;
+    }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── WHAT'S INCLUDED ── */
+    .include-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 12px; margin: 24px 0;
+    }
+    @media (max-width: 520px) { .include-grid { grid-template-columns: 1fr; } }
+    .include-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 20px;
+    }
+    .ic-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .ic-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .ic-body { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* ── NEIGHBORHOOD SECTION ── */
+    .neighborhood-box {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 16px; padding: 28px;
+      margin: 28px 0;
+    }
+    .nb-label {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: var(--gray-400); margin-bottom: 14px;
+    }
+    .nb-grid {
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .nb-pill {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px; padding: 5px 14px;
+      font-size: 13px; color: rgba(255,255,255,0.55);
+    }
+    .nb-footer {
+      font-size: 13px; color: rgba(255,255,255,0.35);
+      margin-top: 16px; line-height: 1.6;
+    }
+
+    /* ── COMPETITIVE CALLOUT ── */
+    .compete-box {
+      background: rgba(239,68,68,0.05);
+      border: 1px solid rgba(239,68,68,0.14);
+      border-radius: 14px; padding: 22px 24px;
+      margin: 28px 0;
+    }
+    .compete-label {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #f87171; margin-bottom: 10px;
+    }
+    .compete-box p {
+      font-size: 15px; color: rgba(255,255,255,0.55);
+      margin-bottom: 10px; line-height: 1.7;
+    }
+    .compete-box p:last-child { margin-bottom: 0; }
+    .compete-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-left: 3px solid rgba(74,222,128,0.4);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px; margin: 28px 0;
+    }
+    .callout p {
+      font-size: 15px; margin: 0;
+      color: rgba(255,255,255,0.6); line-height: 1.7;
+    }
+    .callout p strong { color: var(--white); }
+
+    /* ── PRICING ── */
+    .pricing-row {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px; margin: 24px 0;
+    }
+    @media (max-width: 560px) { .pricing-row { grid-template-columns: 1fr; } }
+    .plan-card {
+      background: #0d0d0d;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 14px; padding: 22px;
+      display: flex; flex-direction: column;
+    }
+    .plan-card.featured {
+      border-color: rgba(74,222,128,0.25);
+      background: rgba(74,222,128,0.04);
+    }
+    .plan-badge {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 8px;
+    }
+    .plan-name { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .plan-price { font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+    .plan-price span { font-size: 14px; font-weight: 400; color: var(--gray-400); }
+    .plan-desc { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 16px; line-height: 1.5; }
+    .plan-feature {
+      font-size: 12px; color: rgba(255,255,255,0.48);
+      padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex; align-items: flex-start; gap: 7px; line-height: 1.4;
+    }
+    .plan-feature:last-child { border-bottom: none; }
+    .pf-icon { color: #4ade80; flex-shrink: 0; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: var(--white); margin: 64px 0 80px;
+      padding: 56px 32px; border-radius: 16px;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: clamp(22px, 4vw, 38px);
+      font-weight: 700; letter-spacing: -0.02em;
+      color: var(--black); margin-bottom: 12px;
+    }
+    .final-cta p {
+      font-size: 16px; color: #424245;
+      max-width: 420px; margin: 0 auto 28px;
+      line-height: 1.6;
+    }
+    .btn-dark {
+      display: inline-block; background: var(--black);
+      color: var(--white); font-size: 15px; font-weight: 700;
+      padding: 15px 34px; border-radius: 30px;
+      text-decoration: none; transition: opacity .2s;
+    }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge">
+      <span>📍</span> Chicago, Illinois
+    </div>
+    <h1>The website your Chicago repair shop<br><span>needs to get found first</span></h1>
+    <p class="hero-sub">When someone in Logan Square searches "iPhone repair near me," the shop that shows up gets the walk-in. SiteBot builds the site that puts Chicago repair shops on that first page.</p>
+    <div class="hero-cta-row">
+      <a href="/#waitlist" class="btn-green">Join the Waitlist</a>
+      <a href="/blog/cell-phone-shop-seo/" class="btn-outline">How it works</a>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div class="proof-strip">
+    <div class="proof-item">Live proof of concept: <strong>iMobile Repair Center, Detroit</strong></div>
+    <div class="proof-item"><strong>4.9 stars</strong> · 400+ reviews</div>
+    <div class="proof-item"><strong>30+ pages</strong> live and ranking</div>
+    <div class="proof-item">Device calculator captures leads <strong>24/7</strong></div>
+  </div>
+
+  <div class="wrap">
+
+    <h2>Chicago is a big market. Most independent shops are invisible in it.</h2>
+
+    <p>Chicago has millions of smartphone users spread across dozens of distinct neighborhoods — Logan Square, Lakeview, Wicker Park, Pilsen, Hyde Park, Rogers Park, Andersonville, Lincoln Park, Bridgeport, and on. Every one of those neighborhoods has residents with cracked screens and iPhones they want to sell for cash. Most of them search Google before going anywhere.</p>
+
+    <p>The shops showing up for those searches are CPR, uBreakiFix, and the Apple Store. They show up because they have the SEO infrastructure and the marketing budget that most independent shops do not. The independent shop in Lakeview that does better work at a better price is invisible because their website has three pages, no local keywords, and a title tag that just says "Home."</p>
+
+    <p>That gap is where SiteBot works. It does not level the playing field by spending more money — it levels it by building the right pages, targeting the right local keywords, and putting a device calculator on your site that captures leads automatically. A well-built independent shop website in a Chicago neighborhood can rank above a franchise for that neighborhood's specific searches.</p>
+
+    <!-- COMPETITIVE -->
+    <div class="compete-box">
+      <div class="compete-label">The Chicago repair market reality</div>
+      <p>Chicago has CPR locations, uBreakiFix locations, and Apple Stores drawing repair customers daily. They have national SEO authority, large marketing budgets, and brand recognition that took years to build. An independent shop cannot compete with their budget.</p>
+      <p><strong>But they are not optimizing for "iPhone repair Logan Square" or "sell iPhone Wicker Park" or "phone repair Pilsen."</strong> They rank nationally and in broad city searches. The neighborhood-level and buyback-specific searches are wide open for independent shops that have the right pages. That specificity is what wins locally against bigger brands.</p>
+    </div>
+
+    <h2>What SiteBot builds for your Chicago shop</h2>
+
+    <div class="include-grid">
+      <div class="include-card">
+        <span class="ic-icon">🔧</span>
+        <div class="ic-title">Repair pages for Chicago</div>
+        <div class="ic-body">iPhone screen repair Chicago. Battery replacement Chicago. Samsung repair Chicago. Each page targets a specific search in your city — not generic service pages that rank for nothing.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">💵</span>
+        <div class="ic-title">Buyback pages for Chicago sellers</div>
+        <div class="ic-body">Sell iPhone Chicago. Cash for iPhones Chicago. Pages targeting the local seller who searched before leaving home — and a calculator that gives them a number instantly.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📱</span>
+        <div class="ic-title">Device quote calculator</div>
+        <div class="ic-body">The seller who searches at 10pm on a Tuesday gets an instant offer, enters their email, and walks in Wednesday morning with a code. Zero work on your end — captured automatically.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📍</span>
+        <div class="ic-title">Google Business Profile setup</div>
+        <div class="ic-body">Your profile set up with both repair and buyback services listed explicitly. The foundation of the local map pack rankings that put your shop in front of searchers with intent.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📊</span>
+        <div class="ic-title">Prices via Google Sheet</div>
+        <div class="ic-body">Update your iPhone or iPad buyback prices in thirty seconds from your phone. One cell in the sheet changes the number the calculator shows every customer from that moment forward.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">✉️</span>
+        <div class="ic-title">Automated offer emails</div>
+        <div class="ic-body">Every locked price triggers an automatic email to the seller with their offer code, your address, and the expiry window. Every lead goes to your inbox with device details included.</div>
+      </div>
+    </div>
+
+    <!-- NEIGHBORHOODS -->
+    <div class="neighborhood-box">
+      <div class="nb-label">Chicago neighborhoods SiteBot pages target</div>
+      <div class="nb-grid">
+        <span class="nb-pill">Logan Square</span>
+        <span class="nb-pill">Lakeview</span>
+        <span class="nb-pill">Wicker Park</span>
+        <span class="nb-pill">Lincoln Park</span>
+        <span class="nb-pill">Pilsen</span>
+        <span class="nb-pill">Rogers Park</span>
+        <span class="nb-pill">Andersonville</span>
+        <span class="nb-pill">Hyde Park</span>
+        <span class="nb-pill">Bridgeport</span>
+        <span class="nb-pill">Wrigleyville</span>
+        <span class="nb-pill">Bucktown</span>
+        <span class="nb-pill">Humboldt Park</span>
+        <span class="nb-pill">South Loop</span>
+        <span class="nb-pill">The Loop</span>
+        <span class="nb-pill">River North</span>
+      </div>
+      <div class="nb-footer">Pages can target your specific neighborhood — not just "Chicago" broadly. A shop on Milwaukee Ave in Logan Square should rank for Logan Square searches, not just citywide ones. That's the level of specificity that wins against national chains in local searches.</div>
+    </div>
+
+    <h2>The two types of customers your website captures</h2>
+
+    <p>Every Chicago repair shop is leaving two types of customers on the table without a properly built website. The first is the repair customer — the person with a cracked screen who searches "iPhone repair near me" while sitting on the Blue Line. They need the repair today. They go with whoever shows up first and has reviews. If your shop is not on page one for your neighborhood, that walk-in goes to a franchise instead.</p>
+
+    <p>The second is the seller — the person on the North Side who just got a new iPhone and wants to sell the 14 Pro they no longer need. They search "sell iPhone Chicago" before they go anywhere. <strong>If your site gives them an instant price and lets them lock it with their email, you have the lead before they even leave their apartment.</strong> If your site says nothing or asks them to call, they go to an ecoATM at the Walgreens on Clark and get paid a third of what you would have given them. Both of you lose.</p>
+
+    <div class="callout">
+      <p><strong>iMobile Repair Center in Detroit runs this exact system.</strong> The device calculator captures sellers overnight. The offer code email goes out automatically. Shop owner wakes up to leads in the inbox — device details, offer amount, and contact info — before opening the doors. The website does the selling. The shop does the transactions.</p>
+    </div>
+
+    <h2>Pricing</h2>
+
+    <div class="pricing-row">
+      <div class="plan-card">
+        <div class="plan-name">Website</div>
+        <div class="plan-price">$99<span>/mo</span></div>
+        <div class="plan-desc">Website, repair pages, buyback pages, local SEO structure</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Built and launched for you</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Repair pages targeting Chicago</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Buyback pages and sell-phone SEO</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Device quote calculator</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Google Business Profile setup</div>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Most popular</div>
+        <div class="plan-name">Website + SEO</div>
+        <div class="plan-price">$299<span>/mo</span></div>
+        <div class="plan-desc">Everything in Website plus ongoing SEO content and ranking growth</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Everything in Website tier</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Monthly SEO content published</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Neighborhood-level pages added</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Ranking tracking and reporting</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Priority support</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Full Growth</div>
+        <div class="plan-price">$499<span>/mo</span></div>
+        <div class="plan-desc">The complete system with SMS follow-up, lead tracking, and chatbot</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Everything in Website + SEO</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> SMS follow-up automation</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Lead tracking dashboard</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> AI chatbot for lead capture</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Phone agent for missed calls</div>
+      </div>
+    </div>
+
+    <p>Early access shops get $0 setup fee — no credit card required to reserve your spot. Once the system is live in your market, pricing locks in at the waitlist rate.</p>
+
+    <!-- FINAL CTA -->
+    <div class="final-cta">
+      <h2>Ready to be the Chicago shop customers find first?</h2>
+      <p>Join the waitlist and be among the first Chicago repair shops on SiteBot. No setup fee. No credit card required.</p>
+      <a href="/#waitlist" class="btn-dark">Join the Waitlist</a>
+      <p class="final-note">Early access · $0 setup fee · Chicago shops reviewed first</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
