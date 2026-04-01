@@ -5,6 +5,14 @@
 
 var SITEBOT_POSTS = [
   {
+    title: "Cell Phone Shop SEO — How to Rank for Repair and Buyback Searches in Your City",
+    url: "/blog/cell-phone-shop-seo/",
+    description: "A cell phone shop has two different customer types searching for two different things. Here is the page structure, keywords, and Google profile setup that ranks for both simultaneously.",
+    date: "March 2026",
+    category: "SEO",
+    readTime: "10 min read"
+  },
+  {
     title: "Phone Repair Shop Automation — The Parts of Your Business That Should Run Themselves",
     url: "/blog/phone-repair-shop-automation/",
     description: "Lead capture, offer emails, review requests, SMS follow-up, and live pricing — the six business-side automations that protect revenue while you work and while you sleep.",
