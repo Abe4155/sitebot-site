@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Phone Repair Shop Website for Los Angeles, CA — Built and Ready</title>
+  <meta name="description" content="Los Angeles is not one repair market — it's dozens. Nobody crosses town for a screen replacement. SiteBot builds the website, neighborhood SEO pages, and device calculator that puts your LA shop in front of customers who are already nearby.">
+  <link rel="canonical" href="https://sitebot.tech/cell-phone-repair-shop-website-los-angeles/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cell Phone Repair Shop Website — Los Angeles, CA",
+    "description": "SiteBot builds done-for-you websites for cell phone repair and buyback shops in Los Angeles. Repair pages, buyback pages, neighborhood SEO, and device quote calculator included.",
+    "url": "https://sitebot.tech/cell-phone-repair-shop-website-los-angeles/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 860px; margin: 0 auto; padding: 80px 24px 56px; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 30px; padding: 5px 14px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(32px, 5.5vw, 58px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.06; margin-bottom: 20px; }
+    .hero h1 span { color: #4ade80; }
+    .hero-sub { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+    .hero-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-green { display: inline-block; background: #4ade80; color: #000; font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-green:hover { opacity: 0.88; }
+    .btn-outline { display: inline-block; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: border-color .2s; }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
+
+    /* PROOF STRIP */
+    .proof-strip { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 18px 24px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .proof-item { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .proof-item strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+
+    /* CONTENT */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin: 56px 0 16px; line-height: 1.15; }
+    p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* MARKET ZONES */
+    .zone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .zone-grid { grid-template-columns: 1fr; } }
+    .zone-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .zone-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; }
+    .z1 { color: #93c5fd; }
+    .z2 { color: #f9a8d4; }
+    .z3 { color: #fcd34d; }
+    .z4 { color: #86efac; }
+    .zone-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .zone-areas { font-size: 12px; color: rgba(255,255,255,0.38); line-height: 1.65; }
+
+    /* INCLUDE GRID */
+    .include-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .include-grid { grid-template-columns: 1fr; } }
+    .include-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .ic-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .ic-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .ic-body { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* NEIGHBORHOOD */
+    .neighborhood-box { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; margin: 28px 0; }
+    .nb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-400); margin-bottom: 14px; }
+    .nb-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .nb-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 5px 14px; font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nb-footer { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 16px; line-height: 1.6; }
+
+    /* COMPETE */
+    .compete-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .compete-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 10px; }
+    .compete-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .compete-box p:last-child { margin-bottom: 0; }
+    .compete-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(74,222,128,0.4); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* PRICING COMING SOON */
+    .pricing-soon { border: 1px dashed rgba(255,255,255,0.12); border-radius: 16px; padding: 48px 32px; text-align: center; margin: 28px 0; }
+    .ps-icon { font-size: 28px; margin-bottom: 14px; display: block; }
+    .ps-title { font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .ps-body { font-size: 15px; color: rgba(255,255,255,0.4); max-width: 380px; margin: 0 auto; line-height: 1.65; }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin: 64px 0 80px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; line-height: 1.6; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 700; padding: 15px 34px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge"><span>📍</span> Los Angeles, California</div>
+    <h1>In LA, customers go to the shop<br><span>that shows up in their neighborhood</span></h1>
+    <p class="hero-sub">Nobody in Silver Lake drives to the Valley for a screen replacement. Nobody in Torrance goes to Hollywood for a battery swap. LA repair customers search locally and choose locally — SiteBot builds the site that makes sure they find your shop first.</p>
+    <div class="hero-cta-row">
+      <a href="/#waitlist" class="btn-green">Join the Waitlist</a>
+      <a href="/blog/cell-phone-shop-seo/" class="btn-outline">How it works</a>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div class="proof-strip">
+    <div class="proof-item">Live proof of concept: <strong>iMobile Repair Center, Detroit</strong></div>
+    <div class="proof-item"><strong>4.9 stars</strong> · 400+ reviews</div>
+    <div class="proof-item"><strong>30+ pages</strong> live and ranking</div>
+    <div class="proof-item">Device calculator captures leads <strong>24/7</strong></div>
+  </div>
+
+  <div class="wrap">
+
+    <h2>LA is not one repair market. It is dozens — each one largely its own</h2>
+
+    <p>Los Angeles covers over 500 square miles of city proper, plus another 4,000 square miles of metro area. Traffic makes the city feel even larger than it is. A customer with a cracked screen in Culver City is not driving to Pasadena to get it fixed. A seller in the San Fernando Valley is not crossing the hill to find a buyback shop in Hollywood. People shop locally — and in a city this spread out, local means within a few miles of where they already are.</p>
+
+    <p>That geography is the single most important thing to understand about the LA repair market. Citywide SEO is nearly worthless here. <strong>A shop ranking for "iPhone repair Los Angeles" is competing with hundreds of shops across 500 square miles. A shop ranking for "iPhone repair Silver Lake" or "phone repair Sherman Oaks" is competing with a handful of shops — and capturing customers who are already on that side of the city.</strong></p>
+
+    <div class="zone-grid">
+      <div class="zone-card">
+        <div class="zone-label z1">The Westside</div>
+        <div class="zone-name">Silicon Beach and beach cities</div>
+        <div class="zone-areas">Santa Monica · Venice · Culver City · Marina del Rey · Playa Vista — tech workers and startups, high device turnover, frequent upgrades, strong buyback market</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-label z2">Central LA</div>
+        <div class="zone-name">Intown and creative corridor</div>
+        <div class="zone-areas">Hollywood · Silver Lake · Echo Park · Los Feliz · Koreatown · Mid-City — dense, diverse, heavy foot traffic, repair-first mindset</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-label z3">The Valley</div>
+        <div class="zone-name">Over a million people in one basin</div>
+        <div class="zone-areas">Van Nuys · Sherman Oaks · Burbank · North Hollywood · Woodland Hills · Reseda — car-dependent, search-driven, largely underserved online by independent shops</div>
+      </div>
+      <div class="zone-card">
+        <div class="zone-label z4">South Bay and SGV</div>
+        <div class="zone-name">Dense suburban markets</div>
+        <div class="zone-areas">Torrance · Gardena · Long Beach · Pasadena · Arcadia · Alhambra — large Asian-American communities, high iPhone ownership, strong buyback activity</div>
+      </div>
+    </div>
+
+    <div class="compete-box">
+      <div class="compete-label">The LA repair market reality</div>
+      <p>Los Angeles has more uBreakiFix and CPR locations than almost any other city in the country. They occupy strong positions on broad city-level searches and have brand recognition that has built over years of advertising. Competing with them at the "phone repair Los Angeles" level requires national SEO authority that independent shops simply do not have.</p>
+      <p><strong>But at the neighborhood level — "phone repair Culver City," "sell iPhone Van Nuys," "iPhone battery replacement Koreatown" — those pages often do not exist at all for independent shops.</strong> A well-built local page in any LA neighborhood has a realistic shot at ranking above a franchise for that specific search, because the franchise's pages are built for city-level rankings and do not signal deep local relevance for each area.</p>
+    </div>
+
+    <h2>What SiteBot builds for your LA shop</h2>
+
+    <div class="include-grid">
+      <div class="include-card">
+        <span class="ic-icon">🔧</span>
+        <div class="ic-title">Repair pages targeting your LA area</div>
+        <div class="ic-body">iPhone screen repair Silver Lake. Battery replacement Sherman Oaks. Samsung repair Torrance. Each page is written for your specific part of LA — not a single city page competing against every shop in the metro.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">💵</span>
+        <div class="ic-title">Buyback pages for local sellers</div>
+        <div class="ic-body">Sell iPhone Santa Monica. Cash for iPhones Pasadena. Pages targeting area-level sell-phone searches — with a calculator that gives an instant number to the Silicon Beach professional upgrading their device.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📱</span>
+        <div class="ic-title">Device quote calculator</div>
+        <div class="ic-body">A tech worker in Playa Vista decides to sell their iPhone at 11pm. Your calculator gives them a quote, they lock it with their email, and walk in the next morning. Captured while every competitor was closed and unreachable.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📍</span>
+        <div class="ic-title">Google Business Profile setup</div>
+        <div class="ic-body">In LA's map pack, proximity is a dominant ranking signal. A properly configured profile with both repair and buyback services listed ensures your shop appears for the right searches within your actual service radius.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📊</span>
+        <div class="ic-title">Prices via Google Sheet</div>
+        <div class="ic-body">LA's tech-heavy population drives fast device upgrade cycles. Update buyback prices from your phone in thirty seconds when market values shift — your calculator reflects the change immediately with no developer involved.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">✉️</span>
+        <div class="ic-title">Automated offer emails</div>
+        <div class="ic-body">Every seller who locks a price receives an automatic offer code email. Every lead lands in your inbox with device details, offer amount, and contact info — before they ever walk in the door.</div>
+      </div>
+    </div>
+
+    <!-- NEIGHBORHOODS -->
+    <div class="neighborhood-box">
+      <div class="nb-label">LA neighborhoods and areas SiteBot pages target</div>
+      <div class="nb-grid">
+        <span class="nb-pill">Silver Lake</span>
+        <span class="nb-pill">Echo Park</span>
+        <span class="nb-pill">Los Feliz</span>
+        <span class="nb-pill">Hollywood</span>
+        <span class="nb-pill">Koreatown</span>
+        <span class="nb-pill">Mid-City</span>
+        <span class="nb-pill">Culver City</span>
+        <span class="nb-pill">Santa Monica</span>
+        <span class="nb-pill">Venice</span>
+        <span class="nb-pill">Playa Vista</span>
+        <span class="nb-pill">Sherman Oaks</span>
+        <span class="nb-pill">Van Nuys</span>
+        <span class="nb-pill">North Hollywood</span>
+        <span class="nb-pill">Burbank</span>
+        <span class="nb-pill">Glendale</span>
+        <span class="nb-pill">Pasadena</span>
+        <span class="nb-pill">Torrance</span>
+        <span class="nb-pill">Long Beach</span>
+        <span class="nb-pill">Inglewood</span>
+        <span class="nb-pill">Alhambra</span>
+      </div>
+      <div class="nb-footer">In a city where nobody drives across town, ranking for your specific neighborhood matters more than in any other market. A shop in the Valley that ranks for Valley-specific searches captures a customer base of over a million people without competing against a single Westside shop.</div>
+    </div>
+
+    <h2>LA's device economy — why buyback is a major opportunity here</h2>
+
+    <p>Los Angeles has two populations that drive unusually high device turnover. The first is the tech and startup workforce concentrated in Silicon Beach — Santa Monica, Venice, Playa Vista, and Culver City — where upgrading to the latest iPhone is common and frequent. The second is the entertainment industry spread across Hollywood, Burbank, and the broader city, where professionals treat their phones as production tools and replace them on a similar cycle.</p>
+
+    <p>Both groups are accustomed to researching purchases online before making decisions. When they decide to sell their old device, they search first, compare options, and choose the one that gives them the clearest information and the best price upfront. <strong>A local shop with a calculator that gives an instant quote in thirty seconds captures that customer before any national platform or kiosk enters the picture.</strong> Without that online presence, those sellers never find the local shop at all — not because the shop pays less, but because it simply cannot be found.</p>
+
+    <div class="callout">
+      <p><strong>iMobile Repair Center in Detroit runs this exact system.</strong> The device calculator captures leads around the clock — device model, condition, offer amount, and contact info all arrive in the shop owner's inbox before the customer walks in. The website does the acquisition. The shop closes the transaction. That loop runs automatically whether the shop is open or not.</p>
+    </div>
+
+    <h2>Pricing</h2>
+
+    <div class="pricing-soon">
+      <span class="ps-icon">🛠️</span>
+      <div class="ps-title">Pricing coming soon</div>
+      <div class="ps-body">We are still building the tools. Join the waitlist now and you will be the first to know when pricing is announced — early access shops get the best rate.</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Ready to be the LA shop customers find first?</h2>
+      <p>Join the waitlist and be among the first Los Angeles repair shops on SiteBot. No setup fee. No credit card required.</p>
+      <a href="/#waitlist" class="btn-dark">Join the Waitlist</a>
+      <p class="final-note">Early access · $0 setup fee · LA shops reviewed first</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
