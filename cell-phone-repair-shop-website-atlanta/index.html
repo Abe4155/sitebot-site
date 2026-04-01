@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cell Phone Repair Shop Website for Atlanta, GA — Built and Ready</title>
+  <meta name="description" content="Atlanta's repair market is split between intown neighborhoods and sprawling suburbs. SiteBot builds the website, local SEO pages, and device calculator for independent phone repair and buyback shops in Atlanta.">
+  <link rel="canonical" href="https://sitebot.tech/cell-phone-repair-shop-website-atlanta/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Cell Phone Repair Shop Website — Atlanta, GA",
+    "description": "SiteBot builds done-for-you websites for cell phone repair and buyback shops in Atlanta. Repair pages, buyback pages, local SEO, and device quote calculator included.",
+    "url": "https://sitebot.tech/cell-phone-repair-shop-website-atlanta/"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --black: #000; --white: #fff;
+      --gray-400: #86868b;
+      --font: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--black); color: var(--white); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+    /* HERO */
+    .hero { max-width: 860px; margin: 0 auto; padding: 80px 24px 56px; text-align: center; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(74,222,128,0.08); border: 1px solid rgba(74,222,128,0.2);
+      border-radius: 30px; padding: 5px 14px;
+      font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+      color: #4ade80; margin-bottom: 24px;
+    }
+    .hero h1 { font-size: clamp(32px, 5.5vw, 58px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.06; margin-bottom: 20px; }
+    .hero h1 span { color: #4ade80; }
+    .hero-sub { font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.5); max-width: 560px; margin: 0 auto 36px; line-height: 1.6; }
+    .hero-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-green { display: inline-block; background: #4ade80; color: #000; font-size: 15px; font-weight: 700; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-green:hover { opacity: 0.88; }
+    .btn-outline { display: inline-block; background: transparent; border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); font-size: 15px; font-weight: 600; padding: 14px 28px; border-radius: 30px; text-decoration: none; transition: border-color .2s; }
+    .btn-outline:hover { border-color: rgba(255,255,255,0.5); }
+
+    /* PROOF STRIP */
+    .proof-strip { border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 18px 24px; text-align: center; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .proof-item { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .proof-item strong { color: rgba(255,255,255,0.75); font-weight: 600; }
+
+    /* CONTENT */
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+    h2 { font-size: clamp(22px, 3.5vw, 32px); font-weight: 700; letter-spacing: -0.02em; color: var(--white); margin: 56px 0 16px; line-height: 1.15; }
+    p { font-size: 17px; color: rgba(255,255,255,0.6); line-height: 1.78; margin-bottom: 20px; }
+    p strong { color: rgba(255,255,255,0.9); font-weight: 600; }
+    p:last-child { margin-bottom: 0; }
+
+    /* INCLUDE GRID */
+    .include-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .include-grid { grid-template-columns: 1fr; } }
+    .include-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .ic-icon { font-size: 22px; margin-bottom: 10px; display: block; }
+    .ic-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .ic-body { font-size: 13px; color: rgba(255,255,255,0.42); line-height: 1.6; }
+
+    /* TWO MARKETS */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+    .mkt-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 20px; }
+    .mkt-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+    .mkt-label.intown { color: #4ade80; }
+    .mkt-label.suburbs { color: #93c5fd; }
+    .mkt-title { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .mkt-item { font-size: 13px; color: rgba(255,255,255,0.45); padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .mkt-item:last-child { border-bottom: none; }
+
+    /* NEIGHBORHOOD */
+    .neighborhood-box { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 16px; padding: 28px; margin: 28px 0; }
+    .nb-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--gray-400); margin-bottom: 14px; }
+    .nb-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .nb-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 5px 14px; font-size: 13px; color: rgba(255,255,255,0.55); }
+    .nb-footer { font-size: 13px; color: rgba(255,255,255,0.35); margin-top: 16px; line-height: 1.6; }
+
+    /* COMPETE */
+    .compete-box { background: rgba(239,68,68,0.05); border: 1px solid rgba(239,68,68,0.14); border-radius: 14px; padding: 22px 24px; margin: 28px 0; }
+    .compete-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #f87171; margin-bottom: 10px; }
+    .compete-box p { font-size: 15px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.7; }
+    .compete-box p:last-child { margin-bottom: 0; }
+    .compete-box p strong { color: rgba(255,255,255,0.85); }
+
+    .callout { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.08); border-left: 3px solid rgba(74,222,128,0.4); border-radius: 0 12px 12px 0; padding: 20px 24px; margin: 28px 0; }
+    .callout p { font-size: 15px; margin: 0; color: rgba(255,255,255,0.6); line-height: 1.7; }
+    .callout p strong { color: var(--white); }
+
+    /* PRICING */
+    .pricing-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 24px 0; }
+    @media (max-width: 560px) { .pricing-row { grid-template-columns: 1fr; } }
+    .plan-card { background: #0d0d0d; border: 1px solid rgba(255,255,255,0.07); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; }
+    .plan-card.featured { border-color: rgba(74,222,128,0.25); background: rgba(74,222,128,0.04); }
+    .plan-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #4ade80; margin-bottom: 8px; }
+    .plan-name { font-size: 16px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
+    .plan-price { font-size: 28px; font-weight: 700; color: var(--white); margin-bottom: 2px; }
+    .plan-price span { font-size: 14px; font-weight: 400; color: var(--gray-400); }
+    .plan-desc { font-size: 12px; color: rgba(255,255,255,0.35); margin-bottom: 16px; line-height: 1.5; }
+    .plan-feature { font-size: 12px; color: rgba(255,255,255,0.48); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: flex-start; gap: 7px; line-height: 1.4; }
+    .plan-feature:last-child { border-bottom: none; }
+    .pf-icon { color: #4ade80; flex-shrink: 0; }
+
+    /* CTA */
+    .final-cta { background: var(--white); margin: 64px 0 80px; padding: 56px 32px; border-radius: 16px; text-align: center; }
+    .final-cta h2 { font-size: clamp(22px, 4vw, 38px); font-weight: 700; letter-spacing: -0.02em; color: var(--black); margin-bottom: 12px; }
+    .final-cta p { font-size: 16px; color: #424245; max-width: 420px; margin: 0 auto 28px; line-height: 1.6; }
+    .btn-dark { display: inline-block; background: var(--black); color: var(--white); font-size: 15px; font-weight: 700; padding: 15px 34px; border-radius: 30px; text-decoration: none; transition: opacity .2s; }
+    .btn-dark:hover { opacity: 0.85; }
+    .final-note { margin-top: 10px; font-size: 12px; color: #86868b; }
+  </style>
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-badge"><span>📍</span> Atlanta, Georgia</div>
+    <h1>Atlanta's growing market rewards<br><span>the repair shops that show up online</span></h1>
+    <p class="hero-sub">From East Atlanta Village to Buckhead to Decatur, Atlanta's distinct communities each have customers searching locally for repairs and buyback. SiteBot builds the website that puts your shop in front of them first.</p>
+    <div class="hero-cta-row">
+      <a href="/#waitlist" class="btn-green">Join the Waitlist</a>
+      <a href="/blog/cell-phone-shop-seo/" class="btn-outline">How it works</a>
+    </div>
+  </div>
+
+  <!-- PROOF STRIP -->
+  <div class="proof-strip">
+    <div class="proof-item">Live proof of concept: <strong>iMobile Repair Center, Detroit</strong></div>
+    <div class="proof-item"><strong>4.9 stars</strong> · 400+ reviews</div>
+    <div class="proof-item"><strong>30+ pages</strong> live and ranking</div>
+    <div class="proof-item">Device calculator captures leads <strong>24/7</strong></div>
+  </div>
+
+  <div class="wrap">
+
+    <h2>Atlanta is two repair markets in one — both are underserved online</h2>
+
+    <p>Atlanta's repair market splits sharply between the intown neighborhoods and the suburban ring. Intown Atlanta — Midtown, Buckhead, Virginia-Highland, East Atlanta Village, Little Five Points, Old Fourth Ward, Inman Park — is dense, walkable in pockets, and full of young professionals who upgrade devices frequently and want repairs fast. The suburban ring — Sandy Springs, Alpharetta, Marietta, Decatur, College Park, Smyrna, Kennesaw — is sprawling, car-dependent, and equally large.</p>
+
+    <p>Both markets have customers searching Google before they go anywhere. The intown customer on MARTA or walking down Ponce de Leon searches "phone repair near me" and picks whoever has the best nearby result. The Alpharetta customer in their car searches "iPhone repair Alpharetta" and navigates to the closest shop that shows up. The common thread: they search first, they choose based on what they find, and the shop that does not appear loses them before they ever think about calling.</p>
+
+    <div class="two-col">
+      <div class="mkt-card">
+        <div class="mkt-label intown">Intown Atlanta</div>
+        <div class="mkt-title">High foot traffic, fast decisions</div>
+        <div class="mkt-item">Midtown / Buckhead</div>
+        <div class="mkt-item">Virginia-Highland</div>
+        <div class="mkt-item">East Atlanta Village</div>
+        <div class="mkt-item">Little Five Points</div>
+        <div class="mkt-item">Old Fourth Ward</div>
+        <div class="mkt-item">Inman Park / Ponce corridor</div>
+      </div>
+      <div class="mkt-card">
+        <div class="mkt-label suburbs">Metro Atlanta suburbs</div>
+        <div class="mkt-title">Car-dependent, search-driven</div>
+        <div class="mkt-item">Decatur</div>
+        <div class="mkt-item">Sandy Springs</div>
+        <div class="mkt-item">Alpharetta</div>
+        <div class="mkt-item">Marietta</div>
+        <div class="mkt-item">College Park / East Point</div>
+        <div class="mkt-item">Smyrna / Kennesaw</div>
+      </div>
+    </div>
+
+    <div class="compete-box">
+      <div class="compete-label">The Atlanta repair market reality</div>
+      <p>Atlanta has multiple uBreakiFix locations, CPR franchises across the metro, and established independents like ScreenFixing in East Atlanta Village that have been building community trust for years. They own the broad "phone repair Atlanta" searches and the franchise brand recognition.</p>
+      <p><strong>What they do not own is the neighborhood-specific and area-specific searches.</strong> "Phone repair Decatur GA," "sell iPhone Midtown Atlanta," "iPhone screen repair Alpharetta" — these area-level searches are far lower competition. A local shop with a page built for their specific area ranks above a franchise for that search, because the franchise has one Atlanta page and the local shop has the exact neighborhood mentioned throughout.</p>
+    </div>
+
+    <h2>What SiteBot builds for your Atlanta shop</h2>
+
+    <div class="include-grid">
+      <div class="include-card">
+        <span class="ic-icon">🔧</span>
+        <div class="ic-title">Repair pages for Atlanta</div>
+        <div class="ic-body">iPhone screen repair Atlanta. Samsung repair Atlanta. Battery replacement Decatur. Each page targets a specific search in your part of the metro — not a single generic page that competes at the city level.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">💵</span>
+        <div class="ic-title">Buyback pages for Atlanta sellers</div>
+        <div class="ic-body">Sell iPhone Atlanta. Cash for phones Midtown. Pages targeting the local seller who researches before leaving home — and a calculator that gives them a number before they find a kiosk.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📱</span>
+        <div class="ic-title">Device quote calculator</div>
+        <div class="ic-body">An Atlanta customer upgrading to the new iPhone searches "sell iPhone Atlanta" late at night. Your calculator gives them a price, they lock it with their email, and walk in the next day with a code. Captured overnight automatically.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📍</span>
+        <div class="ic-title">Google Business Profile setup</div>
+        <div class="ic-body">Configured for both repair and buyback searches. The map pack is where most local repair searches end up — and it requires a properly set-up profile to appear there for both service types.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">📊</span>
+        <div class="ic-title">Prices via Google Sheet</div>
+        <div class="ic-body">Atlanta sees fast device upgrade cycles with its large tech workforce. When iPhone values shift around new releases, update your buyback prices in thirty seconds and the change goes live immediately.</div>
+      </div>
+      <div class="include-card">
+        <span class="ic-icon">✉️</span>
+        <div class="ic-title">Automated offer emails</div>
+        <div class="ic-body">Every locked price triggers an automatic offer code email to the seller and a lead notification to your inbox — device, condition, offer amount, and contact info included before they arrive.</div>
+      </div>
+    </div>
+
+    <!-- NEIGHBORHOODS -->
+    <div class="neighborhood-box">
+      <div class="nb-label">Atlanta areas SiteBot pages target</div>
+      <div class="nb-grid">
+        <span class="nb-pill">Midtown</span>
+        <span class="nb-pill">Buckhead</span>
+        <span class="nb-pill">East Atlanta Village</span>
+        <span class="nb-pill">Little Five Points</span>
+        <span class="nb-pill">Virginia-Highland</span>
+        <span class="nb-pill">Inman Park</span>
+        <span class="nb-pill">Old Fourth Ward</span>
+        <span class="nb-pill">Decatur</span>
+        <span class="nb-pill">Sandy Springs</span>
+        <span class="nb-pill">Alpharetta</span>
+        <span class="nb-pill">Marietta</span>
+        <span class="nb-pill">College Park</span>
+        <span class="nb-pill">Smyrna</span>
+        <span class="nb-pill">Kennesaw</span>
+        <span class="nb-pill">Grant Park</span>
+        <span class="nb-pill">Ponce de Leon</span>
+      </div>
+      <div class="nb-footer">Atlanta's strong neighborhood identities make local specificity more important here than in many cities. A shop in EAV and a shop in Buckhead are serving completely different communities. Pages that name the specific area your shop serves outrank generic city pages for those neighborhood-level searches.</div>
+    </div>
+
+    <h2>Atlanta's tech culture drives device turnover — and buyback opportunity</h2>
+
+    <p>Atlanta has grown into a significant tech and fintech hub. Companies like NCR, Global Payments, and dozens of startups have brought a large professional workforce to Midtown and Buckhead. That workforce upgrades devices regularly — and when they upgrade, the outgoing iPhone needs to go somewhere. Most of them would rather get fair cash from a local shop than ship it to a national buyback platform and wait a week for a check.</p>
+
+    <p>The buyback opportunity in Atlanta is significant and largely uncaptured online. Most local shops that buy phones have a sign in the window but nothing on Google targeting "sell iPhone Atlanta" or "cash for iPhones Midtown." <strong>The national platforms appear for those searches because local shops have not built pages targeting them.</strong> A dedicated buyback page with a working calculator captures that traffic directly and brings those sellers in before they find any other option.</p>
+
+    <div class="callout">
+      <p><strong>iMobile Repair Center in Detroit proves the model.</strong> The device calculator runs overnight. Sellers lock prices, receive offer codes automatically, and walk in the next day. The shop owner opens to new leads in the inbox every morning — device details, offer amount, and contact info already captured. The website does the acquiring. The shop handles the transaction.</p>
+    </div>
+
+    <h2>Pricing</h2>
+
+    <div class="pricing-row">
+      <div class="plan-card">
+        <div class="plan-name">Website</div>
+        <div class="plan-price">$99<span>/mo</span></div>
+        <div class="plan-desc">Website, repair pages, buyback pages, local SEO structure</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Built and launched for you</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Repair pages targeting Atlanta</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Buyback pages and sell-phone SEO</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Device quote calculator</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Google Business Profile setup</div>
+      </div>
+      <div class="plan-card featured">
+        <div class="plan-badge">Most popular</div>
+        <div class="plan-name">Website + SEO</div>
+        <div class="plan-price">$299<span>/mo</span></div>
+        <div class="plan-desc">Everything in Website plus ongoing SEO content and ranking growth</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Everything in Website tier</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Monthly SEO content published</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Neighborhood-level pages added</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Ranking tracking and reporting</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Priority support</div>
+      </div>
+      <div class="plan-card">
+        <div class="plan-name">Full Growth</div>
+        <div class="plan-price">$499<span>/mo</span></div>
+        <div class="plan-desc">The complete system with SMS follow-up, lead tracking, and chatbot</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Everything in Website + SEO</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> SMS follow-up automation</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Lead tracking dashboard</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> AI chatbot for lead capture</div>
+        <div class="plan-feature"><span class="pf-icon">✓</span> Phone agent for missed calls</div>
+      </div>
+    </div>
+
+    <p>Early access shops pay $0 setup fee. No credit card required to reserve your spot on the waitlist.</p>
+
+    <!-- CTA -->
+    <div class="final-cta">
+      <h2>Ready to be the Atlanta shop customers find first?</h2>
+      <p>Join the waitlist and be among the first Atlanta repair shops on SiteBot. No setup fee. No credit card required.</p>
+      <a href="/#waitlist" class="btn-dark">Join the Waitlist</a>
+      <p class="final-note">Early access · $0 setup fee · Atlanta shops reviewed first</p>
+    </div>
+
+  </div>
+
+  <div id="site-footer"></div>
+  <script src="/components/header.js"></script>
+  <script src="/components/footer.js"></script>
+
+</body>
+</html>
