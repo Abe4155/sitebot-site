@@ -390,6 +390,7 @@
       <input type="text" id="field-name" placeholder="Your name" required autocomplete="name">
       <input type="text" id="field-shop" placeholder="Shop name" required>
       <input type="email" id="field-email" placeholder="Email address" required autocomplete="email">
+      <input type="tel" id="field-phone" placeholder="Phone number (optional)">
       <button type="submit" class="btn-waitlist" id="submit-btn">Join the Waitlist — It's Free</button>
       <p class="form-note">Cell phone shops only. No credit card. No spam ever.</p>
     </form>
@@ -623,6 +624,7 @@
       const name  = document.getElementById('field-name').value.trim();
       const shop  = document.getElementById('field-shop').value.trim();
       const email = document.getElementById('field-email').value.trim();
+      var phone = document.getElementById('field-phone').value.trim();
       const code  = genCode();
 
       const params = new URLSearchParams({
@@ -630,7 +632,7 @@
         name, shop, email, code
       });
 
-      fetch(SCRIPT_URL + '?' + params.toString())
+      fetch(SCRIPT_URL + '?' + params.toString() + '&phone=' + encodeURIComponent(phone))
         .then(r => r.json())
         .then(() => {
           document.getElementById('waitlist-form').style.display = 'none';
