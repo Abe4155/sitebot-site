@@ -1,4 +1,18 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "sitebot.tech" }],
+      "destination": "https://phoneshoppos.com/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.sitebot.tech" }],
+      "destination": "https://phoneshoppos.com/:path*",
+      "statusCode": 301
+    }
+  ]
 }
