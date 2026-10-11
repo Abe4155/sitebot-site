@@ -3,6 +3,191 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/about{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/ai-for-phone-repair-shops{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/cell-phone-repair-shop-checklist{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/cell-phone-repair-shop-software{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/cell-phone-repair-shop-website-cost{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/cell-phone-shop-seo{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/google-business-profile-phone-repair{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-buy-phones-for-cash{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-get-people-to-sell-phones-to-your-shop{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-price-used-phones{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-rank-on-google-phone-repair{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/how-to-start-cell-phone-repair-shop{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-buyback-website{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-repair-lead-capture{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-repair-shop-automation{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-repair-shop-marketing{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-repair-shop-reviews{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-repair-shop-sms-marketing{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/phone-repair-shop-website{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/seo-for-phone-buyback{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/case-study/imobile{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cell-phone-repair-shop-website-atlanta{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cell-phone-repair-shop-website-chicago{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cell-phone-repair-shop-website-dallas{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cell-phone-repair-shop-website-houston{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cell-phone-repair-shop-website-los-angeles{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cell-phone-repair-shop-website-miami{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/cell-phone-repair-shop-website-new-york{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/demo{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/features{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vs-r3up{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vs-repairdesk{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vs-squarespace{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/vs-wix{/}?",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/case-study/:path*",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
       "source": "/",
       "has": [
         {

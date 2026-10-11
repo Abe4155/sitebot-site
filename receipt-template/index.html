@@ -53,9 +53,47 @@
   }
 }
   </script>
+  <link rel="stylesheet" href="/assets/nav.css">
 </head>
 <body>
-  <div id="site-header"></div>
+  <nav id="psp-nav" aria-label="Main">
+    <div class="psp-nav-inner">
+      <a class="psp-logo" href="/">PhoneShopPOS</a>
+      <ul class="psp-links">
+        <li class="psp-tools">
+          <details>
+            <summary>Tools</summary>
+            <ul class="psp-tools-menu">
+              <li><a href="/invoice-generator">Invoice generator</a></li>
+              <li><a href="/receipt-maker">Receipt maker</a></li>
+              <li><a href="/receipt-template">Receipt template</a></li>
+              <li><a href="/work-order-template">Work order template</a></li>
+              <li><a href="/cash-receipt-template">Cash receipt template</a></li>
+              <li><a href="/auto-repair-work-order">Auto repair work order</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="https://app.phoneshoppos.com/login">Log in</a></li>
+      </ul>
+      <button class="psp-toggle" type="button" aria-expanded="false" aria-controls="psp-mobile">Menu</button>
+    </div>
+    <div class="psp-mobile" id="psp-mobile" hidden>
+      <p class="psp-mobile-label">Tools</p>
+      <ul>
+        <li><a href="/invoice-generator">Invoice generator</a></li>
+        <li><a href="/receipt-maker">Receipt maker</a></li>
+        <li><a href="/receipt-template">Receipt template</a></li>
+        <li><a href="/work-order-template">Work order template</a></li>
+        <li><a href="/cash-receipt-template">Cash receipt template</a></li>
+        <li><a href="/auto-repair-work-order">Auto repair work order</a></li>
+      </ul>
+      <ul>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="https://app.phoneshoppos.com/login">Log in</a></li>
+      </ul>
+    </div>
+  </nav>
   <main>
     <section class="tool-head wrap" aria-labelledby="tool-title">
       <h1 id="tool-title">Receipt template, print or download PDF</h1>
@@ -99,8 +137,32 @@
     <p class="free-account"><a href="https://app.phoneshoppos.com/signup">Create free account</a></p>
     <script src="/assets/tool-embed.js"></script>
   </main>
-  <div id="site-footer"></div>
-  <script src="/components/header.js"></script>
-  <script src="/components/footer.js"></script>
+  <footer id="psp-footer">
+    <div class="psp-footer-inner">
+      <div>
+        <p class="psp-footer-head">Tools</p>
+        <ul>
+          <li><a href="/invoice-generator">Invoice generator</a></li>
+          <li><a href="/receipt-maker">Receipt maker</a></li>
+          <li><a href="/receipt-template">Receipt template</a></li>
+          <li><a href="/work-order-template">Work order template</a></li>
+          <li><a href="/cash-receipt-template">Cash receipt template</a></li>
+          <li><a href="/auto-repair-work-order">Auto repair work order</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="psp-footer-head">PhoneShopPOS</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="https://app.phoneshoppos.com/login">Log in</a></li>
+          <li><a href="mailto:info@phoneshoppos.com">info@phoneshoppos.com</a></li>
+          <li><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="psp-copy">&copy; 2026 Sell N Buy Wireless LLC</p>
+  </footer>
+  <script src="/assets/nav.js"></script>
 </body>
 </html>

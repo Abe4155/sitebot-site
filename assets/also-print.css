@@ -1,5 +1,5 @@
 /* "Also print" strip + free account link. Self-contained so it can sit on
-   the older blog and city pages without their styles leaking in. */
+   any page without that page's styles leaking in. */
 .also-print {
   border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;
   padding: 18px 20px; margin: 40px auto 0; max-width: 1100px;

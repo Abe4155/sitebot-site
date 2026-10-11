@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Service — PhoneShopPOS</title>
-  <meta name="description" content="PhoneShopPOS terms of service. Read these before joining the waitlist or using the PhoneShopPOS platform.">
-  <link rel="canonical" href="https://phoneshoppos.com/terms/">
+  <title>PhoneShopPOS Terms of Service</title>
+  <meta name="description" content="PhoneShopPOS terms of service for the free printing tools and PhoneShopPOS accounts.">
+  <link rel="canonical" href="https://phoneshoppos.com/terms">
   <meta name="robots" content="noindex">
 
   <style>
@@ -115,17 +115,55 @@
     .contact-box a:hover { text-decoration: underline; }
 
     </style>
+  <link rel="stylesheet" href="/assets/nav.css">
 </head>
 <body>
 
   <!-- NAV -->
-  <div id="site-header"></div>
+  <nav id="psp-nav" aria-label="Main">
+    <div class="psp-nav-inner">
+      <a class="psp-logo" href="/">PhoneShopPOS</a>
+      <ul class="psp-links">
+        <li class="psp-tools">
+          <details>
+            <summary>Tools</summary>
+            <ul class="psp-tools-menu">
+              <li><a href="/invoice-generator">Invoice generator</a></li>
+              <li><a href="/receipt-maker">Receipt maker</a></li>
+              <li><a href="/receipt-template">Receipt template</a></li>
+              <li><a href="/work-order-template">Work order template</a></li>
+              <li><a href="/cash-receipt-template">Cash receipt template</a></li>
+              <li><a href="/auto-repair-work-order">Auto repair work order</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="https://app.phoneshoppos.com/login">Log in</a></li>
+      </ul>
+      <button class="psp-toggle" type="button" aria-expanded="false" aria-controls="psp-mobile">Menu</button>
+    </div>
+    <div class="psp-mobile" id="psp-mobile" hidden>
+      <p class="psp-mobile-label">Tools</p>
+      <ul>
+        <li><a href="/invoice-generator">Invoice generator</a></li>
+        <li><a href="/receipt-maker">Receipt maker</a></li>
+        <li><a href="/receipt-template">Receipt template</a></li>
+        <li><a href="/work-order-template">Work order template</a></li>
+        <li><a href="/cash-receipt-template">Cash receipt template</a></li>
+        <li><a href="/auto-repair-work-order">Auto repair work order</a></li>
+      </ul>
+      <ul>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="https://app.phoneshoppos.com/login">Log in</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <div class="page-wrap">
 
     <div class="page-label">Legal</div>
     <h1 class="page-title">Terms of Service</h1>
-    <p class="page-updated">Last updated: March 2026</p>
+    <p class="page-updated">Last updated: October 2026</p>
 
     <!-- TOC -->
     <div class="toc">
@@ -133,26 +171,25 @@
       <ul class="toc-list">
         <li><a href="#agreement">1. Agreement to these terms</a></li>
         <li><a href="#services">2. What PhoneShopPOS provides</a></li>
-        <li><a href="#waitlist">3. Waitlist and early access</a></li>
+        <li><a href="#free">3. Free tools and the Free plan</a></li>
         <li><a href="#account">4. Your account and responsibilities</a></li>
         <li><a href="#acceptable">5. Acceptable use</a></li>
         <li><a href="#content">6. Your content</a></li>
-        <li><a href="#sms">7. SMS communications</a></li>
-        <li><a href="#billing">8. Billing and payments</a></li>
-        <li><a href="#ip">9. Intellectual property</a></li>
-        <li><a href="#disclaimer">10. Disclaimers</a></li>
-        <li><a href="#liability">11. Limitation of liability</a></li>
-        <li><a href="#termination">12. Termination</a></li>
-        <li><a href="#changes">13. Changes to these terms</a></li>
-        <li><a href="#contact">14. Contact</a></li>
+        <li><a href="#billing">7. Billing and payments</a></li>
+        <li><a href="#ip">8. Intellectual property</a></li>
+        <li><a href="#disclaimer">9. Disclaimers</a></li>
+        <li><a href="#liability">10. Limitation of liability</a></li>
+        <li><a href="#termination">11. Termination</a></li>
+        <li><a href="#changes">12. Changes to these terms</a></li>
+        <li><a href="#contact">13. Contact</a></li>
       </ul>
     </div>
 
     <!-- 1 -->
     <div class="section" id="agreement">
       <h2>1. Agreement to these terms</h2>
-      <p>By accessing phoneshoppos.com, joining the PhoneShopPOS waitlist, or using any PhoneShopPOS service, you agree to be bound by these Terms of Service. If you do not agree, do not use the platform.</p>
-      <p>These terms apply to all visitors, waitlist members, and paying customers. <strong>PhoneShopPOS</strong> refers to the product and platform operated by iMobile Repair Center and its principals.</p>
+      <p>By accessing phoneshoppos.com, using the free printing tools, or creating a PhoneShopPOS account, you agree to be bound by these Terms of Service. If you do not agree, do not use PhoneShopPOS.</p>
+      <p>These terms apply to all visitors and account holders, on free and paid plans. <strong>PhoneShopPOS</strong> refers to the product and service operated by iMobile Repair Center and its principals.</p>
     </div>
 
     <hr class="divider">
@@ -160,26 +197,24 @@
     <!-- 2 -->
     <div class="section" id="services">
       <h2>2. What PhoneShopPOS provides</h2>
-      <p>PhoneShopPOS is a website and lead generation platform built specifically for cell phone repair and device buyback shops. Services include but are not limited to:</p>
+      <p>PhoneShopPOS is point-of-sale software built for cell phone repair and device buyback shops. It includes:</p>
       <ul>
-        <li>A professionally built website for your shop</li>
-        <li>A device quote calculator connected to a Google Sheets pricing backend</li>
-        <li>An offer code and email lead capture system</li>
-        <li>SEO-optimized content pages targeting local repair and buyback searches</li>
-        <li>Google Business Profile optimization guidance</li>
-        <li>Automated lead email notifications</li>
+        <li>Repair tickets with a tear-off tag for the device</li>
+        <li>Buyback receipts with seller details and a signature line</li>
+        <li>Sales receipts with line items and sales tax</li>
+        <li>Customer history looked up by phone number</li>
+        <li>Free tools for printing invoices, receipts and work orders without an account</li>
       </ul>
-      <p>Additional features including SMS follow-up, AI pricing assistance, and lead tracking dashboards are in development and will be offered to qualifying accounts when available. PhoneShopPOS reserves the right to add, modify, or discontinue any feature at any time.</p>
+      <p>Current plans and prices are shown on phoneshoppos.com. PhoneShopPOS reserves the right to add, modify, or discontinue any feature at any time.</p>
     </div>
 
     <hr class="divider">
 
     <!-- 3 -->
-    <div class="section" id="waitlist">
-      <h2>3. Waitlist and early access</h2>
-      <p>Joining the PhoneShopPOS waitlist does not guarantee access to the platform or create a contractual obligation on either side. Waitlist signups are collected to gauge interest and prioritize onboarding.</p>
-      <p>Early access shops are onboarded at PhoneShopPOS's discretion. Early access terms including pricing, setup fees, and features will be communicated directly before any paid agreement begins.</p>
-      <p><strong>No charges will be made to any waitlist member without explicit agreement.</strong> Joining the waitlist is free and requires no payment information.</p>
+    <div class="section" id="free">
+      <h2>3. Free tools and the Free plan</h2>
+      <p>The free printing tools and the Free plan are provided at no charge, with the limits described on phoneshoppos.com. We may change those limits or stop offering a free tool at any time.</p>
+      <p><strong>No charges will be made to a free account without your explicit agreement to a paid plan.</strong> Creating a free account requires no payment information.</p>
     </div>
 
     <hr class="divider">
@@ -187,15 +222,14 @@
     <!-- 4 -->
     <div class="section" id="account">
       <h2>4. Your account and responsibilities</h2>
-      <p>When you become a PhoneShopPOS customer you are responsible for:</p>
+      <p>When you use PhoneShopPOS you are responsible for:</p>
       <ul>
-        <li>Providing accurate information about your shop during onboarding</li>
-        <li>Keeping your Google Sheet pricing data accurate and up to date</li>
-        <li>Ensuring the offers displayed on your calculator reflect prices you are actually willing to honor</li>
-        <li>Maintaining the security of any credentials we provide to you</li>
-        <li>Complying with all applicable local, state, and federal laws related to device buyback and repair services in your jurisdiction</li>
+        <li>Providing accurate information when you create your account</li>
+        <li>Keeping your login credentials secure and the activity of any staff logins on your account</li>
+        <li>The accuracy of the tickets, receipts and other documents you create and print</li>
+        <li>Complying with all applicable local, state, and federal laws related to device buyback, repair and sales in your jurisdiction, including any record keeping and identification requirements for buying used devices</li>
       </ul>
-      <p>You are responsible for the accuracy of pricing, offers, and information displayed on your PhoneShopPOS-powered website. PhoneShopPOS is not liable for disputes between you and your customers arising from pricing errors or misrepresented offers.</p>
+      <p>PhoneShopPOS is not liable for disputes between you and your customers arising from the transactions you record or the documents you print.</p>
     </div>
 
     <hr class="divider">
@@ -205,12 +239,11 @@
       <h2>5. Acceptable use</h2>
       <p>You may not use PhoneShopPOS to:</p>
       <ul>
-        <li>Display false, misleading, or fraudulent device offers</li>
+        <li>Create false, misleading, or fraudulent receipts, invoices or other documents</li>
         <li>Collect customer information under false pretenses</li>
+        <li>Buy or sell devices you know or suspect to be stolen</li>
         <li>Violate any law or regulation applicable to your business</li>
-        <li>Engage in bait-and-switch pricing tactics</li>
-        <li>Send unsolicited commercial messages to leads captured through your PhoneShopPOS system</li>
-        <li>Attempt to reverse-engineer, copy, or resell any part of the PhoneShopPOS platform</li>
+        <li>Attempt to reverse-engineer, copy, or resell any part of PhoneShopPOS</li>
       </ul>
       <p>PhoneShopPOS reserves the right to suspend or terminate any account found to be in violation of these acceptable use guidelines without prior notice.</p>
     </div>
@@ -220,90 +253,74 @@
     <!-- 6 -->
     <div class="section" id="content">
       <h2>6. Your content</h2>
-      <p>You retain ownership of any content you provide to PhoneShopPOS including your shop name, logo, pricing data, and other materials. By providing content you grant PhoneShopPOS a limited license to display and use that content solely for the purpose of operating your website and lead system.</p>
+      <p>You retain ownership of the information you enter into PhoneShopPOS, including your shop details, customer records, tickets, receipts and sales. By entering it you grant PhoneShopPOS a limited license to store, process and display that information solely for the purpose of providing the service to you.</p>
       <p>PhoneShopPOS may use your shop's name, general results, and anonymized data for marketing purposes including case studies and testimonials. We will ask before using your name or likeness publicly in any detailed or identifiable way.</p>
     </div>
 
     <hr class="divider">
 
     <!-- 7 -->
-    <div class="section" id="sms">
-      <h2>7. SMS communications</h2>
-      <p>PhoneShopPOS may offer SMS-based lead follow-up as a feature for active subscribers. Any SMS features are subject to the following:</p>
+    <div class="section" id="billing">
+      <h2>7. Billing and payments</h2>
+      <p>Paid plans are monthly subscriptions at the price shown on phoneshoppos.com when you subscribe.</p>
       <ul>
-        <li><strong>Consent:</strong> Your customers must have explicitly opted in to receive SMS messages before any automated texts are sent on your behalf. PhoneShopPOS will only send SMS messages to leads who have provided consent through your website's opt-in flow.</li>
-        <li><strong>Opt-out:</strong> Every SMS sent through PhoneShopPOS includes an opt-out option. Customers who reply STOP will be removed from all future messaging immediately.</li>
-        <li><strong>Compliance:</strong> You agree to use SMS features in compliance with the Telephone Consumer Protection Act (TCPA) and all applicable messaging regulations. PhoneShopPOS is not responsible for your failure to comply with applicable law.</li>
-        <li><strong>Message frequency:</strong> Message frequency will vary based on customer interactions with your offer system. Standard message and data rates may apply to your customers.</li>
+        <li><strong>Billing cycle:</strong> Subscriptions are billed monthly in advance unless otherwise agreed.</li>
+        <li><strong>Cancellation:</strong> You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period. No partial refunds are issued for unused time within a billing cycle.</li>
+        <li><strong>Late payments:</strong> Accounts with outstanding balances may have paid features suspended until payment is received.</li>
+        <li><strong>Price changes:</strong> PhoneShopPOS reserves the right to adjust pricing with 30 days written notice.</li>
       </ul>
-      <p>SMS features are currently in development and will be activated for qualifying accounts when available. These terms apply when the feature is enabled on your account.</p>
     </div>
 
     <hr class="divider">
 
     <!-- 8 -->
-    <div class="section" id="billing">
-      <h2>8. Billing and payments</h2>
-      <p>PhoneShopPOS operates on a monthly subscription model. Pricing, billing cycles, and included features will be confirmed in writing before your paid account begins. No charges occur during the waitlist or onboarding discussion phase.</p>
-      <ul>
-        <li><strong>Billing cycle:</strong> Subscriptions are billed monthly in advance unless otherwise agreed.</li>
-        <li><strong>Cancellation:</strong> You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period. No partial refunds are issued for unused time within a billing cycle.</li>
-        <li><strong>Late payments:</strong> Accounts with outstanding balances may have services suspended until payment is received.</li>
-        <li><strong>Price changes:</strong> PhoneShopPOS reserves the right to adjust pricing with 30 days written notice. Early access pricing is locked for the term specified in your onboarding agreement.</li>
-      </ul>
+    <div class="section" id="ip">
+      <h2>8. Intellectual property</h2>
+      <p>All code, design, systems, and content created by PhoneShopPOS remain the property of PhoneShopPOS. This includes but is not limited to the software, the printable layouts, and the free tools. They may not be copied or redistributed.</p>
     </div>
 
     <hr class="divider">
 
     <!-- 9 -->
-    <div class="section" id="ip">
-      <h2>9. Intellectual property</h2>
-      <p>All code, design, systems, and content created by PhoneShopPOS remain the property of PhoneShopPOS. This includes but is not limited to the website templates, calculator system, email capture flow, and offer code generation logic.</p>
-      <p>The SEO content created for your specific shop is licensed to you for use on your PhoneShopPOS-powered site. If your subscription ends, you may request a copy of your shop-specific content. The underlying platform, templates, and systems remain PhoneShopPOS property and may not be copied or redistributed.</p>
+    <div class="section" id="disclaimer">
+      <h2>9. Disclaimers</h2>
+      <p>PhoneShopPOS is provided on an "as is" and "as available" basis. We make no warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+      <p>PhoneShopPOS does not guarantee that the documents it produces meet every legal, tax or record keeping requirement in your jurisdiction. Check the requirements that apply to your business.</p>
+      <p>We are not responsible for downtime, data loss, or interruptions caused by third-party services including Vercel or any other infrastructure provider we rely on.</p>
     </div>
 
     <hr class="divider">
 
     <!-- 10 -->
-    <div class="section" id="disclaimer">
-      <h2>10. Disclaimers</h2>
-      <p>PhoneShopPOS is provided on an "as is" and "as available" basis. We make no warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
-      <p>PhoneShopPOS does not guarantee specific search engine rankings, lead volumes, or revenue outcomes. SEO results vary based on your market, competition, and factors outside our control. We build the system. Results depend on your market.</p>
-      <p>We are not responsible for downtime, data loss, or interruptions caused by third-party services including Google Sheets, EmailJS, Vercel, or any other infrastructure provider we rely on.</p>
-    </div>
-
-    <hr class="divider">
-
-    <!-- 11 -->
     <div class="section" id="liability">
-      <h2>11. Limitation of liability</h2>
-      <p>To the maximum extent permitted by law, PhoneShopPOS's total liability for any claim arising from or related to these terms or your use of the platform shall not exceed the amount you paid to PhoneShopPOS in the three months preceding the claim.</p>
+      <h2>10. Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, PhoneShopPOS's total liability for any claim arising from or related to these terms or your use of PhoneShopPOS shall not exceed the amount you paid to PhoneShopPOS in the three months preceding the claim.</p>
       <p>PhoneShopPOS is not liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business, even if we have been advised of the possibility of such damages.</p>
     </div>
 
     <hr class="divider">
 
-    <!-- 12 -->
+    <!-- 11 -->
     <div class="section" id="termination">
-      <h2>12. Termination</h2>
-      <p>Either party may terminate the service relationship at any time. You may cancel through written notice to info@phoneshoppos.com. PhoneShopPOS may terminate or suspend your account for violations of these terms, non-payment, or any reason with reasonable notice.</p>
-      <p>Upon termination we will provide you with a copy of your shop-specific content within 30 days if requested. Your website will be taken offline at the end of the billing period or immediately in cases of terms violations.</p>
+      <h2>11. Termination</h2>
+      <p>Either party may end the service relationship at any time. You may cancel through written notice to info@phoneshoppos.com. PhoneShopPOS may terminate or suspend your account for violations of these terms, non-payment, or any reason with reasonable notice.</p>
+      <p>Upon termination we will provide you with a copy of your records within 30 days if requested.</p>
+    </div>
+
+    <hr class="divider">
+
+    <!-- 12 -->
+    <div class="section" id="changes">
+      <h2>12. Changes to these terms</h2>
+      <p>PhoneShopPOS may update these terms from time to time. When we do we will update the date at the top of this page. If changes are material we will notify account holders by email at least 14 days before the changes take effect.</p>
+      <p>Continued use of PhoneShopPOS after changes take effect constitutes your acceptance of the updated terms.</p>
     </div>
 
     <hr class="divider">
 
     <!-- 13 -->
-    <div class="section" id="changes">
-      <h2>13. Changes to these terms</h2>
-      <p>PhoneShopPOS may update these terms from time to time. When we do we will update the date at the top of this page. If changes are material we will notify active subscribers by email at least 14 days before the changes take effect.</p>
-      <p>Continued use of the platform after changes take effect constitutes your acceptance of the updated terms.</p>
-    </div>
-
-    <hr class="divider">
-
-    <!-- 14 -->
     <div class="section" id="contact">
-      <h2>14. Contact</h2>
+      <h2>13. Contact</h2>
       <p>Questions about these terms? Reach us at:</p>
     </div>
 
@@ -316,9 +333,33 @@
   </div>
 
   <!-- FOOTER -->
-  <div id="site-footer"></div>
+  <footer id="psp-footer">
+    <div class="psp-footer-inner">
+      <div>
+        <p class="psp-footer-head">Tools</p>
+        <ul>
+          <li><a href="/invoice-generator">Invoice generator</a></li>
+          <li><a href="/receipt-maker">Receipt maker</a></li>
+          <li><a href="/receipt-template">Receipt template</a></li>
+          <li><a href="/work-order-template">Work order template</a></li>
+          <li><a href="/cash-receipt-template">Cash receipt template</a></li>
+          <li><a href="/auto-repair-work-order">Auto repair work order</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="psp-footer-head">PhoneShopPOS</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/#pricing">Pricing</a></li>
+          <li><a href="https://app.phoneshoppos.com/login">Log in</a></li>
+          <li><a href="mailto:info@phoneshoppos.com">info@phoneshoppos.com</a></li>
+          <li><a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="psp-copy">&copy; 2026 Sell N Buy Wireless LLC</p>
+  </footer>
 
-  <script src="/components/header.js"></script>
-  <script src="/components/footer.js"></script>
+  <script src="/assets/nav.js"></script>
 </body>
 </html>
