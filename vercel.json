@@ -46,5 +46,11 @@
       "destination": "https://phoneshoppos.com/:path*",
       "statusCode": 301
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/print/:path*",
+      "destination": "https://app.phoneshoppos.com/print/:path*?via=site"
+    }
   ]
 }

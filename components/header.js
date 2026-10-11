@@ -1,100 +1,88 @@
-// PhoneShopPOS — shared header component
-// Usage: add <div id="site-header"></div> and <script src="/components/header.js"></script> to every page
-
+// PhoneShopPOS — shared header. Every page has
+// <div id="site-header"></div> and <script src="/components/header.js"></script>.
 (function () {
-  const nav = `
-  <nav id="sitebot-nav">
-    <a class="nav-logo" href="/">PhoneShopPOS</a>
-    <ul class="nav-links">
-      <li><a href="/features/">Features</a></li>
-      <li><a href="/demo/">Demo</a></li>
-      <li><a href="/case-study/imobile/">Case Study</a></li>
-      <li><a href="/blog/">Blog</a></li>
-      <li><a href="/about/">About</a></li>
-      <li><a href="/" class="nav-cta">Join the Waitlist</a></li>
-    </ul>
-    <button class="nav-mobile-toggle" aria-label="Open menu" onclick="toggleMobileMenu()">&#9776;</button>
-  </nav>
-  <div class="nav-mobile-menu" id="nav-mobile-menu">
-    <a href="/features/">Features</a>
-    <a href="/demo/">Demo</a>
-    <a href="/case-study/imobile/">Case Study</a>
-    <a href="/blog/">Blog</a>
-    <a href="/about/">About</a>
-    <a href="/">Join the Waitlist</a>
-  </div>`;
+  const APP = 'https://app.phoneshoppos.com';
+  const TOOLS = [
+    ['/invoice-generator', 'Invoice'],
+    ['/receipt-maker', 'Receipt'],
+    ['/work-order-template', 'Work order'],
+    ['/cash-receipt-template', 'Cash receipt'],
+  ];
+  const toolLinks = TOOLS.map(([h, t]) => `<li><a href="${h}">${t}</a></li>`).join('');
+
+  const html = `
+  <nav id="psp-nav" aria-label="Main">
+    <div class="psp-nav-inner">
+      <a class="psp-logo" href="/">PhoneShopPOS</a>
+      <ul class="psp-links">
+        <li class="psp-tools">
+          <details>
+            <summary>Tools</summary>
+            <ul class="psp-tools-menu">${toolLinks}</ul>
+          </details>
+        </li>
+        <li><a href="/#compare">Compare</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="${APP}/login">Log in</a></li>
+      </ul>
+      <button class="psp-toggle" type="button" aria-expanded="false" aria-controls="psp-mobile">Menu</button>
+    </div>
+    <div class="psp-mobile" id="psp-mobile" hidden>
+      <p class="psp-mobile-label">Tools</p>
+      <ul>${toolLinks}</ul>
+      <ul>
+        <li><a href="/#compare">Compare</a></li>
+        <li><a href="/#pricing">Pricing</a></li>
+        <li><a href="${APP}/login">Log in</a></li>
+      </ul>
+    </div>
+  </nav>`;
 
   const style = `
-  <style id="sitebot-nav-style">
-    #sitebot-nav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(0,0,0,0.88);
-      backdrop-filter: saturate(180%) blur(20px);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 0 24px; height: 52px;
-      display: flex; align-items: center; justify-content: space-between;
+  <style id="psp-nav-style">
+    #psp-nav { background: #fff; border-bottom: 1px solid #e5e7eb; position: relative; z-index: 50;
+      font-family: "Manrope", system-ui, -apple-system, "Segoe UI", Arial, sans-serif; }
+    #psp-nav .psp-nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 20px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between; }
+    #psp-nav a { color: #111827; text-decoration: none; }
+    #psp-nav .psp-logo { font-size: 19px; font-weight: 800; letter-spacing: -0.01em; }
+    #psp-nav .psp-links { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
+    #psp-nav .psp-links > li > a, #psp-nav summary { font-size: 16px; font-weight: 600; color: #111827; cursor: pointer; }
+    #psp-nav .psp-links a:hover, #psp-nav summary:hover { color: #1d4ed8; }
+    #psp-nav details { position: relative; }
+    #psp-nav summary { list-style: none; }
+    #psp-nav summary::-webkit-details-marker { display: none; }
+    #psp-nav summary::after { content: " \\25BE"; font-size: 12px; }
+    #psp-nav .psp-tools-menu { position: absolute; top: 34px; left: -16px; min-width: 190px; list-style: none;
+      margin: 0; padding: 8px 0; background: #fff; border: 1px solid #e5e7eb; border-radius: 10px; }
+    #psp-nav .psp-tools-menu a { display: block; padding: 8px 16px; font-weight: 600; }
+    #psp-nav .psp-toggle { display: none; background: #fff; border: 1px solid #111827; border-radius: 8px;
+      padding: 8px 14px; font: inherit; font-weight: 700; color: #111827; cursor: pointer; }
+    #psp-nav .psp-mobile { border-top: 1px solid #e5e7eb; padding: 8px 20px 16px; }
+    #psp-nav .psp-mobile ul { list-style: none; margin: 0; padding: 0; }
+    #psp-nav .psp-mobile a { display: block; padding: 10px 0; font-size: 17px; font-weight: 600; }
+    #psp-nav .psp-mobile-label { margin: 8px 0 0; font-size: 13px; font-weight: 700; color: #4b5563;
+      text-transform: uppercase; letter-spacing: 0.06em; }
+    @media (max-width: 760px) {
+      #psp-nav .psp-links { display: none; }
+      #psp-nav .psp-toggle { display: inline-block; }
     }
-    #sitebot-nav .nav-logo {
-      font-size: 17px; font-weight: 600;
-      color: #fff; text-decoration: none;
-      letter-spacing: -0.3px;
-      font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
-    }
-    #sitebot-nav .nav-links {
-      display: flex; align-items: center;
-      gap: 24px; list-style: none;
-    }
-    #sitebot-nav .nav-links a {
-      font-size: 13px; color: rgba(255,255,255,0.7);
-      text-decoration: none; transition: color .2s;
-      font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
-    }
-    #sitebot-nav .nav-links a:hover { color: #fff; }
-    #sitebot-nav .nav-cta {
-      background: #fff; color: #000 !important;
-      padding: 7px 16px; border-radius: 20px;
-      font-weight: 500 !important; font-size: 13px !important;
-      transition: opacity .2s;
-    }
-    #sitebot-nav .nav-cta:hover { opacity: 0.88; }
-    #sitebot-nav .nav-mobile-toggle {
-      display: none; background: none; border: none;
-      color: rgba(255,255,255,0.7); font-size: 20px;
-      cursor: pointer; padding: 4px 8px;
-    }
-    .nav-mobile-menu {
-      display: none; flex-direction: column;
-      background: #0a0a0a;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      padding: 12px 24px 20px;
-      position: sticky; top: 52px; z-index: 99;
-    }
-    .nav-mobile-menu a {
-      font-size: 15px; color: rgba(255,255,255,0.7);
-      text-decoration: none; padding: 10px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
-    }
-    .nav-mobile-menu a:last-child {
-      border-bottom: none; color: #fff; font-weight: 500; padding-top: 14px;
-    }
-    .nav-mobile-menu.open { display: flex; }
-    @media (max-width: 680px) {
-      #sitebot-nav .nav-links { display: none; }
-      #sitebot-nav .nav-mobile-toggle { display: block; }
-    }
+    @media (min-width: 761px) { #psp-nav .psp-mobile { display: none !important; } }
   </style>`;
 
   const target = document.getElementById('site-header');
-  if (target) {
-    target.innerHTML = style + nav;
-  } else {
-    document.body.insertAdjacentHTML('afterbegin', style + nav);
-  }
+  if (target) target.innerHTML = style + html;
+  else document.body.insertAdjacentHTML('afterbegin', style + html);
 
-  window.toggleMobileMenu = function () {
-    const menu = document.getElementById('nav-mobile-menu');
-    if (menu) menu.classList.toggle('open');
-  };
+  const toggle = document.querySelector('#psp-nav .psp-toggle');
+  const menu = document.getElementById('psp-mobile');
+  toggle.addEventListener('click', function () {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    menu.hidden = open;
+  });
+  // Close the Tools dropdown on outside click / Escape.
+  const details = document.querySelector('#psp-nav details');
+  document.addEventListener('click', function (e) { if (!details.contains(e.target)) details.open = false; });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') details.open = false; });
 })();
