@@ -1,4 +1,4 @@
-// SiteBot — shared footer component
+// PhoneShopPOS — shared footer component
 // Usage: add <div id="site-footer"></div> and <script src="/components/footer.js"></script> to every page
 
 (function () {
@@ -8,7 +8,7 @@
   <footer id="sitebot-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <a href="/" class="footer-logo">SiteBot</a>
+        <a href="/" class="footer-logo">PhoneShopPOS</a>
         <p class="footer-tagline">Built by a real cell phone shop owner.<br>Tested at iMobile Repair Center, Detroit.</p>
       </div>
       <div class="footer-cols">
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; ${year} SiteBot. All rights reserved.</span>
+      <span>&copy; ${year} PhoneShopPOS. All rights reserved.</span>
     </div>
   </footer>`;
 

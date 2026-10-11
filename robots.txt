@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sitebot.tech/sitemap.xml
+Sitemap: https://phoneshoppos.com/sitemap.xml

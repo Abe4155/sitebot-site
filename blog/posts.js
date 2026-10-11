@@ -1,4 +1,4 @@
-// SiteBot Blog Posts
+// PhoneShopPOS Blog Posts
 // To add a new post: add one object to the SITEBOT_POSTS array below.
 // The blog index page at /blog/ reads this file automatically.
 // Order: newest first.

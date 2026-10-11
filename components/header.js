@@ -1,10 +1,10 @@
-// SiteBot — shared header component
+// PhoneShopPOS — shared header component
 // Usage: add <div id="site-header"></div> and <script src="/components/header.js"></script> to every page
 
 (function () {
   const nav = `
   <nav id="sitebot-nav">
-    <a class="nav-logo" href="/">SiteBot</a>
+    <a class="nav-logo" href="/">PhoneShopPOS</a>
     <ul class="nav-links">
       <li><a href="/features/">Features</a></li>
       <li><a href="/demo/">Demo</a></li>
