@@ -31,7 +31,7 @@
           <a href="/about/">About</a>
           <a href="/terms/">Terms</a>
           <a href="/privacy/">Privacy</a>
-          <a href="mailto:info@sitebot.tech">info@sitebot.tech</a>
+          <a href="mailto:info@phoneshoppos.com">info@phoneshoppos.com</a>
         </div>
       </div>
     </div>
