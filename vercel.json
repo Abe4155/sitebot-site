@@ -235,11 +235,5 @@
       "destination": "/:path+",
       "statusCode": 308
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/print/:path*",
-      "destination": "https://app.phoneshoppos.com/print/:path*?via=site"
-    }
   ]
 }
