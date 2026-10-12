@@ -2,6 +2,11 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/print/:path*",
+      "destination": "https://app.phoneshoppos.com/print/:path*",
+      "statusCode": 301
+    },
+    {
       "source": "/about{/}?",
       "destination": "https://phoneshoppos.com/",
       "statusCode": 301
