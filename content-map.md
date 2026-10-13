@@ -26,9 +26,10 @@ Future buyback spoke pages. Slugs are proposals until the page is built. When th
 
 | Future page | Target keyword | Waiting link from | Status |
 | --- | --- | --- | --- |
-| /phone-buyback-form | phone buyback form | /buyback-receipt (More guides) | PENDING |
-| /bill-of-sale-for-phone | bill of sale for a cell phone | /buyback-receipt (More guides) | PENDING |
-| /check-imei-before-buying | check IMEI before buying used phone | /buyback-receipt (More guides, and the IMEI mistake line) | PENDING |
-| /used-phone-condition-grades | used phone condition grading | /buyback-receipt (More guides, and the condition grade field) | PENDING |
+| /bill-of-sale-cell-phone | bill of sale cell phone | /buyback-receipt (More guides) | PENDING |
+| /phone-buyback-receipt-template | phone buyback receipt template | /buyback-receipt (More guides) | PENDING |
+| /used-phone-purchase-receipt | used phone purchase receipt | /buyback-receipt (More guides) | PENDING |
+| /receipt-with-imei | receipt with IMEI | /buyback-receipt (More guides) | PENDING |
+| /bill-of-sale-electronics | bill of sale electronics | /buyback-receipt (More guides) | PENDING |
 
 No PENDING links pointed to /buyback-receipt before it went live (this file was created with it).
